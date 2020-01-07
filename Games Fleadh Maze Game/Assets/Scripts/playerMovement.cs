@@ -13,19 +13,26 @@ public class playerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (Input.GetKey("w"))
         {
             transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * moveSpeed;
-        }else if (Input.GetKey("s"))
+        }
+        else if (Input.GetKey("s"))
         {
             transform.position += transform.TransformDirection(Vector3.back) * Time.deltaTime * moveSpeed;
         }
-        if(Input.GetKey("a") && !Input.GetKey("d"))
+        else if(Input.GetKey("a"))
         {
             transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * moveSpeed;
-        }else if(Input.GetKey("d") && !Input.GetKey("a"))
+        }
+        else if(Input.GetKey("d"))
         {
             transform.position += transform.TransformDirection(Vector3.right) * Time.deltaTime * moveSpeed;
+        }
+        else if(Input.GetKey("q"))
+        {
+            
         }
 	}
 }
