@@ -68,7 +68,7 @@ public class gridFloorGenerator : MonoBehaviour
             int split = Random.Range((int)CornerPoint.z,(int)CornerPointOpposite.z);
              Debug.Log("OVER_HERE_z "+split);
             int entrypoint = Random.Range((int)CornerPoint.x,(int)CornerPointOpposite.x);
-            int endwall=0;
+            //int endwall=0;
             for(int i=(int)CornerPoint.x;i<=(int)CornerPointOpposite.x;i++){
                 Debug.Log("OVER_HERE_x "+i);
                 if(!(i==entrypoint)){
@@ -83,7 +83,7 @@ public class gridFloorGenerator : MonoBehaviour
                     Quaternion.Euler(0,0,0));
                 splitWall2.transform.parent=gameObject.transform;
                 }
-                endwall=i;
+                //endwall=i;
             }   
             
        // Rooms[1]=new Vector3(endwall,0,split);
