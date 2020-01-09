@@ -53,7 +53,7 @@ public class MazeBoss : MonoBehaviour
             if(!(x==randomDoorWay)||(max1==size.z)){
             GameObject WallX = Instantiate(WallPrefab);
             WallX.name="Maze Wall " + x + ", " + randomZ;
-            WallX.transform.localPosition = new Vector3(x,0.5f,randomZ-0.5f);
+            WallX.transform.localPosition = new Vector3(x,0,randomZ-0.5f);
             }
         }
         return randomZ;
