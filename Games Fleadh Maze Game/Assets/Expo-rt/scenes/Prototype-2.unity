@@ -113,76 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &29340140
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1996192685}
-    m_Modifications:
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ec159dbf456a8a54fa0f3e5f94fbdb29, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &42531027
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +197,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 42531027}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &58915963
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996192685}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 28820035fb4eae44a94b7f8c6e0201e8, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &75341767
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,14 +354,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75341767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.3512698, z: 0, w: 0.9362743}
   m_LocalPosition: {x: 270, y: 9.19, z: 104.6}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1065620542}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -41.13, z: 0}
 --- !u!114 &75341773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3934,7 +3926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471951445}
   m_Layer: 0
-  m_Name: Portal (1)
+  m_Name: Portal to Damiens Stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4055,10 +4047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNum: 3
---- !u!4 &654250906 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400006, guid: 84b8df0eedc9d7d4da5c952b12092666, type: 3}
-  m_PrefabInternal: {fileID: 29340140}
 --- !u!1 &808752090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,16 +4324,14 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1102298378}
-  m_Text: 'Step on the Portal Square
-
-'
+  m_Text: "Step on the Portal Square \nto go To Damiens cool stuff\n"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -4393,7 +4379,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1102298378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.2100067, y: 10.400001, z: -5.399994}
+  m_LocalPosition: {x: -11.5, y: 10.400001, z: -5.399994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471951445}
@@ -4588,6 +4574,8 @@ TextMesh:
   m_GameObject: {fileID: 1268538552}
   m_Text: 'Step on the Portal Square
 
+    To Go to Crappy Maze
+
 '
   m_OffsetZ: 0
   m_CharacterSize: 1
@@ -4595,7 +4583,7 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -4643,12 +4631,16 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268538552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.2100067, y: 10.400001, z: -5.399994}
+  m_LocalPosition: {x: -10.37, y: 10.400001, z: -3.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1450655762}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1325810019 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+  m_PrefabInternal: {fileID: 58915963}
 --- !u!1 &1395699389
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,7 +4844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450655762}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: Portal to Crappy Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8400,7 +8392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609227712}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6.040001, y: 14.98, z: -1.49}
+  m_LocalPosition: {x: -0.65, y: 15.56, z: -2.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1996192685}
@@ -8627,7 +8619,7 @@ Transform:
   m_Children:
   - {fileID: 1609227715}
   - {fileID: 1825781050}
-  - {fileID: 654250906}
+  - {fileID: 1325810019}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

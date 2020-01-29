@@ -1,36 +1,29 @@
 fileFormatVersion: 2
-guid: 84b8df0eedc9d7d4da5c952b12092666
+guid: 8936256600c7769429eaba0c6e0e1368
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Armature
-    100002: Bone
-    100004: Bone_end
-    100006: //RootNode
-    100008: ChestBottom
-    100010: ChestHinges
-    100012: ChestTop
-    400000: Armature
-    400002: Bone
-    400004: Bone_end
-    400006: //RootNode
-    400008: ChestBottom
-    400010: ChestHinges
-    400012: ChestTop
+    100000: //RootNode
+    100002: ChestBottom
+    100004: ChestHinges
+    100006: ChestTop
+    400000: //RootNode
+    400002: ChestBottom
+    400004: ChestHinges
+    400006: ChestTop
     2100000: Material
     2300000: ChestBottom
     2300002: ChestHinges
+    2300004: ChestTop
     3300000: ChestBottom
     3300002: ChestHinges
+    3300004: ChestTop
     4300000: ChestTop
     4300002: ChestBottom
     4300004: ChestHinges
-    7400000: Armature|ChestOpen
-    7400002: Armature|CloseChest
-    7400004: Armature|Open
-    7400006: Armature|OpenChest
+    7400000: ChestClose
+    7400002: ChestTop|ChestOpen
     9500000: //RootNode
-    13700000: ChestTop
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -59,38 +52,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|CloseChest
-      takeName: Armature|CloseChest
+      name: ChestTop|ChestOpen
+      takeName: ChestTop|ChestOpen
       firstFrame: 0
-      lastFrame: 99
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|OpenChest
-      takeName: Armature|OpenChest
-      firstFrame: 0
-      lastFrame: 99
+      lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

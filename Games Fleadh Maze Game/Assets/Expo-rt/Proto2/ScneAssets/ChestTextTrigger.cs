@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChestTextTrigger : MonoBehaviour {
 
 	public GameObject textForChest;
-
+	
 	private void OnTriggerEnter()
 	{
 		textForChest.SetActive (true);
