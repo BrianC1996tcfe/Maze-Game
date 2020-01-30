@@ -7,9 +7,10 @@ public class FairyController : MonoBehaviour
 
     public Transform player;
     static Animator anim;
+	public Transform firePoint;
+	public GameObject fireballPrefab;
+	public int dmg = 10;
 
-
-    // Update is called once per frame
 
     void Start()
     {
@@ -26,16 +27,18 @@ public class FairyController : MonoBehaviour
 
             anim.SetBool("isIdle", false);
 
-            if (direction.magnitude > 10)
+			if (direction.magnitude > 10)
             {
-                this.transform.Translate(0, 0, 0.2f);
+                this.transform.Translate(0, 0, 0.05f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }
             else
             {
-                anim.SetBool("isAttacking", true);
-                anim.SetBool("isWalking", false);
+				anim.SetBool("isAttacking", true);
+				anim.SetBool("isWalking", false);
+				Shoot ();
+
             }
         }
         else
@@ -45,4 +48,7 @@ public class FairyController : MonoBehaviour
             anim.SetBool("isAttacking", false);
         }
     }
+	void Shoot (){
+		GameObject fireballClone = Instantiate (fireballPrefab, firePoint.position, firePoint.rotation);
+	}
 }
