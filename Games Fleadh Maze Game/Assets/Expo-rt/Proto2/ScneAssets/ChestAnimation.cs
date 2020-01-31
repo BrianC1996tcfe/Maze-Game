@@ -11,8 +11,8 @@ public class ChestAnimation : MonoBehaviour {
 		anim = GetComponent<Animator>();
 	}
 	void Update () {
-		//if(InteractionText.activeSelf){
-			if(InteractionText.activeSelf && Input.GetKeyDown(KeyCode.E)){
+		if(InteractionText.activeSelf){
+			if(Input.GetKeyDown(KeyCode.E)){
 				if(coolBool){
 					coolBool = false;
 				}
@@ -22,5 +22,5 @@ public class ChestAnimation : MonoBehaviour {
 				anim.SetBool("open",coolBool);
 			}
 		}
-	//}
+	}
 }
