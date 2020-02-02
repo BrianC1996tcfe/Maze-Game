@@ -18,22 +18,23 @@ public class SlimeShapeKeyAnim : MonoBehaviour {
 	void Key2Up(){
 		if(nSize>=100.0f){
 			CancelInvoke("Key2Up");
-			InvokeRepeating("Key2Down",0.0f,speedy);
+			InvokeRepeating("Key1Down",0.0f,speedy);
 		}
 		GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, nSize++);
 	}
-	void Key2Down(){
-		if(nSize<=0.0f){
-			CancelInvoke("Key2Down");
-			InvokeRepeating("Key1Down",0.0f,speedy);
-		}
-		GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, nSize--);
-	}
+	// void Key2Down(){
+	// 	if(nSize<=0.0f){
+	// 		CancelInvoke("Key2Down");
+	// 		InvokeRepeating("Key1Down",0.0f,speedy);
+	// 	}
+	// 	GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, nSize--);
+	// }
 	void Key1Down(){
 		if(mSize<=0.0f){
 			CancelInvoke("Key1Down");
 			InvokeRepeating("Key1Up",0.0f,speed);
 		}
 		GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0, mSize--);
+		GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, nSize--);
 	}
 }

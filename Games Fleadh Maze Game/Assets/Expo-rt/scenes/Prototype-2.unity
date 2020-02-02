@@ -152,6 +152,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4393135294745728, guid: ac4477048a5643445b2cecf9e90a9bde, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494903322645692, guid: ac4477048a5643445b2cecf9e90a9bde, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692345558375794, guid: ac4477048a5643445b2cecf9e90a9bde, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac4477048a5643445b2cecf9e90a9bde, type: 2}
   m_IsPrefabParent: 0
@@ -8572,15 +8584,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
       propertyPath: m_Controller
@@ -8594,6 +8606,10 @@ Prefab:
       propertyPath: m_BlendShapeWeights.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f74de486742a8194693b8a59c73aec23, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8dbd1f5e853bb44b96d5dcd7df19edb, type: 3}
   m_IsPrefabParent: 0
