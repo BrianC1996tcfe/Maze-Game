@@ -9,7 +9,8 @@ public class FairyController : MonoBehaviour
     static Animator anim;
 	public Transform firePoint;
 	public GameObject fireballPrefab;
-	public int dmg = 10;
+	private float shootTime = 1f;
+	private float shootDelay = 1f;
 
 
     void Start()
@@ -34,11 +35,10 @@ public class FairyController : MonoBehaviour
                 anim.SetBool("isAttacking", false);
             }
             else
-            {
+			{
 				anim.SetBool("isAttacking", true);
 				anim.SetBool("isWalking", false);
-				Shoot ();
-
+				InvokeRepeating ("Shoot", shootTime, shootDelay);
             }
         }
         else
@@ -49,6 +49,7 @@ public class FairyController : MonoBehaviour
         }
     }
 	void Shoot (){
-		GameObject fireballClone = Instantiate (fireballPrefab, firePoint.position, firePoint.rotation);
+		Instantiate (fireballPrefab, firePoint.position, firePoint.rotation);
+		CancelInvoke ("Shoot");
 	}
 }

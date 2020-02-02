@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fireball : MonoBehaviour {
 
 	public float speed;
-	public int dmg;
+	public float dmg;
 	public Rigidbody rb;
 
 	// Use this for initialization
@@ -13,11 +13,8 @@ public class Fireball : MonoBehaviour {
 		rb.velocity = transform.forward * speed;
 	}
 
-	void OnTRiggerEnter(SphereCollider hitInfo){
-		EnemyHealth health = hitInfo.GetComponent<EnemyHealth> ();
-		if(health != null){
-			health.TakeDamage (dmg);
-		}
+	void OnTriggerEnter(Collider other){
+		other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);
 		Destroy (gameObject);
 	}
 }

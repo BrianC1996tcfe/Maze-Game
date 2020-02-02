@@ -6,9 +6,11 @@ public class movementControl : MonoBehaviour {
 
 	public float moveSpeed;
 	Animator anim;
+	private Rigidbody rb;
 
 	void Start (){
 		anim = GetComponent<Animator> ();
+		//rb = GetComponent<Rigidbody> ();
 	}
 
 	// Update is called once per frame
@@ -30,17 +32,20 @@ public class movementControl : MonoBehaviour {
 	void Animations(){
 		
 		if(Input.GetKeyDown("w")){
-			anim.SetBool ("Move", true);
+			anim.SetBool ("Front", true);
 			anim.SetBool ("Attack", false);
 			anim.SetBool ("Idle", false);
 		}else if(Input.GetKeyUp("w")){
-			anim.SetBool ("Move", false);
+			anim.SetBool ("Front", false);
 			anim.SetBool ("Attack", false);
 			anim.SetBool ("Idle", true);
 		}
+	
 		if (Input.GetButtonDown ("Fire1")) {
 			anim.SetTrigger ("Attack");
 		}
+	}
+	private void OnTriggerEnter(Collider other){
 	}
 }
 	
