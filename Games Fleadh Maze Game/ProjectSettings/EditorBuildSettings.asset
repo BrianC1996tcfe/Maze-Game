@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 079f7d79c4ccb1a4dab49319c257ae52
   - enabled: 1
-    path: Assets/Expo-rt/scenes/Test Square.unity
-    guid: 5ef761bbc331ca44291138bf6076c928
+    path: Assets/MazeAttempt2/M2.unity
+    guid: 662a2148605a9e54ca5ede51133d7d30
