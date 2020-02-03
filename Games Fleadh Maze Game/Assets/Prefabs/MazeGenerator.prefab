@@ -46,13 +46,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577563193924658}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 938cbe082dee65548ae192041c1a5b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 1721063979926592, guid: 571c2cc47b15fdb4baca65a9184a54ab, type: 2}
-  floor: {fileID: 1716704861386872, guid: 01b28bf5b62e41d4cb496da5357ef86a, type: 2}
+  wall: {fileID: 1747239484329038, guid: ad5a3b77faad7d442a0e2f2709347b1e, type: 2}
+  floor: {fileID: 1308154474610722, guid: 4be37e0cc46a2244097972ff0f64c0e5, type: 2}
   wallLenght: 1
   xSize: 10
   ySize: 10
