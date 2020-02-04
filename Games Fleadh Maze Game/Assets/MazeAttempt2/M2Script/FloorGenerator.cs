@@ -7,11 +7,11 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject colorfloor;
 	public GameObject Room;
 	public GameObject startTile,endTile;
-	public GameObject wall;
+	public GameObject wall,column;
 	public GameObject TextCheck;
 	//public GameObject northPass, southPass, eastPass, westPass;
 	public Vector2 size;
-	private int tilesize = 50;//,stack=0;
+	private int tilesize = 100;//,stack=0;
 
 	//private ArrayList stackList= new ArrayList();
 	private Stack<Vector2> mazeBlock = new Stack<Vector2>();
@@ -41,9 +41,9 @@ public class FloorGenerator : MonoBehaviour {
 		placeRed();
 		makeFloor();
 		pathfinder();
-		walls1();
+		makewalls();
 	}
-	private void walls1(){
+	private void makewalls(){
 		//creates row along x-axis
 		for(int i = 0; i<=size.x;i++){
 				for(int e=0;e<size.y;e++){
@@ -53,7 +53,11 @@ public class FloorGenerator : MonoBehaviour {
 						GameObject wallx = Instantiate(wall,posD,Quaternion.identity);
 						wallx.name="Wall X-axis row,  x-"+i+", z-"+e;
 						wallx.transform.parent = transform;
+						Vector3 posC = new Vector3((i*tilesize)-(tilesize/2),0,(e*tilesize)-(tilesize/2));
+					GameObject colum = Instantiate(column,posC,Quaternion.identity);
+					colum.transform.parent = transform;
 					}
+					
 				}
 		}
 		//creates rows along z-axis
@@ -65,6 +69,8 @@ public class FloorGenerator : MonoBehaviour {
 						GameObject wallz = Instantiate(wall,posD,Quaternion.Euler(0,90,0));
 						wallz.name="Wall Z-axis row, x-"+e+" ,z-"+i;
 						wallz.transform.parent = transform;
+						Vector3 posC = new Vector3((e*tilesize)-(tilesize/2),0,(i*tilesize)-(tilesize/2));
+					GameObject colum = Instantiate(column,posC,Quaternion.identity);
 						// 
 					}
 				}
@@ -86,8 +92,8 @@ public class FloorGenerator : MonoBehaviour {
 		cellsUsed=14;
 		// Debug.Log("USED "+cellsUsed+"USED "+((int)size.x*(int)size.y)+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
 		mazeBlock.Push(new Vector2(0,0));
-		GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
-		numText.name="numtext 0";
+		// GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
+		// numText.name="numtext 0";
 		//numText.GetComponent<TextMesh>().text="R";
 
 		partofmaze[0,0]=false;
@@ -164,9 +170,9 @@ public class FloorGenerator : MonoBehaviour {
 							Debug.Log("North "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y+1));
 							mazeBlock.Push(p);
 							tempcount++;
-							GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText2.name="numtext "+tempcount.ToString();
-								numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText2.name="numtext "+tempcount.ToString();
+							// 	numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 1:
 							Vector2 a = new Vector2(mazeBlock.Peek().x+1,mazeBlock.Peek().y);
@@ -176,9 +182,9 @@ public class FloorGenerator : MonoBehaviour {
 							Debug.Log("East "+tempcount+", Between x-"+(mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x+1)+", z-"+mazeBlock.Peek().y));
 							mazeBlock.Push(a);
 							tempcount++;
-							GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText3.name="numtext "+tempcount.ToString();
-								numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText3.name="numtext "+tempcount.ToString();
+							// 	numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 2:
 							Vector2 e = new Vector2(mazeBlock.Peek().x,mazeBlock.Peek().y-1);
@@ -188,9 +194,9 @@ public class FloorGenerator : MonoBehaviour {
 							Debug.Log("South "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y-1));
 							mazeBlock.Push(e);
 							tempcount++;
-							GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText4.name="numtext "+tempcount.ToString();
-								numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText4.name="numtext "+tempcount.ToString();
+							// 	numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 3:
 							Vector2 k = new Vector2(mazeBlock.Peek().x-1,mazeBlock.Peek().y);
@@ -200,9 +206,9 @@ public class FloorGenerator : MonoBehaviour {
 							Debug.Log("west "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x-1)+", z-"+mazeBlock.Peek().y);
 							mazeBlock.Push(k);
 							tempcount++;
-							GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText5.name="numtext "+tempcount.ToString();
-								numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText5.name="numtext "+tempcount.ToString();
+							// 	numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 					}
 					cellsUsed++;
@@ -274,14 +280,14 @@ public class FloorGenerator : MonoBehaviour {
 		GameObject prefabRoom = Instantiate(Room,Rpos,Quaternion.identity);
 	}
 	private void playerTile(){
-		Vector3 startpos = new Vector3(0,0,-50);
+		Vector3 startpos = new Vector3(0,0,-tilesize);
 		GameObject playerStart = Instantiate(startTile,startpos,Quaternion.Euler(0,180,0));
 		wallBoolRemove(0,0,"south");
 	}
 	private void endtile(){
-		Vector3 endpos = new Vector3(20*tilesize,0,9*tilesize);
+		Vector3 endpos = new Vector3(size.x*tilesize,0,(size.y-1)*tilesize);
 		GameObject playerend = Instantiate(endTile,endpos,Quaternion.Euler(0,90,0));
-		wallBoolRemove(19,9,"east");
+		wallBoolRemove((int)size.x-1,(int)size.y-1,"east");
 	}
 	private void placeRed(){
 		for(int i=0;i<=2;i++){
@@ -290,8 +296,10 @@ public class FloorGenerator : MonoBehaviour {
 				x=Random.Range(0,(int)size.x);
 				z=Random.Range(0,(int)size.y);
 			}
+			int rondam = Random.Range(0,3);
+			int rotato = 90*rondam;
 			Vector3 redpos = new Vector3(x*tilesize,0,z*tilesize);
-			GameObject RedFloor = Instantiate(colorfloor,redpos,Quaternion.identity);
+			GameObject RedFloor = Instantiate(colorfloor,redpos,Quaternion.Euler(0,rotato,0));
 			partofmaze[x,z]=false;
 			wallBoolRemove(x,z,"all");
 		}
@@ -301,8 +309,10 @@ public class FloorGenerator : MonoBehaviour {
 		for(int i=0;i<size.x;i++){
 			for(int e=0;e<size.y;e++){
 				if(partofmaze[i,e]==true){
+					int rondam = Random.Range(0,3);
+					int rotato = 90*rondam;
 					Vector3 zpos = new Vector3(i*tilesize,0,e*tilesize);
-					GameObject madeFloor = Instantiate(floor,zpos,Quaternion.identity);
+					GameObject madeFloor = Instantiate(floor,zpos,Quaternion.Euler(0,rotato,0));
 					madeFloor.name = "FloorTile, x-"+i+", z-"+e;
 					madeFloor.transform.parent = transform;
 				}
