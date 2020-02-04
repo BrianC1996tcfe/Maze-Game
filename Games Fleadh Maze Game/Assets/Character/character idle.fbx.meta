@@ -38,6 +38,39 @@ ModelImporter:
     100064: R upper arm.001
     100066: R upper leg.001
     100068: tummy
+    100070: foot.L
+    100072: foot.L_end
+    100074: foot.R
+    100076: foot.R_end
+    100078: hand.L
+    100080: hand.L_end
+    100082: hand.R
+    100084: hand.R_end
+    100086: ik target L
+    100088: ik target L_end
+    100090: ik target R
+    100092: ik target R_end
+    100094: lower arm.L
+    100096: lower arm.R
+    100098: lower body
+    100100: lower leg.L
+    100102: lower leg.R
+    100104: lower wing.L
+    100106: lower wing.L_end
+    100108: lower wing.R
+    100110: lower wing.R_end
+    100112: pole L
+    100114: pole L_end
+    100116: pole R
+    100118: pole R_end
+    100120: upper arm.L
+    100122: upper arm.R
+    100124: upper leg.L
+    100126: upper leg.R
+    100128: upper wing.L
+    100130: upper wing.L_end
+    100132: upper wing.R
+    100134: upper wing.R_end
     400000: Armature
     400002: //RootNode
     400004: chest
@@ -73,6 +106,39 @@ ModelImporter:
     400064: R upper arm.001
     400066: R upper leg.001
     400068: tummy
+    400070: foot.L
+    400072: foot.L_end
+    400074: foot.R
+    400076: foot.R_end
+    400078: hand.L
+    400080: hand.L_end
+    400082: hand.R
+    400084: hand.R_end
+    400086: ik target L
+    400088: ik target L_end
+    400090: ik target R
+    400092: ik target R_end
+    400094: lower arm.L
+    400096: lower arm.R
+    400098: lower body
+    400100: lower leg.L
+    400102: lower leg.R
+    400104: lower wing.L
+    400106: lower wing.L_end
+    400108: lower wing.R
+    400110: lower wing.R_end
+    400112: pole L
+    400114: pole L_end
+    400116: pole R
+    400118: pole R_end
+    400120: upper arm.L
+    400122: upper arm.R
+    400124: upper leg.L
+    400126: upper leg.R
+    400128: upper wing.L
+    400130: upper wing.L_end
+    400132: upper wing.R
+    400134: upper wing.R_end
     2100000: Material
     4300000: Cube
     7400000: Armature|Action
