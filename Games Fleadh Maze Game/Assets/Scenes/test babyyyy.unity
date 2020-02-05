@@ -238,9 +238,68 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114672964870078446, guid: e11e485f8e86a8c4e930309387b904bc,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95791881139543834, guid: e11e485f8e86a8c4e930309387b904bc,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f8417ed9cf6f0cf4c838b06d41ecfaec, type: 2}
+    - target: {fileID: 54957559001476274, guid: e11e485f8e86a8c4e930309387b904bc,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e11e485f8e86a8c4e930309387b904bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &210894778 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1252512295244862, guid: e11e485f8e86a8c4e930309387b904bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 210894777}
+--- !u!143 &210894779
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210894778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &210894780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210894778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9695a72f920aa584c8c6a4402990ed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputZ: 0
+  inputX: 0
+  desiredMoveDirection: {x: 0, y: 0, z: 0}
+  blockRotationPlayer: 0
+  desiredRotationspeed: 0.1
+  anim: {fileID: 0}
+  Speed: 0
+  allowPlayerRotation: 0.1
+  cam: {fileID: 0}
+  controller: {fileID: 0}
+  isGrounded: 0
 --- !u!1001 &655683235
 Prefab:
   m_ObjectHideFlags: 0
@@ -285,6 +344,10 @@ Prefab:
       propertyPath: cameraFollowObject
       value: 
       objectReference: {fileID: 1524369160}
+    - target: {fileID: 1204123049828932, guid: cc72bb07002b9ac4a81a922a100263ed, type: 2}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc72bb07002b9ac4a81a922a100263ed, type: 2}
   m_IsPrefabParent: 0
