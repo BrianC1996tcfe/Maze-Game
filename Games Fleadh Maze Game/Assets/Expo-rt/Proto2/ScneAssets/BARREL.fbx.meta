@@ -1,41 +1,23 @@
 fileFormatVersion: 2
-guid: 8936256600c7769429eaba0c6e0e1368
+guid: 5ba2f281d485bae4b8f8a33990d846a8
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: ChestBottom
-    100004: ChestHinges
-    100006: ChestTop
+    100002: Cylinder
+    100004: Cylinder.001
     400000: //RootNode
-    400002: ChestBottom
-    400004: ChestHinges
-    400006: ChestTop
-    2100000: Material
-    2100002: Material.001
-    2300000: ChestBottom
-    2300002: ChestHinges
-    2300004: ChestTop
-    3300000: ChestBottom
-    3300002: ChestHinges
-    3300004: ChestTop
-    4300000: ChestTop
-    4300002: ChestBottom
-    4300004: ChestHinges
-    7400000: ChestClose
-    7400002: ChestTop|ChestOpen
-    9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100002, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+    400002: Cylinder
+    400004: Cylinder.001
+    2100000: Material.001
+    2100002: Material.002
+    2300000: Cylinder
+    2300002: Cylinder.001
+    3300000: Cylinder
+    3300002: Cylinder.001
+    4300000: Cylinder
+    4300002: Cylinder.001
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,35 +43,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: ChestTop|ChestOpen
-      takeName: ChestTop|ChestOpen
-      firstFrame: 0
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -137,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

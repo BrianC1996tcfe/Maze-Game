@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8936256600c7769429eaba0c6e0e1368
+guid: cfe71f46cef8dfc41bdcf4dfa4251e8b
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -11,8 +11,8 @@ ModelImporter:
     400002: ChestBottom
     400004: ChestHinges
     400006: ChestTop
-    2100000: Material
-    2100002: Material.001
+    2100000: Material.001
+    2100002: Material
     2300000: ChestBottom
     2300002: ChestHinges
     2300004: ChestTop
@@ -25,17 +25,7 @@ ModelImporter:
     7400000: ChestClose
     7400002: ChestTop|ChestOpen
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100002, guid: 8936256600c7769429eaba0c6e0e1368, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,35 +51,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: ChestTop|ChestOpen
-      takeName: ChestTop|ChestOpen
-      firstFrame: 0
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
