@@ -36,6 +36,9 @@ public class NewMovement : MonoBehaviour {
 		moveVector = new Vector3 (0, verticalVel, 0);
 		controller.Move (moveVector);
 
+		if (Input.GetButtonDown ("Fire1")) {
+			anim.SetTrigger ("isAttacking");
+		}
 	}
 
 	void PlayerMoveAndRotation(){
