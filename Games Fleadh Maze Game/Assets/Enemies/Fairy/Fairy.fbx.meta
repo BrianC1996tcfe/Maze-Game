@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3b49223a69922e43b8a0ad5c97d3968
+guid: d6b2ef827201b314489e9761eca28400
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -86,9 +86,9 @@ ModelImporter:
     2100000: Material
     4300000: Cube
     7400000: Armature|attack
-    7400002: Armature|Idle.001
+    7400002: Armature|Idle
     7400004: Armature|library
-    7400006: Armature|walking
+    7400006: Armature|walk
     9500000: //RootNode
     13700000: Cube
   externalObjects: {}
@@ -147,8 +147,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Idle.001
-      takeName: Armature|Idle.001
+      name: Armature|Idle
+      takeName: Armature|Idle
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -178,7 +178,7 @@ ModelImporter:
       name: Armature|library
       takeName: Armature|library
       firstFrame: 0
-      lastFrame: 2
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -203,8 +203,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|walking
-      takeName: Armature|walking
+      name: Armature|walk
+      takeName: Armature|walk
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0

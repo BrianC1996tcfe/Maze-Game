@@ -23,7 +23,8 @@ public class EnemyController : MonoBehaviour {
             anim.SetBool("isIdle", false);
 
 			if(direction.magnitude > 7){
-				this.transform.Translate (0,0,0.2f);
+				//0.05f is the movement speed towards the player
+				this.transform.Translate (0,0,0.05f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
 			}
