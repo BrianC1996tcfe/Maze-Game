@@ -71,6 +71,10 @@ ModelImporter:
     100130: upper wing.L_end
     100132: upper wing.R
     100134: upper wing.R_end
+    100136: Armature.001
+    100138: Bone
+    100140: Bone_end
+    100142: Cube.002
     400000: Armature
     400002: //RootNode
     400004: chest
@@ -139,8 +143,16 @@ ModelImporter:
     400130: upper wing.L_end
     400132: upper wing.R
     400134: upper wing.R_end
+    400136: Armature.001
+    400138: Bone
+    400140: Bone_end
+    400142: Cube.002
     2100000: Material
+    2100002: Material.001
+    2300000: Cube.002
+    3300000: Cube.002
     4300000: Cube
+    4300002: Cube.002
     7400000: Armature|Action
     7400002: Armature|attack animation1
     7400004: Armature|Idle animation
