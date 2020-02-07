@@ -33,16 +33,38 @@ public class FloorGenerator : MonoBehaviour {
 		partofWallZ = new bool[(int)size.x,(int)size.y+1];
 		// Debug.Log("2zUSED "+partofWallZ.GetLength(0)+"USED "+partofWallZ.GetLength(1));
 		// Debug.Log("T "+size.x+" "+size.y+" "+size);
+		cellsUsed=0;
 		setBoolsTrue();
-		placePrefab();
+		if(!(size.y<10 || size.x<10)){
+			placePrefab();
+		}
+		
 		playerTile();
 		endtile();
 		// Debug.Log("19");
-		placeRed();
+		int chestnum = Mathf.RoundToInt((size.x*size.y)/50);
+		if(!(chestnum==0)){
+			placeChests(chestnum);
+		}
 		makeFloor();
 		pathfinder();
 		makewalls();
+		corners();
 	}
+	private void corners(){
+		//creates row along x-axis
+		for(int i = 0; i<=size.x;i++){
+				for(int e=0;e<=size.y;e++){
+					// if(partofWallX[e,i]){
+					// Debug.Log("e, "+e+" i, "+i);
+					Vector3 posC = new Vector3((i*tilesize)-(tilesize/2),0,(e*tilesize)-(tilesize/2));
+					GameObject colum = Instantiate(column,posC,Quaternion.identity);
+					colum.transform.parent = transform;
+					// }	
+				}
+		}
+	}
+		
 	private void makewalls(){
 		//creates row along x-axis
 		for(int i = 0; i<=size.x;i++){
@@ -53,9 +75,9 @@ public class FloorGenerator : MonoBehaviour {
 						GameObject wallx = Instantiate(wall,posD,Quaternion.identity);
 						wallx.name="Wall X-axis row,  x-"+i+", z-"+e;
 						wallx.transform.parent = transform;
-						Vector3 posC = new Vector3((i*tilesize)-(tilesize/2),0,(e*tilesize)-(tilesize/2));
-					GameObject colum = Instantiate(column,posC,Quaternion.identity);
-					colum.transform.parent = transform;
+					// 	Vector3 posC = new Vector3((i*tilesize)-(tilesize/2),0,(e*tilesize)-(tilesize/2));
+					// GameObject colum = Instantiate(column,posC,Quaternion.identity);
+					// colum.transform.parent = transform;
 					}
 					
 				}
@@ -69,8 +91,8 @@ public class FloorGenerator : MonoBehaviour {
 						GameObject wallz = Instantiate(wall,posD,Quaternion.Euler(0,90,0));
 						wallz.name="Wall Z-axis row, x-"+e+" ,z-"+i;
 						wallz.transform.parent = transform;
-						Vector3 posC = new Vector3((e*tilesize)-(tilesize/2),0,(i*tilesize)-(tilesize/2));
-					GameObject colum = Instantiate(column,posC,Quaternion.identity);
+					// 	Vector3 posC = new Vector3((e*tilesize)-(tilesize/2),0,(i*tilesize)-(tilesize/2));
+					// GameObject colum = Instantiate(column,posC,Quaternion.identity);
 						// 
 					}
 				}
@@ -79,22 +101,26 @@ public class FloorGenerator : MonoBehaviour {
 	private void pathfinder(){
 		//This Gets 46 for some odd reason
 
-		// cellsUsed=0;
-		// for(int i=0;i<partofmaze.GetLength(0);i++){
-		// 	for(int a=0;a<partofmaze.GetLength(1);a++){
-		// 		if(!(partofmaze[i,a])){
-		// 			cellsUsed++;
-		// 		}
-		// 	}
-		// }
+		//cellsUsed=0;
+		Debug.Log("**USED "+cellsUsed+"USED "+(partofmaze.GetLength(0)*partofmaze.GetLength(1))+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
+		for(int i=0;i<size.x;i++){
+			for(int ae=0;ae<size.y;ae++){
+				Debug.Log("WhatNow "+i+" "+ae+" "+partofmaze[i,ae]);
+				//}
+				if(!(partofmaze[i,ae])){
+					cellsUsed++;
+					//Debug.Log("KUMinPant "+i+" "+ae+" "+partofmaze[i,ae]);
+				}
+			}
+		}
 		//--temporary until i can calculate it correctly--
 		//cellsUsed=0;
-		cellsUsed=14;
-		// Debug.Log("USED "+cellsUsed+"USED "+((int)size.x*(int)size.y)+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
+		// cellsUsed=14;
+		Debug.Log("-*-*-USED "+cellsUsed+"USED "+((int)size.x*(int)size.y)+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
 		mazeBlock.Push(new Vector2(0,0));
-		// GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
-		// numText.name="numtext 0";
-		//numText.GetComponent<TextMesh>().text="R";
+		GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
+		numText.name="numtext 0";
+		// numText.GetComponent<TextMesh>().text="R";
 
 		partofmaze[0,0]=false;
 		// pathTemp(mazeBlock.Peek(),0);
@@ -113,30 +139,30 @@ public class FloorGenerator : MonoBehaviour {
 					//north=true;
 					south=true;
 					neighbourCount++;
-					Debug.Log("Is South? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
+					// Debug.Log("Is South? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
 					
 				}
 				//check if east is usable
 				if(mazeBlock.Peek().x < size.x && ((partofmaze[(int)mazeBlock.Peek().x + 1, (int)mazeBlock.Peek().y]))){
 					east=true;
 					neighbourCount++;
-					Debug.Log("Is East? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
+					// Debug.Log("Is East? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
 				}
 				//check if south is usable
 				if(mazeBlock.Peek().y < size.y && ((partofmaze[(int)mazeBlock.Peek().x, (int)mazeBlock.Peek().y + 1]))){
 					north=true;
 					//south=true;
 					neighbourCount++;
-					Debug.Log("Is North? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
+					// Debug.Log("Is North? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
 				}
 				//check if west is usable
 				if(mazeBlock.Peek().x > 0 && ((partofmaze[(int)mazeBlock.Peek().x - 1, (int)mazeBlock.Peek().y]))){
 					west=true;
 					neighbourCount++;
-					Debug.Log("Is West? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
+					// Debug.Log("Is West? x-"+mazeBlock.Peek().x+" z-"+mazeBlock.Peek().y);
 					
 				}
-				Debug.Log("Path Try- "+tempcount+" Neighbours "+ neighbourCount);
+				// Debug.Log("Path Try- "+tempcount+" Neighbours "+ neighbourCount);
 				int[] neighbour = new int[neighbourCount];
 				//add to array
 					int nC=0;
@@ -167,48 +193,48 @@ public class FloorGenerator : MonoBehaviour {
 							//pathTemp(p,0);
 							partofmaze[(int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y+1]=false;
 							wallBoolRemove((int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y,"north");
-							Debug.Log("North "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y+1));
+							// Debug.Log("North "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y+1));
 							mazeBlock.Push(p);
 							tempcount++;
-							// GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
-							// 	numText2.name="numtext "+tempcount.ToString();
-							// 	numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
+								numText2.name="numtext "+tempcount.ToString();
+								numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 1:
 							Vector2 a = new Vector2(mazeBlock.Peek().x+1,mazeBlock.Peek().y);
 							//pathTemp(a,1);
 							partofmaze[(int)mazeBlock.Peek().x+1,(int)mazeBlock.Peek().y]=false;
 							wallBoolRemove((int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y,"east");
-							Debug.Log("East "+tempcount+", Between x-"+(mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x+1)+", z-"+mazeBlock.Peek().y));
+							// Debug.Log("East "+tempcount+", Between x-"+(mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x+1)+", z-"+mazeBlock.Peek().y));
 							mazeBlock.Push(a);
 							tempcount++;
-							// GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
-							// 	numText3.name="numtext "+tempcount.ToString();
-							// 	numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
+								numText3.name="numtext "+tempcount.ToString();
+								numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 2:
 							Vector2 e = new Vector2(mazeBlock.Peek().x,mazeBlock.Peek().y-1);
 							//pathTemp(e,2);
 							partofmaze[(int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y-1]=false;
 							wallBoolRemove((int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y,"south");
-							Debug.Log("South "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y-1));
+							// Debug.Log("South "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y-1));
 							mazeBlock.Push(e);
 							tempcount++;
-							// GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
-							// 	numText4.name="numtext "+tempcount.ToString();
-							// 	numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
+								numText4.name="numtext "+tempcount.ToString();
+								numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 3:
 							Vector2 k = new Vector2(mazeBlock.Peek().x-1,mazeBlock.Peek().y);
 							//pathTemp(k,3);
 							partofmaze[(int)mazeBlock.Peek().x-1,(int)mazeBlock.Peek().y]=false;
 							wallBoolRemove((int)mazeBlock.Peek().x,(int)mazeBlock.Peek().y,"west");
-							Debug.Log("west "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x-1)+", z-"+mazeBlock.Peek().y);
+							// Debug.Log("west "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x-1)+", z-"+mazeBlock.Peek().y);
 							mazeBlock.Push(k);
 							tempcount++;
-							// GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
-							// 	numText5.name="numtext "+tempcount.ToString();
-							// 	numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
+								numText5.name="numtext "+tempcount.ToString();
+								numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 					}
 					cellsUsed++;
@@ -216,12 +242,12 @@ public class FloorGenerator : MonoBehaviour {
 				else{
 					mazeBlock.Pop();
 				}
-				Debug.Log("squash "+ cellsUsed+" "+(size.x*size.y));
+				// Debug.Log("squash "+ cellsUsed+" "+(size.x*size.y));
 				// if((cellsUsed<(size.x*size.y))){
 				// pathfinder();
 				// }
 		}
-		Debug.Log("Finito c "+cellsUsed+" t "+tempcount);
+		// Debug.Log("Finito c "+cellsUsed+" t "+tempcount);
 	}
 		private void wallBoolRemove(int x,int z, string direction){
 			switch(direction){
@@ -289,20 +315,86 @@ public class FloorGenerator : MonoBehaviour {
 		GameObject playerend = Instantiate(endTile,endpos,Quaternion.Euler(0,90,0));
 		wallBoolRemove((int)size.x-1,(int)size.y-1,"east");
 	}
-	private void placeRed(){
-		for(int i=0;i<=2;i++){
-			int x=Random.Range(0,(int)size.x),z=Random.Range(0,(int)size.y);
-			while(partofmaze[x,z]==false){
+	private void placeChests(int spawnNum){
+		for(int i=0;i<spawnNum;i++){
+			int x=Random.Range(0,(int)size.x-1),z=Random.Range(0,(int)size.y);
+			//stop from placing on top of something else
+			while(partofmaze[x,z]==false || (x==0 && z==0) || (x==(int)size.x-1 && z==(int)size.y-1)){
 				x=Random.Range(0,(int)size.x);
 				z=Random.Range(0,(int)size.y);
 			}
-			int rondam = Random.Range(0,3);
-			int rotato = 90*rondam;
+			//https://answers.unity.com/questions/452983/how-to-exclude-int-values-from-randomrange.html
+			//wont rotate to outside
+			int[] ValDir;
+			if(z==0 && x==(int)size.x-1){
+				ValDir=new int[]{2,3};
+				
+			}
+			else if(z==0){
+				ValDir=new int[]{0,2,3};
+			}
+			else if(x==(int)size.x-1){
+				ValDir=new int[]{1,2,3};
+				Debug.Log("TOOT");
+				
+			}
+			else if(x==0 && z==(int)size.y-1 ){
+				ValDir=new int[]{0,1};
+				
+			}
+			else if(x==0){
+				ValDir=new int[]{0,1,3};
+			}
+			else if(z==(int)size.y-1){
+				ValDir=new int[]{0,1,2};
+				Debug.Log("TOOTTjooj");
+			}
+			else{
+				ValDir=new int[]{0,1,2,3};
+			}
+			int mandy = ValDir[Random.Range(0,ValDir.Length)];
+			prefabrotationcheck(mandy,x,z,ValDir);
+			// 
+			int rotato = 90*mandy;
+			// int rotato=90*0;
+			//int rotato=90*2;
 			Vector3 redpos = new Vector3(x*tilesize,0,z*tilesize);
 			GameObject RedFloor = Instantiate(colorfloor,redpos,Quaternion.Euler(0,rotato,0));
 			partofmaze[x,z]=false;
 			wallBoolRemove(x,z,"all");
 		}
+	}
+	public void prefabrotationcheck(int mandy,int x,int z,int[] ValDir){
+		switch(mandy){
+				case 0:
+					if(!partofmaze[x+1,z]){
+						while(mandy==0){
+							mandy = ValDir[Random.Range(0,ValDir.Length)];
+						}
+					}
+				break;
+				case 1:
+					if(!partofmaze[x,z-1]){
+						while(mandy==1){
+							mandy = ValDir[Random.Range(0,ValDir.Length)];
+						}
+					}
+				break;
+				case 2:
+					if(!partofmaze[x-1,z]){
+						while(mandy==2){
+							mandy = ValDir[Random.Range(0,ValDir.Length)];
+						}
+					}
+				break;
+				case 3:
+					if(!partofmaze[x,z+1]){
+						while(mandy==3){
+							mandy = ValDir[Random.Range(0,ValDir.Length)];
+						}
+					}
+				break;
+			}
 	}
 
 	private void makeFloor(){
