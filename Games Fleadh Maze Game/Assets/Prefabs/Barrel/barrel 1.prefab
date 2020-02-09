@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33060710730610204}
   - component: {fileID: 23902991003519820}
   - component: {fileID: 65231320670807766}
-  - component: {fileID: 114568717112641892}
+  - component: {fileID: 114653234801692374}
   m_Layer: 0
   m_Name: barrel 1
   m_TagString: Untagged
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967802274997960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0006, y: -0, z: 0.0186}
+  m_LocalPosition: {x: -0.0001, y: -0, z: 0.0238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4846482220909918}
@@ -125,7 +125,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029192641, y: 0.029192636, z: 0.034999993}
   m_Center: {x: 0.0000000018626451, y: -0.0000000018626448, z: 0}
---- !u!114 &114568717112641892
+--- !u!114 &114653234801692374
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
