@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class swordDamage : MonoBehaviour {
 
-	public float dmg;
+	//public float dmg;
 
-	void OnTriggerEnter(Collider other){
-		other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);
-	}
+	//private void OnTriggerEnter(Collider other){
+	//	other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);
+	//}
 }

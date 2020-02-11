@@ -138,6 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4834825926855740}
   broken: {fileID: 1278265299634970, guid: 19c370f5d97395a4d87554fc05988702, type: 2}
-  spawn1: {fileID: 1108896679300934, guid: 3042113f5042d9e48b6735bdf9a511db, type: 2}
+  spawn1: {fileID: 1263158996461366, guid: cea5473f7e9417943b04c91273a51442, type: 2}
   spawn2: {fileID: 1786544870029526, guid: 15fc922510bf52a47af1de5e6096cf17, type: 2}
-  spawn3: {fileID: 1108896679300934, guid: 3042113f5042d9e48b6735bdf9a511db, type: 2}
+  spawn3: {fileID: 1263158996461366, guid: cea5473f7e9417943b04c91273a51442, type: 2}

@@ -20,7 +20,6 @@ public class PlayerHealth : MonoBehaviour {
 		if (cur_Health <= 0){
 			Destroy (gameObject);
 		}
-		Debug.Log (cur_Health);
 	}
 	
 	public void SetHealthBar(){
