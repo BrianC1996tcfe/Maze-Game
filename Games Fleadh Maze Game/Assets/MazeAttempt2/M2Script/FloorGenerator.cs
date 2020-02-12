@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FloorGenerator : MonoBehaviour {
 	public GameObject floor;
-	public GameObject colorfloor;
-	public GameObject Room;
+	public GameObject LootRoom;
+	public GameObject BossRoom;
+	public GameObject SewerRoom;
 	public GameObject startTile,endTile;
 	public GameObject wall,column;
 	public GameObject TextCheck;
-	//public GameObject northPass, southPass, eastPass, westPass;
+	public GameObject sewerpath, sewerConnectMid;
 	public Vector2 size;
-	private int tilesize = 100;//,stack=0;
+	private int tilesize = 50;//,stack=0;
 
 	//private ArrayList stackList= new ArrayList();
 	private Stack<Vector2> mazeBlock = new Stack<Vector2>();
@@ -36,7 +37,8 @@ public class FloorGenerator : MonoBehaviour {
 		cellsUsed=0;
 		setBoolsTrue();
 		if(!(size.y<10 || size.x<10)){
-			placePrefab();
+			placeBossRoomPrefab();
+			placeSewerRoomPrefab();
 		}
 		
 		playerTile();
@@ -102,10 +104,10 @@ public class FloorGenerator : MonoBehaviour {
 		//This Gets 46 for some odd reason
 
 		//cellsUsed=0;
-		Debug.Log("**USED "+cellsUsed+"USED "+(partofmaze.GetLength(0)*partofmaze.GetLength(1))+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
+		//Debug.Log("**USED "+cellsUsed+"USED "+(partofmaze.GetLength(0)*partofmaze.GetLength(1))+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
 		for(int i=0;i<size.x;i++){
 			for(int ae=0;ae<size.y;ae++){
-				Debug.Log("WhatNow "+i+" "+ae+" "+partofmaze[i,ae]);
+				//Debug.Log("WhatNow "+i+" "+ae+" "+partofmaze[i,ae]);
 				//}
 				if(!(partofmaze[i,ae])){
 					cellsUsed++;
@@ -116,10 +118,10 @@ public class FloorGenerator : MonoBehaviour {
 		//--temporary until i can calculate it correctly--
 		//cellsUsed=0;
 		// cellsUsed=14;
-		Debug.Log("-*-*-USED "+cellsUsed+"USED "+((int)size.x*(int)size.y)+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
+		//Debug.Log("-*-*-USED "+cellsUsed+"USED "+((int)size.x*(int)size.y)+"USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
 		mazeBlock.Push(new Vector2(0,0));
-		GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
-		numText.name="numtext 0";
+		// GameObject numText = Instantiate(TextCheck,new Vector3(0,1,0),Quaternion.Euler(90,90,0));	
+		// numText.name="numtext 0";
 		// numText.GetComponent<TextMesh>().text="R";
 
 		partofmaze[0,0]=false;
@@ -196,9 +198,9 @@ public class FloorGenerator : MonoBehaviour {
 							// Debug.Log("North "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y+1));
 							mazeBlock.Push(p);
 							tempcount++;
-							GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText2.name="numtext "+tempcount.ToString();
-								numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText2 = Instantiate(TextCheck,new Vector3(p.x*tilesize,1,p.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText2.name="numtext "+tempcount.ToString();
+							// 	numText2.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 1:
 							Vector2 a = new Vector2(mazeBlock.Peek().x+1,mazeBlock.Peek().y);
@@ -208,9 +210,9 @@ public class FloorGenerator : MonoBehaviour {
 							// Debug.Log("East "+tempcount+", Between x-"+(mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x+1)+", z-"+mazeBlock.Peek().y));
 							mazeBlock.Push(a);
 							tempcount++;
-							GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText3.name="numtext "+tempcount.ToString();
-								numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText3 = Instantiate(TextCheck,new Vector3(a.x*tilesize,1,a.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText3.name="numtext "+tempcount.ToString();
+							// 	numText3.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 2:
 							Vector2 e = new Vector2(mazeBlock.Peek().x,mazeBlock.Peek().y-1);
@@ -220,9 +222,9 @@ public class FloorGenerator : MonoBehaviour {
 							// Debug.Log("South "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+mazeBlock.Peek().x+", z-"+(mazeBlock.Peek().y-1));
 							mazeBlock.Push(e);
 							tempcount++;
-							GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText4.name="numtext "+tempcount.ToString();
-								numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText4 = Instantiate(TextCheck,new Vector3(e.x*tilesize,1,e.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText4.name="numtext "+tempcount.ToString();
+							// 	numText4.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 						case 3:
 							Vector2 k = new Vector2(mazeBlock.Peek().x-1,mazeBlock.Peek().y);
@@ -232,9 +234,9 @@ public class FloorGenerator : MonoBehaviour {
 							// Debug.Log("west "+tempcount+", Between x-"+mazeBlock.Peek().x+", z-"+mazeBlock.Peek().y+" and x-"+(mazeBlock.Peek().x-1)+", z-"+mazeBlock.Peek().y);
 							mazeBlock.Push(k);
 							tempcount++;
-							GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
-								numText5.name="numtext "+tempcount.ToString();
-								numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
+							// GameObject numText5 = Instantiate(TextCheck,new Vector3(k.x*tilesize,1,k.y*tilesize),Quaternion.Euler(90,90,0));	
+							// 	numText5.name="numtext "+tempcount.ToString();
+							// 	numText5.GetComponent<TextMesh>().text=""+tempcount.ToString();
 							break;
 					}
 					cellsUsed++;
@@ -284,8 +286,8 @@ public class FloorGenerator : MonoBehaviour {
 			}
 	}
 		
-	private void placePrefab(){
-		RoomPrefab_Boss room1 =  Room.GetComponent<RoomPrefab_Boss>();
+	private void placeBossRoomPrefab(){
+		RoomPrefab_Boss room1 =  BossRoom.GetComponent<RoomPrefab_Boss>();
 		Vector2[] newpos =  new Vector2[room1.tilepos.Length];
 		int maxX = (int)size.x - (int)room1.rangeX.x;
 		int maxZ = (int)size.y - (int)room1.rangeZ.x;
@@ -303,7 +305,39 @@ public class FloorGenerator : MonoBehaviour {
 			wallBoolRemove((int)newpos[i].x,(int)newpos[i].y,"all");
 		}
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
-		GameObject prefabRoom = Instantiate(Room,Rpos,Quaternion.identity);
+		GameObject prefabRoom = Instantiate(BossRoom,Rpos,Quaternion.identity);
+		if(room1.sewerConnected==true){
+			Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,25,(room1.sewerPoint.y+zr)*tilesize);
+			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+		}
+	}
+	private void placeSewerRoomPrefab(){
+		RoomPrefab_SewerEntrance room2 =  SewerRoom.GetComponent<RoomPrefab_SewerEntrance>();
+		Vector2[] newpos =  new Vector2[room2.tilepos.Length];
+		int maxX = (int)size.x - (int)room2.rangeX.x;
+		int maxZ = (int)size.y - (int)room2.rangeZ.x;
+		int minX = 0-(int)room2.rangeX.y;
+		int minZ =	0-(int)room2.rangeZ.y;
+		int xr = Random.Range(minX, maxX);
+		int	zr = Random.Range(minZ, maxZ);
+		 Debug.Log("Checknumbers : [sizex- "+size.x+" sizey- "+size.y+"] [minX- "+minX+" maxX- "+maxX+"] [minZ- "+minZ+" maxZ- "+maxZ+"] [xrand- "+xr+"  zrand- "+zr+"]");
+		for(int i=0;i<room2.tilepos.Length;i++){
+			Debug.Log("Check V2-"+room2.tilepos[i]+" /"+xr+" , "+zr);
+			newpos[i].x = (int)room2.tilepos[i].x + xr;
+			newpos[i].y = (int)room2.tilepos[i].y + zr;
+			 Debug.Log("Co-ordinate "+i+" (x-"+(int)newpos[i].x+" z-"+(int)newpos[i].y+") Length: "+room2.tilepos.Length);
+			partofmaze[(int)newpos[i].x,(int)newpos[i].y]=false;
+			wallBoolRemove((int)newpos[i].x,(int)newpos[i].y,"all");
+			GameObject numText2 = Instantiate(TextCheck,new Vector3(newpos[i].x*tilesize,1,newpos[i].y*tilesize),Quaternion.Euler(90,90,0));	
+								numText2.name="numtext "+i.ToString();
+								numText2.GetComponent<TextMesh>().text=""+i.ToString();
+		}
+		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
+		GameObject prefabRoom = Instantiate(SewerRoom,Rpos,Quaternion.identity);
+		if(room2.sewerConnected==true){
+			Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,25,(room2.sewerPoint.y+zr)*tilesize);
+			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+		}
 	}
 	private void playerTile(){
 		Vector3 startpos = new Vector3(0,0,-tilesize);
@@ -319,7 +353,8 @@ public class FloorGenerator : MonoBehaviour {
 		for(int i=0;i<spawnNum;i++){
 			int x=Random.Range(0,(int)size.x-1),z=Random.Range(0,(int)size.y);
 			//stop from placing on top of something else
-			while(partofmaze[x,z]==false || (x==0 && z==0) || (x==(int)size.x-1 && z==(int)size.y-1)){
+			//**fix it so that it can't be placed between **
+			while(partofmaze[x,z]==false || (x==0 && z==0) || (x==(int)size.x-1 && z==(int)size.y-1 || ( !partofmaze[x+1,z] && !partofmaze[x,z-1] && !partofmaze[x-1,z] && !partofmaze[x,z+1]))){
 				x=Random.Range(0,(int)size.x);
 				z=Random.Range(0,(int)size.y);
 			}
@@ -359,7 +394,7 @@ public class FloorGenerator : MonoBehaviour {
 			// int rotato=90*0;
 			//int rotato=90*2;
 			Vector3 redpos = new Vector3(x*tilesize,0,z*tilesize);
-			GameObject RedFloor = Instantiate(colorfloor,redpos,Quaternion.Euler(0,rotato,0));
+			GameObject RedFloor = Instantiate(LootRoom,redpos,Quaternion.Euler(0,rotato,0));
 			partofmaze[x,z]=false;
 			wallBoolRemove(x,z,"all");
 		}
