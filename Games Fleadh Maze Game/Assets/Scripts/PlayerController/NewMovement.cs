@@ -18,9 +18,6 @@ public class NewMovement : MonoBehaviour {
 	private float verticalVel;
 	private Vector3 moveVector;
 
-	public int cooldownTime;
-	private int nextattack;
-
 	void Start () {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
