@@ -18,6 +18,9 @@ public class NewMovement : MonoBehaviour {
 	private float verticalVel;
 	private Vector3 moveVector;
 
+	public int cooldownTime;
+	private int nextattack;
+
 	void Start () {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
@@ -36,7 +39,7 @@ public class NewMovement : MonoBehaviour {
 		moveVector = new Vector3 (0, verticalVel, 0);
 		controller.Move (moveVector);
 
-		if (Input.GetButtonDown ("Fire1")) {
+		if (Input.GetMouseButtonDown (0)) {
 			//anim.SetTrigger ("isAttacking");
 			anim.SetBool ("Attack", true);
 			anim.SetBool ("Movement", false);
