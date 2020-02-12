@@ -368,7 +368,7 @@ ModelImporter:
       name: Armature|run
       takeName: Armature|run
       firstFrame: 0
-      lastFrame: 35
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
