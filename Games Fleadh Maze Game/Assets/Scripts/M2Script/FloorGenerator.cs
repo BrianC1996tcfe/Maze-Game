@@ -12,7 +12,7 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject TextCheck;
 	public GameObject sewerpath, sewerConnectMid;
 	public Vector2 size;
-	private int tilesize = 50;//,stack=0;
+	private int tilesize = 10;//,stack=0;
 
 	//private ArrayList stackList= new ArrayList();
 	private Stack<Vector2> mazeBlock = new Stack<Vector2>();
@@ -307,7 +307,7 @@ public class FloorGenerator : MonoBehaviour {
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
 		GameObject prefabRoom = Instantiate(BossRoom,Rpos,Quaternion.identity);
 		if(room1.sewerConnected==true){
-			Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,25,(room1.sewerPoint.y+zr)*tilesize);
+			Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,tilesize/2,(room1.sewerPoint.y+zr)*tilesize);
 			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
 		}
 	}
@@ -335,7 +335,7 @@ public class FloorGenerator : MonoBehaviour {
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
 		GameObject prefabRoom = Instantiate(SewerRoom,Rpos,Quaternion.identity);
 		if(room2.sewerConnected==true){
-			Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,25,(room2.sewerPoint.y+zr)*tilesize);
+			Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,tilesize/2,(room2.sewerPoint.y+zr)*tilesize);
 			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
 		}
 	}
