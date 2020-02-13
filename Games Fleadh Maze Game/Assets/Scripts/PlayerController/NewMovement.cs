@@ -36,15 +36,35 @@ public class NewMovement : MonoBehaviour {
 		moveVector = new Vector3 (0, verticalVel, 0);
 		controller.Move (moveVector);
 
-		if (Input.GetMouseButtonDown (0)) {
+		QuickAttack ();
+		HeavyAttack ();
+
+	}
+
+	public void QuickAttack(){
+
+		if (Input.GetButtonDown ("Fire1")) {
 			//anim.SetTrigger ("isAttacking");
 			anim.SetBool ("Attack", true);
 			anim.SetBool ("Movement", false);
+			//anim.SetBool ("AttackHeavy", false);
 		} else {
+			//anim.SetBool ("AttackHeavy", false);
 			anim.SetBool ("Attack", false);
 			anim.SetBool ("Movement", true);
 		}
+	}
 
+	public void HeavyAttack(){
+		if (Input.GetButtonDown ("Fire2")) {
+			anim.SetBool ("AttackHeavy", true);
+			//anim.SetBool ("Attack", false);
+			anim.SetBool ("Movement", false);
+		} else {
+			anim.SetBool ("AttackHeavy", false);
+			//anim.SetBool ("Attack", false);
+			anim.SetBool ("Movement", true);
+		}
 	}
 
 	void PlayerMoveAndRotation(){
