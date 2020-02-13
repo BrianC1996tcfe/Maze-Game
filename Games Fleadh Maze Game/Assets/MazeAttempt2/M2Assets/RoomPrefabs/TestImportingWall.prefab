@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33759025586955628}
   - component: {fileID: 23912086799578792}
   - component: {fileID: 64917444881532176}
+  - component: {fileID: 65079441712577196}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -70,6 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4468130936620192}
+  - component: {fileID: 65035251047125512}
   m_Layer: 0
   m_Name: TestImportingWall
   m_TagString: Untagged
@@ -238,7 +240,31 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 51f690ae24eb80f4e9abbf02561d23e7, type: 3}
+--- !u!65 &65035251047125512
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985584652112568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 15, y: 100, z: 120}
+  m_Center: {x: 0, y: 26.25, z: 0}
+--- !u!65 &65079441712577196
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404315372512324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010000003, y: 0.01870051, z: 0.010383328}
+  m_Center: {x: -1.6234639e-25, y: -4.0050968e-16, z: 0.00019166523}
