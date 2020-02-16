@@ -26,7 +26,7 @@ public class NewMovement : MonoBehaviour {
 
 	void Update () {
 		InputMagnitude ();
-
+		//this.GetComponent<RollManager> ().Roll ();
 		isGrounded = controller.isGrounded;
 		if (isGrounded) {
 			verticalVel -= 0;
@@ -38,7 +38,21 @@ public class NewMovement : MonoBehaviour {
 
 		QuickAttack ();
 		HeavyAttack ();
+		Roll ();
 
+	}
+
+	public void Roll(){
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			anim.SetBool ("Roll", true);
+			anim.SetBool ("Movement", false);
+			this.GetComponent<Collider> ().enabled = false;
+		} else {
+			anim.SetBool ("Roll", false);
+			anim.SetBool ("Movement", true);
+			//this.GetComponent<Collider> ().enabled = true;
+		}
+		this.GetComponent<Collider> ().enabled = true;
 	}
 
 	public void QuickAttack(){
@@ -67,7 +81,7 @@ public class NewMovement : MonoBehaviour {
 		}
 	}
 
-	void PlayerMoveAndRotation(){
+	public void PlayerMoveAndRotation(){
 		inputX = Input.GetAxis ("Horizontal");
 		inputZ = Input.GetAxis ("Vertical");
 
@@ -90,7 +104,7 @@ public class NewMovement : MonoBehaviour {
 		}
 	}
 
-	void InputMagnitude(){
+	public void InputMagnitude(){
 		inputX = Input.GetAxis ("Horizontal");
 		inputZ = Input.GetAxis ("Vertical");
 
