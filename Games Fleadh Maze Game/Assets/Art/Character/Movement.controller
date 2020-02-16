@@ -93,7 +93,7 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0
---- !u!1101 &1101489411246872218
+--- !u!1101 &1101168223172346532
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -270,7 +270,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Armature|attack heavy_001
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101515716929940958}
@@ -379,7 +379,7 @@ AnimatorStateMachine:
     m_Position: {x: 348, y: 108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102288447265317004}
-    m_Position: {x: 516, y: 12, z: 0}
+    m_Position: {x: 504, y: -12, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102613325460257904}
     m_Position: {x: 228, y: 36, z: 0}
@@ -388,8 +388,8 @@ AnimatorStateMachine:
     m_Position: {x: 648, y: 192, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
-  - {fileID: 1101489411246872218}
   - {fileID: 1101505908032769214}
+  - {fileID: 1101168223172346532}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []

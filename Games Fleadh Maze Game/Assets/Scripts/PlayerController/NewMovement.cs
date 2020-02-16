@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewMovement : MonoBehaviour {
-
+	//-----------------Movement-----------------------
 	public float inputZ;
 	public float inputX;
 	public Vector3 desiredMoveDirection;
@@ -17,7 +18,9 @@ public class NewMovement : MonoBehaviour {
 	public bool isGrounded;
 	private float verticalVel;
 	private Vector3 moveVector;
-
+	public GameObject swordL;
+	public GameObject swordR;
+	//-----------------------------------------------
 	void Start () {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
@@ -41,17 +44,16 @@ public class NewMovement : MonoBehaviour {
 		Roll ();
 
 	}
-
+	//------------------Rolling-------------------
 	public void Roll(){
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			anim.SetBool ("Roll", true);
 			anim.SetBool ("Movement", false);
-			//this.GetComponent<Collider> ().enabled = false;
 			StartCoroutine("RollTime");
+			this.GetComponent<StaminaSystem> ().TakeStamina (10f);
 		} else {
 			anim.SetBool ("Roll", false);
 			anim.SetBool ("Movement", true);
-			//this.GetComponent<Collider> ().enabled = true;
 		}
 	}
 
@@ -59,37 +61,53 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			this.GetComponent<Collider> ().enabled = false;
 
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (0.2f);
 
 			this.GetComponent<Collider> ().enabled = true;
 		}
 	}
-
-	public void QuickAttack(){
-
+	//------------------Attacking--------------------
+	IEnumerator QuickAttackCollider(){
 		if (Input.GetButtonDown ("Fire1")) {
-			//anim.SetTrigger ("isAttacking");
+			swordL.GetComponent<BoxCollider> ().enabled = true;
+
+			yield return new WaitForSeconds (1f);
+
+			swordL.GetComponent<BoxCollider> ().enabled = false;
+		}
+	}
+	public void QuickAttack(){
+		if (Input.GetButtonDown ("Fire1")) {
+			StartCoroutine ("QuickAttackCollider");
 			anim.SetBool ("Attack", true);
 			anim.SetBool ("Movement", false);
-			//anim.SetBool ("AttackHeavy", false);
 		} else {
-			//anim.SetBool ("AttackHeavy", false);
 			anim.SetBool ("Attack", false);
 			anim.SetBool ("Movement", true);
 		}
 	}
 
+	IEnumerator QuickHeavyCollider(){
+		if (Input.GetButtonDown ("Fire2")) {
+			swordR.GetComponent<BoxCollider> ().enabled = true;
+
+			yield return new WaitForSeconds (1f);
+
+			swordR.GetComponent<BoxCollider> ().enabled = false;
+		}
+	}
+
 	public void HeavyAttack(){
 		if (Input.GetButtonDown ("Fire2")) {
+			StartCoroutine ("QuickHeavyCollider");
 			anim.SetBool ("AttackHeavy", true);
-			//anim.SetBool ("Attack", false);
 			anim.SetBool ("Movement", false);
 		} else {
 			anim.SetBool ("AttackHeavy", false);
-			//anim.SetBool ("Attack", false);
 			anim.SetBool ("Movement", true);
 		}
 	}
+	//------------------------------------------------------------
 
 	public void PlayerMoveAndRotation(){
 		inputX = Input.GetAxis ("Horizontal");
