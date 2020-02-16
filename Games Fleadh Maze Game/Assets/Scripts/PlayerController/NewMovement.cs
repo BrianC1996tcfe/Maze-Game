@@ -46,13 +46,23 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			anim.SetBool ("Roll", true);
 			anim.SetBool ("Movement", false);
-			this.GetComponent<Collider> ().enabled = false;
+			//this.GetComponent<Collider> ().enabled = false;
+			StartCoroutine("RollTime");
 		} else {
 			anim.SetBool ("Roll", false);
 			anim.SetBool ("Movement", true);
 			//this.GetComponent<Collider> ().enabled = true;
 		}
-		this.GetComponent<Collider> ().enabled = true;
+	}
+
+	IEnumerator RollTime(){
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			this.GetComponent<Collider> ().enabled = false;
+
+			yield return new WaitForSeconds (1f);
+
+			this.GetComponent<Collider> ().enabled = true;
+		}
 	}
 
 	public void QuickAttack(){
