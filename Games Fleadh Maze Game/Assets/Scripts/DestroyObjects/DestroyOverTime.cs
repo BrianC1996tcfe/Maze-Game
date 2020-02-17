@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DestroyOverTime : MonoBehaviour {
 
-	float interval = 10f;
+	float interval = 5f;
 
 
-	void OnTriggerEnter(){
+	void OnCollisionEnter(){
 		Destroy(gameObject,interval);
 	}
 

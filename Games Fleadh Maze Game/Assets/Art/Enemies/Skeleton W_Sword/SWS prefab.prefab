@@ -1278,7 +1278,7 @@ MonoBehaviour:
   cur_Health: 0
   healthBar: {fileID: 1325155397915778}
   player: {fileID: 0}
-  xp: 101
+  xp: 5
 --- !u!114 &114061872006427024
 MonoBehaviour:
   m_ObjectHideFlags: 1
