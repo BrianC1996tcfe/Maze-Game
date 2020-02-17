@@ -7,8 +7,9 @@ public class EnemyHealth : MonoBehaviour {
 	public float max_Health = 100f;
 	public float cur_Health = 0f;
 	public GameObject healthBar;
+	public GameObject player;
 
-	public float xp;
+	public int xp = 5;
 
 
 	void Start () {
@@ -25,12 +26,8 @@ public class EnemyHealth : MonoBehaviour {
 	}
 
 	public void Die(){
-			Destroy (gameObject);	
-	}
-
-	public void GiveXP(){
-		
-		GetComponent<LevelSystem>().UpdateXP(xp);
+		player.gameObject.GetComponent<LevelSystem>().GainExp(xp);
+		Destroy (gameObject);
 	}
 
 	public void SetHealthBar(){

@@ -50,7 +50,7 @@ public class NewMovement : MonoBehaviour {
 			anim.SetBool ("Roll", true);
 			anim.SetBool ("Movement", false);
 			StartCoroutine("RollTime");
-			this.GetComponent<StaminaSystem> ().TakeStamina (10f);
+			//this.GetComponent<StaminaSystem> ().TakeStamina (10f);
 		} else {
 			anim.SetBool ("Roll", false);
 			anim.SetBool ("Movement", true);
@@ -61,7 +61,7 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			this.GetComponent<Collider> ().enabled = false;
 
-			yield return new WaitForSeconds (0.2f);
+			yield return new WaitForSeconds (0.8f);
 
 			this.GetComponent<Collider> ().enabled = true;
 		}

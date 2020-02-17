@@ -16,6 +16,10 @@ public class PlayerHealth : MonoBehaviour {
 		SetHealthBar ();
 	}
 
+	public void OnLevelUp(int amount){
+		max_Health += amount;
+	}
+
 	public void TakeDamage(float amount){
 		cur_Health -= amount;
 		SetHealthBar ();
