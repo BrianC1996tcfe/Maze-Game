@@ -59,26 +59,4 @@ public class InventoryManager : MonoBehaviour {
 			}
 		}
 	}
-	// public void MakeButtonRows(){
-	// 	for(int e=0-6;e<=row-7;e++){
-	// 		for(int i = 3;i <= column+2;i++ ){
-	// 			Vector3 buttonPos = new Vector3(i*spacing,(e*spacing)-50,0);
-	// 			//Vector3 buttonPos = new Vector3(0,0,0);
-	// 			Vector3 buttonScale = new Vector3(1,1,1);
-	// 			// float x = InventoryCanvas.transform.position.x;
-	// 			// float y = InventoryCanvas.transform.position.y;
-	// 			// float z = InventoryCanvas.transform.position.z;
-	// 			// Debug.Log("Bong >"+x+" "+y+" "+z);
-	// 			// float y2 = y+(y/2);
-	// 			// Vector3 buttonPos = new Vector3(y2*2,z,0);
-	// 			GameObject Slot = Instantiate(ItemButton,buttonPos,Quaternion.identity);
-	// 			// Slot.transform.parent = transform;
-	// 			// Slot.transform.localScale = buttonScale;
-	// 			Slot.transform.SetParent(InventoryCanvas.transform);
-	// 			Slot.transform.localScale = buttonScale;
-	// 			Slot.transform.localPosition = buttonPos;
-	// 			// Slot.transform.localRotation = spawnRotation;
-	// 		}
-	// 	}
-	// }
 }
