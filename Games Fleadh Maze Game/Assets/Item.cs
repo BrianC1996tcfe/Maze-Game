@@ -19,9 +19,10 @@ public class Item : MonoBehaviour{
     public void OnTriggerEnter()
     {
 		Vector3 pos = gameObject.transform.position;
-        Destroy(gameObject);
-		GameObject replacement = Instantiate(particleEffect,pos,Quaternion.identity);
+       
 		// toolbar.pickupItem(id);
 		t_bar.GetComponent<toolbarScript>().pickupItem(id);
+		 Destroy(gameObject);
+		GameObject replacement = Instantiate(particleEffect,pos,Quaternion.identity);
 	}
 }

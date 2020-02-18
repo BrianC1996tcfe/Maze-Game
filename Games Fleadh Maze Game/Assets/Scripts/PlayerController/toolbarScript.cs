@@ -11,7 +11,7 @@ public GameObject[] ItemDescriptionslist;
 public GameObject[] pickup_Items;
 private bool[] checker;
 	void Start () {
-		checker = new bool[toolbarSlots.Length];
+		checker = new bool[toolbarSlots.Length+1];
 		boolfalsify();
 	}
 	
@@ -65,6 +65,7 @@ private bool[] checker;
 				string nameItem = pickup_Items[id].GetComponent<Item>().itemName;
 				ItemDescriptionslist[e].GetComponent<Text>().text = nameItem;
 				ImageItem[e].GetComponent<Image>().sprite = pickup_Items[id].GetComponent<Item>().itemUISprite;
+				break;
 				
 			}
 		}
