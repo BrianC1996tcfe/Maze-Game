@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour {
 
-	public float dmg;
+	public int dmg;
 
 	void OnTriggerEnter(Collider other){
 		other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);

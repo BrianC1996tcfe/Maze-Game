@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class swordDamage : MonoBehaviour {
 
-	public float dmg;
+	public int dmg;
 
 	void OnTriggerEnter(Collider other){
 		StartCoroutine ("Collider");

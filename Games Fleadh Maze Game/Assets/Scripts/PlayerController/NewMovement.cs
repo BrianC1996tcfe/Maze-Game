@@ -20,11 +20,13 @@ public class NewMovement : MonoBehaviour {
 	private Vector3 moveVector;
 	public GameObject swordL;
 	public GameObject swordR;
+	public float movementSpeed;
 	//-----------------------------------------------
 	void Start () {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
+		movementSpeed = 7f;
 	}
 
 	void Update () {
@@ -71,7 +73,7 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			swordL.GetComponent<BoxCollider> ().enabled = true;
 
-			yield return new WaitForSeconds (0.2f);
+			yield return new WaitForSeconds (0.25f);
 
 			swordL.GetComponent<BoxCollider> ().enabled = false;
 		}
@@ -91,7 +93,7 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire2")) {
 			swordR.GetComponent<BoxCollider> ().enabled = true;
 
-			yield return new WaitForSeconds (0.2f);
+			yield return new WaitForSeconds (0.25f);
 
 			swordR.GetComponent<BoxCollider> ().enabled = false;
 		}
@@ -125,11 +127,15 @@ public class NewMovement : MonoBehaviour {
 
 		desiredMoveDirection = forward * inputZ + right * inputX;
 
-		controller.Move (desiredMoveDirection * Time.deltaTime * 7f);
+		controller.Move (desiredMoveDirection * Time.deltaTime * movementSpeed);
 
 		if(blockRotationPlayer == false){
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (desiredMoveDirection), desiredRotationspeed);
 		}
+	}
+
+	public void IncreaseMovementSpeed(float amount){
+		movementSpeed += amount;
 	}
 
 	public void InputMagnitude(){

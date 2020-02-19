@@ -15,7 +15,7 @@ public class SkeletonThrowerController : MonoBehaviour {
 		anim = this.GetComponent<Animator>();
 	}
 	void Update () {
-		if (Vector3.Distance (player.position, this.transform.position) < 17) {
+		if (Vector3.Distance (player.position, this.transform.position) < 13) {
 			Vector3 direction = player.position - this.transform.position;
 			direction.y = 0;
 

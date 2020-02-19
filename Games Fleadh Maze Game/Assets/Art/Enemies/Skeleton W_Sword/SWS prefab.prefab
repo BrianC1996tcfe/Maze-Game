@@ -1129,7 +1129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623094979748054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.449707, y: 0.38, z: 7.200821}
+  m_LocalPosition: {x: 22.56, y: 0.38, z: 7.200821}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4823302032419336}
@@ -1274,11 +1274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc430e9f1f4518f45bfd140ef5a3287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_Health: 25
+  max_Health: 30
   cur_Health: 0
   healthBar: {fileID: 1325155397915778}
   player: {fileID: 0}
-  xp: 5
+  xp: 10
 --- !u!114 &114071144597594134
 MonoBehaviour:
   m_ObjectHideFlags: 1

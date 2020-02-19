@@ -13,11 +13,11 @@ public class LevelSystem : MonoBehaviour{
 	public Text exp;
 	public Text myLevel;
 	public GameObject xpBar;
-
-
+	public GameObject player;
 	//methods
 
 	void Start(){
+		player = this.gameObject;
 		level = 1;
 		experience = 0;
 		experienceRequired = 100;
@@ -41,11 +41,7 @@ public class LevelSystem : MonoBehaviour{
 		level += 1;
 		experience = 0;
 		//experienceRequired = experienceRequired * 1.2;
-		IncreaseHealth ();
-	}
-
-	public void IncreaseHealth(){
-		this.gameObject.GetComponent<PlayerHealth> ().OnLevelUp (10);
+		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
 	}
 
 	void Exp(){

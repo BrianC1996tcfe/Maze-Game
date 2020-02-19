@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoneScript : MonoBehaviour {
 
 	public float speed;
-	public float dmg;
+	public int dmg;
 	public Rigidbody rb;
 	public Animator anim;
 

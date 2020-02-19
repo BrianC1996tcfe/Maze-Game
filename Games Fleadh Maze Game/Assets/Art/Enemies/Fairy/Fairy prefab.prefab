@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 54179670349972032}
   - component: {fileID: 65619011349275972}
   - component: {fileID: 114265240417018680}
-  - component: {fileID: 114139912740584410}
+  - component: {fileID: 114150510697855146}
   m_Layer: 0
   m_Name: Fairy prefab
   m_TagString: Untagged
@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!114 &114139912740584410
+--- !u!114 &114150510697855146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1424,13 +1424,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1239866819034662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c258bc39b714864c9eb23c4692c8f4d, type: 3}
+  m_Script: {fileID: 11500000, guid: bc430e9f1f4518f45bfd140ef5a3287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_Health: 100
+  max_Health: 25
   cur_Health: 0
   healthBar: {fileID: 1726246729086964}
-  health: {fileID: 0}
+  player: {fileID: 0}
+  xp: 10
 --- !u!114 &114247523770980512
 MonoBehaviour:
   m_ObjectHideFlags: 1
