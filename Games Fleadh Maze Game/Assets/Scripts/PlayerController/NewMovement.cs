@@ -71,7 +71,7 @@ public class NewMovement : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			swordL.GetComponent<BoxCollider> ().enabled = true;
 
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (0.2f);
 
 			swordL.GetComponent<BoxCollider> ().enabled = false;
 		}
@@ -87,11 +87,11 @@ public class NewMovement : MonoBehaviour {
 		}
 	}
 
-	IEnumerator QuickHeavyCollider(){
+	IEnumerator HeavyCollider(){
 		if (Input.GetButtonDown ("Fire2")) {
 			swordR.GetComponent<BoxCollider> ().enabled = true;
 
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (0.2f);
 
 			swordR.GetComponent<BoxCollider> ().enabled = false;
 		}
@@ -99,7 +99,7 @@ public class NewMovement : MonoBehaviour {
 
 	public void HeavyAttack(){
 		if (Input.GetButtonDown ("Fire2")) {
-			StartCoroutine ("QuickHeavyCollider");
+			StartCoroutine ("HeavyCollider");
 			anim.SetBool ("AttackHeavy", true);
 			anim.SetBool ("Movement", false);
 		} else {

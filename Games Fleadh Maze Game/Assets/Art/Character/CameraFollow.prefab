@@ -714,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraMoveSpeed: 100
   cameraFollowObject: {fileID: 0}
-  clampAngle: 13
+  clampAngle: 30
   inputSensitivity: 150
   camera: {fileID: 1712002100700408}
   player: {fileID: 0}
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.077962786, g: 0.75735295, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

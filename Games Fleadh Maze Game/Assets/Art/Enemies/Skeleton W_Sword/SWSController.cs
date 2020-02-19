@@ -6,11 +6,9 @@ public class SWSController : MonoBehaviour {
 
 	public Transform player;
 	static Animator anim;
-	public float attackTime = 3f;
-	public float attackDelay = 1f;
 
 	void Start(){
-		anim = GetComponent<Animator>();
+		anim = this.GetComponent<Animator>();
 	}
 	void Update () {
 		if (Vector3.Distance (player.position, this.transform.position) < 17) {
@@ -27,13 +25,20 @@ public class SWSController : MonoBehaviour {
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
 			} else {
-				anim.SetBool ("isAttacking", true);
-				anim.SetBool ("isWalking", false);
+				//anim.SetBool ("isAttacking", true);
+				//anim.SetBool ("isWalking", false);
+				StartCoroutine("Attack");
 			}
 		} else {
 			anim.SetBool ("isIdle", true);
 			anim.SetBool ("isWalking", false);
 			anim.SetBool ("isAttacking", false);
 		}
+	}
+	IEnumerator Attack(){
+		anim.SetBool ("isAttacking", true);
+		anim.SetBool ("isWalking", false);
+
+		yield return new WaitForSeconds (1);
 	}
 }
