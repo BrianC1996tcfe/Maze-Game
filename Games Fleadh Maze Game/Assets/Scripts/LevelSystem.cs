@@ -9,11 +9,13 @@ public class LevelSystem : MonoBehaviour{
 	//variables
 	public float level;
 	private float experience;
-	private float experienceRequired;
+	public float experienceRequired;
 	public Text exp;
 	public Text myLevel;
 	public GameObject xpBar;
 	public GameObject player;
+	public static float myPoints;
+	public float addPoints;
 	//methods
 
 	void Start(){
@@ -24,9 +26,9 @@ public class LevelSystem : MonoBehaviour{
 	}
 
 	void Update(){
+		SetLevel ();
 		Exp ();
 		SetXpBar();
-		SetLevel ();
 	}
 
 	public void GainExp(int amount){
@@ -40,8 +42,11 @@ public class LevelSystem : MonoBehaviour{
 	void LevelUp(){
 		level += 1;
 		experience = 0;
-		//experienceRequired = experienceRequired * 1.2;
+		experienceRequired = experienceRequired * 1.75f;
 		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
+		//player.gameObject.GetComponent<PlayerStats> ().GivePoints (3);
+		//myPoints = addPoints + 3;
+		PlayerStats.points += 3f;
 	}
 
 	void Exp(){

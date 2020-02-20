@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour {
 	//values
 	public float hpToGive;
 	public float speedToGive;
+	public static float points;
 
 	//Game Objects
 	public GameObject charProfile;
@@ -34,6 +35,7 @@ public class PlayerStats : MonoBehaviour {
 	public Text	Dex;
 	public Text	Mr;
 	public Text	Dr;
+	public Text Points;
 	//public Text AtkSpeed;
 	//public Text MovSpeed;
 
@@ -55,9 +57,11 @@ public class PlayerStats : MonoBehaviour {
 		Dexterity = 5;
 		Health = 10;
 		Strenght = 5;
-	}
 
+	}
+		
 	public void Update(){
+		Points.text = "Points : " + points.ToString ();
 		Str.text = "Str : " + Strenght.ToString ();
 		Hp.text = "Hp : " + Health.ToString ();
 		Dex.text = "Dex : " + Dexterity.ToString ();
@@ -72,18 +76,38 @@ public class PlayerStats : MonoBehaviour {
 				break;
 			}	
 		}
+		if (points <= 0) {
+			hpBtn.interactable = false;
+			strBtn.interactable = false;
+			dexBtn.interactable = false;
+		} else if (points >=1 ){
+			hpBtn.interactable = true;
+			strBtn.interactable = true;
+			dexBtn.interactable = true;
+		}
 	}
+
+	public void GivePoints(float amount){
+		points += amount;
+	}
+
 	public void dexBtnOnClick(){
 		Dexterity += 1;
+		points -= 1;
 		playerPrefab.gameObject.GetComponent<NewMovement> ().IncreaseMovementSpeed (speedToGive);
 	}
+
 	public void hpBtnOnClick(){
 		Health += 1;
+		points -= 1;
 		playerPrefab.gameObject.GetComponent<PlayerHealth> ().IncreaseHealth (hpToGive);
 	}
+
 	public void strBtnOnClick(){
 		Strenght += 1;
+		points -= 1;
 	}
+
 	public void OpenCharInfo(){
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
