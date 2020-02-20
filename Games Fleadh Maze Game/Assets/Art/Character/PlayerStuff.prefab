@@ -2184,7 +2184,6 @@ GameObject:
   - component: {fileID: 114007579352185170}
   - component: {fileID: 114968624822851764}
   - component: {fileID: 114776033644952352}
-  - component: {fileID: 114743864896164184}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5648,8 +5647,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.846572, y: 14.726269, z: 5.4419155}
-  m_Center: {x: -1.4776192, y: 7.111577, z: 1.8548412}
+  m_Size: {x: 7.01178, y: 14.726269, z: 5.4419155}
+  m_Center: {x: -0.5602226, y: 7.111577, z: 1.8548412}
 --- !u!65 &65818565885368280
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -8485,7 +8484,6 @@ MonoBehaviour:
   MagicResist: 5
   hpToGive: 0
   speedToGive: 0
-  points: 0
   charProfile: {fileID: 1474362929672086}
   cameraPrefab: {fileID: 1127140188245178}
   playerPrefab: {fileID: 1584284709203022}
@@ -11331,37 +11329,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114743864896164184
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584284709203022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c301aafc35be58e42801fdd5e2ba39dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dexterity: 5
-  PhysicalDefense: 5
-  MagicResist: 5
-  hpToGive: 0
-  speedToGive: 0
-  points: 0
-  charProfile: {fileID: 0}
-  cameraPrefab: {fileID: 0}
-  playerPrefab: {fileID: 0}
-  hpBtn: {fileID: 0}
-  strBtn: {fileID: 0}
-  dexBtn: {fileID: 0}
-  mrBtn: {fileID: 0}
-  pdBtn: {fileID: 0}
-  Hp: {fileID: 0}
-  Str: {fileID: 0}
-  Dex: {fileID: 0}
-  Mr: {fileID: 0}
-  Dr: {fileID: 0}
-  Points: {fileID: 0}
 --- !u!114 &114744264694180194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11570,10 +11537,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  experienceRequired: 0
   exp: {fileID: 114402833139849244}
   myLevel: {fileID: 114414256292751808}
   xpBar: {fileID: 1672342667479140}
   player: {fileID: 0}
+  addPoints: 0
 --- !u!114 &114781119538578842
 MonoBehaviour:
   m_ObjectHideFlags: 1
