@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour {
 	public static float points;
 
 	//Game Objects
-	public GameObject charProfile;
+	public GameObject canvas;
 	public GameObject cameraPrefab;
 	public GameObject playerPrefab;
 
@@ -67,7 +67,7 @@ public class PlayerStats : MonoBehaviour {
 		Dex.text = "Dex : " + Dexterity.ToString ();
 
 		if (Input.GetKeyDown (KeyCode.P)) {
-			switch (charProfile.activeSelf) {
+			switch (canvas.activeSelf) {
 			case true:
 				CloseCharInfo ();
 				break;
@@ -111,7 +111,7 @@ public class PlayerStats : MonoBehaviour {
 	public void OpenCharInfo(){
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
-		charProfile.SetActive (true);
+		canvas.SetActive (true);
 		cameraPrefab.GetComponent<cameraFollow>().enabled = false;
 		playerPrefab.GetComponent<NewMovement>().enabled = false;
 	}
@@ -119,7 +119,7 @@ public class PlayerStats : MonoBehaviour {
 	public void CloseCharInfo(){
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
-		charProfile.SetActive (false);
+		canvas.SetActive (false);
 		cameraPrefab.GetComponent<cameraFollow>().enabled = true;
 		playerPrefab.GetComponent<NewMovement>().enabled = true;
 	}
