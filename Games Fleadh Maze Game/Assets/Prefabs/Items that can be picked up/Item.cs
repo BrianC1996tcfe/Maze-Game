@@ -10,8 +10,7 @@ public class Item : MonoBehaviour{
 	public GameObject InvManager;
 	// private toolbarScript toolbar;
 
-    void Start()
-    {
+	void Start(){
         //Change item tag to Respawn to detect when we look at it
         gameObject.tag = "Respawn";
     }
