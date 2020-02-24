@@ -11646,7 +11646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_stamina: 100
-  cur_stamina: 0
   staminaBar: {fileID: 1631328601419992}
   anim: {fileID: 0}
 --- !u!114 &114756710236339940

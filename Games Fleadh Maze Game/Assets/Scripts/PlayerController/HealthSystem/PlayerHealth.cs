@@ -9,9 +9,15 @@ public class PlayerHealth : MonoBehaviour {
 	public float cur_Health = 0f;
 	public GameObject healthBar;
 	public Text health;
+	private Animator anim;
+	private NewMovement movement;
+	private Rigidbody rb;
 
 
 	void Start () {
+		anim = this.GetComponent<Animator> ();
+		movement = this.GetComponent<NewMovement> ();
+
 		max_Health = 100f;
 		cur_Health = max_Health;
 		SetHealthBar ();
@@ -21,7 +27,8 @@ public class PlayerHealth : MonoBehaviour {
 		cur_Health -= amount;
 		SetHealthBar ();
 		if (cur_Health <= 0){
-			Destroy (gameObject);
+			anim.SetBool ("Death", true);
+			movement.enabled = false;
 		}
 	}
 	public void IncreaseHealth(float amount){
