@@ -112,4 +112,4 @@ MonoBehaviour:
   itemUISprite: {fileID: 21300000, guid: 24955bd8fcad05f49a17afa80f4f2317, type: 3}
   particleEffect: {fileID: 1456122858471216, guid: 29ec9f8a95df14741b10a1abfe41580e,
     type: 2}
-  t_bar: {fileID: 0}
+  InvManager: {fileID: 1197661224111398, guid: a2e4e86f3e7ab32449a93623a9c2fa6d, type: 2}
