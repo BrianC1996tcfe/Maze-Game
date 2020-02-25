@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour {
 
 
 	void Start () {
+		player = GameObject.FindGameObjectWithTag ("Player");
 		cur_Health = max_Health;
 
 	}

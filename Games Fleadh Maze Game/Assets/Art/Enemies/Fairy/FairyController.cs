@@ -6,7 +6,7 @@ public class FairyController : MonoBehaviour
 {
 
     public Transform player;
-    static Animator anim;
+	public Animator anim;
 	public Transform firePoint;
 	public GameObject fireballPrefab;
 	private float shootTime = 1f;
@@ -15,6 +15,7 @@ public class FairyController : MonoBehaviour
 
     void Start()
     {
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
         anim = GetComponent<Animator>();
     }
     void Update()

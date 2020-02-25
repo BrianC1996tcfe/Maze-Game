@@ -8,6 +8,7 @@ public class SWSController : MonoBehaviour {
 	static Animator anim;
 
 	void Start(){
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		anim = this.GetComponent<Animator>();
 	}
 	void Update () {

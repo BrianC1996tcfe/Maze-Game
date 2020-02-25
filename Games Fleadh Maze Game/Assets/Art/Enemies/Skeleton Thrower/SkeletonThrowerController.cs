@@ -5,14 +5,17 @@ using UnityEngine;
 public class SkeletonThrowerController : MonoBehaviour {
 
 	public Transform player;
-	static Animator anim;
+	public Animator anim;
 	public Transform firePoint;
 	public GameObject bonePrefab;
 	private float shootTime = 2.3f;
 	private float shootDelay = 3.5f;
 
+	public int ID;
+
 	void Start(){
 		anim = this.GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 	void Update () {
 		if (Vector3.Distance (player.position, this.transform.position) < 13) {

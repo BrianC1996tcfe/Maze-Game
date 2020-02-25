@@ -5,9 +5,10 @@ using UnityEngine;
 public class SlimeController : MonoBehaviour {
 
 	public Transform player;
-	static Animator anim;
+	public Animator anim;
 
 	void Start(){
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		anim = this.GetComponent<Animator>();
 	}
 	void Update () {
