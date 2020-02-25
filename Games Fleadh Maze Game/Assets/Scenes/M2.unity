@@ -113,6 +113,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8347169 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172266730888102, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
+    type: 2}
+  m_PrefabInternal: {fileID: 1562509317}
+--- !u!1 &1163028967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1450194991339876, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
+    type: 2}
+  m_PrefabInternal: {fileID: 1562509317}
 --- !u!1 &1290524467
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Maze: {fileID: 1376443783435830, guid: bebbe88fac0e43b43a5a65d35f07c189, type: 2}
+  player: {fileID: 8347169}
+  camerar: {fileID: 1163028967}
 --- !u!4 &2042538682
 Transform:
   m_ObjectHideFlags: 0

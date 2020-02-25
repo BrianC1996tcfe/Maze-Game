@@ -28,6 +28,7 @@ public class FloorGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log("lvl: "+enemyLevel);
 		//int x =size.x as int;
 		partofmaze = new bool[(int)size.x+1,(int)size.y+1];
 		// Debug.Log("1USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
