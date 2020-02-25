@@ -24,6 +24,7 @@ public class FloorGenerator : MonoBehaviour {
 	public bool[,] partofWallX;
 	public bool[,] partofWallZ;
 	private int cellsUsed,tempcount=0;
+	public int enemyLevel;
 
 	// Use this for initialization
 	void Start () {
@@ -450,6 +451,7 @@ public class FloorGenerator : MonoBehaviour {
 					}
 					else{
 						GameObject newEnemy = Instantiate(Enemies[randEnemy],zpos,Quaternion.Euler(0,rotato,0));
+						// newEnemy.GetComponent<EnemyManager>.setLevel(enemyLevel);
 					}
 				}
 			}
