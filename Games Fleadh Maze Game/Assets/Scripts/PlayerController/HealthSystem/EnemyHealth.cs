@@ -14,7 +14,6 @@ public class EnemyHealth : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
-		max_Health = 25f;
 		cur_Health = max_Health;
 	}
 
@@ -24,6 +23,10 @@ public class EnemyHealth : MonoBehaviour {
 		if (cur_Health <= 0) {
 			Die ();
 		}
+	}
+
+	public void SetHealth(float amount){
+		max_Health += amount;
 	}
 
 	public void Die(){

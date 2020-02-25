@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  dmg: 10
+  dmg: 5
   rb: {fileID: 54914516112350224}
 --- !u!114 &114731173794738664
 MonoBehaviour:
