@@ -12,6 +12,7 @@ FloorGenerator fl4Gen;
 Vector3 MazePos;
 Vector3 PlayerStartPos;
 Vector3 CStartPos = new Vector3(1.5f,33.9f,12.5f);
+Vector2 newlvlSize;
 
 
 
@@ -45,8 +46,28 @@ Vector3 CStartPos = new Vector3(1.5f,33.9f,12.5f);
 		// // int a = Maze.GetComponent<FloorGenerator>().enemyLevel;
 		// FloorGenerator fg = Maze.GetComponent<FloorGenerator>();
 		// int b = a.enemyLevel;
-		fl4Gen.enemyLevel++;
-		fl4Gen.size.x++;
+		if(!(fl4Gen.enemyLevel>=5)){
+			fl4Gen.enemyLevel++;
+		}
+		switch(fl4Gen.enemyLevel){
+			case 1:
+				newlvlSize = new Vector2(5,5);
+			break;
+			case 2:
+				newlvlSize = new Vector2(5,15);
+			break;
+			case 3:
+				newlvlSize = new Vector2(10,10);
+			break;
+			case 4:
+				newlvlSize = new Vector2(25,10);
+			break;
+			case 5:
+				newlvlSize = new Vector2(25,15);
+			break;
+		}
+		fl4Gen.size.x = newlvlSize.x;
+		fl4Gen.size.y = newlvlSize.y;
 		GameObject newMaze = Instantiate(Maze,MazePos,Quaternion.identity);
 		newMaze.tag = "Maze";
 		player.transform.position = PlayerStartPos;

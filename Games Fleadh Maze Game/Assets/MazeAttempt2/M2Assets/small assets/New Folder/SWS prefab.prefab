@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 65823045347595954}
   - component: {fileID: 114361583316663418}
   - component: {fileID: 114633351885698902}
+  - component: {fileID: 114571004158983724}
   m_Layer: 0
   m_Name: SWS prefab
   m_TagString: Untagged
@@ -1330,6 +1331,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4947146548499038, guid: 24615e4166a34a047ab5e0159b74cfb4, type: 2}
+--- !u!114 &114571004158983724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879540667638306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1879540667638306}
+  enemyAttackType: 0
+  enemyWeapon: {fileID: 1643783894612656}
 --- !u!114 &114592838358328454
 MonoBehaviour:
   m_ObjectHideFlags: 1

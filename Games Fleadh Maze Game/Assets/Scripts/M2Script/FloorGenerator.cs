@@ -41,7 +41,7 @@ public class FloorGenerator : MonoBehaviour {
 		setBoolsTrue();
 		if(!(size.y<10 || size.x<10)){
 			placeBossRoomPrefab();
-			placeSewerRoomPrefab();
+			// placeSewerRoomPrefab();
 		}
 		
 		playerTile();
@@ -461,7 +461,8 @@ public class FloorGenerator : MonoBehaviour {
 					else{
 						GameObject newEnemy = Instantiate(Enemies[randEnemy],zpos,Quaternion.Euler(0,rotato,0));
 						newEnemy.transform.parent = transform;
-						// newEnemy.GetComponent<EnemyManager>.setLevel(enemyLevel);
+						newEnemy.GetComponent<EnemyManager>().EnemyLevel(enemyLevel);
+						
 					}
 				}
 			}
