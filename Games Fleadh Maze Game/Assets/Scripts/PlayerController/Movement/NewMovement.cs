@@ -31,8 +31,8 @@ public class NewMovement : MonoBehaviour {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
-		runSpeed = 7f;
-		sprintSpeed = 10f;
+		runSpeed = 10f;
+		sprintSpeed = 15f;
 		movementSpeed = runSpeed;
 
 	}
@@ -80,7 +80,7 @@ public class NewMovement : MonoBehaviour {
 			anim.SetBool ("Sprint", false);
 			anim.SetBool ("Movement", false);
 			StartCoroutine("RollTime");
-			this.GetComponent<StaminaSystem> ().TakeStamina (10f);
+			//this.GetComponent<StaminaSystem> ().TakeStamina (10f);
 		} else {
 			anim.SetBool ("Roll", false);
 			anim.SetBool ("Sprint", false);
