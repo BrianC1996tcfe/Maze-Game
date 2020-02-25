@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 114150510697855146}
   m_Layer: 0
   m_Name: Fairy prefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1460,6 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  anim: {fileID: 0}
   firePoint: {fileID: 4039181664613368}
   fireballPrefab: {fileID: 1261853058776446, guid: cc907b02e94ad7c46be664c62a7e4153,
     type: 2}

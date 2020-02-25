@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class swordDamage : MonoBehaviour {
 
-	public int dmg;
+	public int dmg = 5;
 
 	void OnTriggerEnter(Collider other){
 		StartCoroutine ("Collider");
 		other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);
 	}
-
+		
 	IEnumerator Collider(){
 		this.GetComponent<BoxCollider> ().enabled = false;
 

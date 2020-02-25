@@ -14,11 +14,13 @@ public class LevelSystem : MonoBehaviour{
 	public Text myLevel;
 	public GameObject xpBar;
 	public GameObject player;
+	public GameObject enemy;
 	public static float myPoints;
 	public float addPoints;
 	//methods
 
 	void Start(){
+		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		player = this.gameObject;
 		level = 1;
 		experience = 0;
@@ -44,8 +46,7 @@ public class LevelSystem : MonoBehaviour{
 		experience = 0;
 		experienceRequired = experienceRequired * 1.75f;
 		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
-		//player.gameObject.GetComponent<PlayerStats> ().GivePoints (3);
-		//myPoints = addPoints + 3;
+
 		PlayerStats.points += 3f;
 	}
 

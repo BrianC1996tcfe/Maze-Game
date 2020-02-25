@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
 
-	public float max_Health = 100f;
+	public float max_Health;
 	public float cur_Health = 0f;
 	public GameObject healthBar;
 	public GameObject player;
@@ -14,8 +14,8 @@ public class EnemyHealth : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
+		max_Health = 25f;
 		cur_Health = max_Health;
-
 	}
 
 	public void TakeDamage(float amount){

@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		max_Health = 100f;
 		cur_Health = max_Health;
+
 		SetHealthBar ();
 	}
 		
@@ -27,6 +28,7 @@ public class PlayerHealth : MonoBehaviour {
 		cur_Health -= amount;
 		SetHealthBar ();
 		if (cur_Health <= 0){
+			cur_Health = 0f;
 			anim.SetBool ("Death", true);
 			movement.enabled = false;
 		}
