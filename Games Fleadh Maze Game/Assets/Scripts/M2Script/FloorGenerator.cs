@@ -13,7 +13,7 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject sewerpath, sewerConnectMid;
 	public GameObject[] Enemies;
 	public Vector2 size;
-	private int tilesize = 10;//,stack=0;
+	private int tilesize = 25;//,stack=0;
 
 	//private ArrayList stackList= new ArrayList();
 	private Stack<Vector2> mazeBlock = new Stack<Vector2>();
