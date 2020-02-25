@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1942500692086294}
+  m_IsPrefabParent: 1
+--- !u!1 &1942500692086294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4896379632718462}
+  - component: {fileID: 114269138749432902}
+  m_Layer: 0
+  m_Name: Maze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4896379632718462
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942500692086294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114269138749432902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942500692086294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26918a287fb7f54d86730cbe1a2996f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: {fileID: 1938667940054008, guid: c21ea620f71ad1f42b162ac784c81455, type: 2}
+  LootRoom: {fileID: 1753537554367000, guid: 67b7300341794d8468016d681b4435e8, type: 2}
+  BossRoom: {fileID: 1894519864475342, guid: 9d99181dbd4d52c499100e51fa9a6554, type: 2}
+  SewerRoom: {fileID: 1128661061549828, guid: 4b0e9cf4ba5c3f14ea66356c4daa1155, type: 2}
+  startTile: {fileID: 1747204478382360, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+  endTile: {fileID: 1338753894732422, guid: a7ec715d8abd5484dbeb472abe588c50, type: 2}
+  wall: {fileID: 1985584652112568, guid: efad91f6482bd97428ce4bbe3fc777c4, type: 2}
+  column: {fileID: 1178424721161400, guid: a7ce4170a5f35e1468d47947f05e3813, type: 2}
+  TextCheck: {fileID: 1492664831862850, guid: 99da2c3b92969d14291ea46c96f6f937, type: 2}
+  sewerpath: {fileID: 1537812994829614, guid: 29c509571431efd429079a46d8274885, type: 2}
+  sewerConnectMid: {fileID: 1766148158755460, guid: 05b1393924e7c9a4fb313365e3cf3dda,
+    type: 2}
+  Enemies:
+  - {fileID: 1770651897203730, guid: 9790e8081bed28148bd062eaf3979a0c, type: 2}
+  - {fileID: 1995200485855444, guid: 8b43dcb0538249a45be48aa259ec94d8, type: 2}
+  - {fileID: 1879540667638306, guid: 476617e8dd666fc418659132ad67e906, type: 2}
+  - {fileID: 1609733060263794, guid: fe98099ef7d46e541b4dc61a7b0cbf64, type: 2}
+  size: {x: 20, y: 10}
+  enemyLevel: 0

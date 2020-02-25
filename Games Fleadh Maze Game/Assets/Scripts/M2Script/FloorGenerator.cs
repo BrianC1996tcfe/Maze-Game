@@ -277,6 +277,7 @@ public class FloorGenerator : MonoBehaviour {
 				break;
 				case "all":
 					// wallx-axisrow //north
+					Debug.Log("280: "+x+" "+z);
 					partofWallX[z,x+1]=false;
 					//wallx-axisrow //south
 					partofWallX[z,x]=false;
@@ -308,9 +309,11 @@ public class FloorGenerator : MonoBehaviour {
 		}
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
 		GameObject prefabRoom = Instantiate(BossRoom,Rpos,Quaternion.identity);
+		prefabRoom.transform.parent = transform;
 		if(room1.sewerConnected==true){
 			Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,tilesize/2,(room1.sewerPoint.y+zr)*tilesize);
 			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+			SewerEntrance.transform.parent = transform;
 		}
 	}
 	private void placeSewerRoomPrefab(){
@@ -333,12 +336,15 @@ public class FloorGenerator : MonoBehaviour {
 			GameObject numText2 = Instantiate(TextCheck,new Vector3(newpos[i].x*tilesize,1,newpos[i].y*tilesize),Quaternion.Euler(90,90,0));	
 								numText2.name="numtext "+i.ToString();
 								numText2.GetComponent<TextMesh>().text=""+i.ToString();
+								numText2.transform.parent = transform;
 		}
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
 		GameObject prefabRoom = Instantiate(SewerRoom,Rpos,Quaternion.identity);
+		prefabRoom.transform.parent = transform;
 		if(room2.sewerConnected==true){
 			Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,tilesize/2,(room2.sewerPoint.y+zr)*tilesize);
 			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+			SewerEntrance.transform.parent = transform;
 		}
 	}
 	private void playerTile(){
@@ -349,6 +355,7 @@ public class FloorGenerator : MonoBehaviour {
 	private void endtile(){
 		Vector3 endpos = new Vector3(size.x*tilesize,0,(size.y-1)*tilesize);
 		GameObject playerend = Instantiate(endTile,endpos,Quaternion.Euler(0,90,0));
+		playerend.transform.parent = transform;
 		wallBoolRemove((int)size.x-1,(int)size.y-1,"east");
 	}
 	private void placeChests(int spawnNum){
@@ -397,6 +404,7 @@ public class FloorGenerator : MonoBehaviour {
 			//int rotato=90*2;
 			Vector3 redpos = new Vector3(x*tilesize,0,z*tilesize);
 			GameObject RedFloor = Instantiate(LootRoom,redpos,Quaternion.Euler(0,rotato,0));
+			RedFloor.transform.parent = transform;
 			partofmaze[x,z]=false;
 			wallBoolRemove(x,z,"all");
 		}
@@ -451,6 +459,7 @@ public class FloorGenerator : MonoBehaviour {
 					}
 					else{
 						GameObject newEnemy = Instantiate(Enemies[randEnemy],zpos,Quaternion.Euler(0,rotato,0));
+						newEnemy.transform.parent = transform;
 						// newEnemy.GetComponent<EnemyManager>.setLevel(enemyLevel);
 					}
 				}
