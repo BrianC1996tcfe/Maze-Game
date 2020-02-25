@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 23783879127027540}
   - component: {fileID: 65361140262522424}
   - component: {fileID: 114071144597594134}
+  - component: {fileID: 114692921935940168}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -409,6 +410,7 @@ GameObject:
   - component: {fileID: 65858265641123140}
   - component: {fileID: 114877179740371586}
   - component: {fileID: 114045538900528242}
+  - component: {fileID: 114721139507627534}
   m_Layer: 0
   m_Name: SWS prefab
   m_TagString: Enemy
@@ -1129,7 +1131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623094979748054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5840912, y: 0.5, z: 5.8743663}
+  m_LocalPosition: {x: -3.63582, y: 1.9253793e-16, z: -16.328863}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4823302032419336}
@@ -1348,6 +1350,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114692921935940168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388238441906896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  n: 0
+  hp: 0
+  fairy: 0
+  swordskele: 0
+  throwskele: 0
 --- !u!114 &114700984444494866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1375,6 +1394,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114721139507627534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1623094979748054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  n: 0
+  hp: 0
+  fairy: 0
+  swordskele: 0
+  throwskele: 0
 --- !u!114 &114877179740371586
 MonoBehaviour:
   m_ObjectHideFlags: 1

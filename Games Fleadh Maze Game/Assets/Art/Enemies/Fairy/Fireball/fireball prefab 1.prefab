@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114361268098495530}
   - component: {fileID: 135628976892807904}
   - component: {fileID: 54914516112350224}
+  - component: {fileID: 114772885723991988}
   m_Layer: 0
   m_Name: fireball prefab 1
   m_TagString: Untagged
@@ -315,6 +316,23 @@ MonoBehaviour:
   speed: 10
   dmg: 10
   rb: {fileID: 54893980803940368}
+--- !u!114 &114772885723991988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261853058776446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  n: 0
+  hp: 0
+  fairy: 0
+  swordskele: 0
+  throwskele: 0
 --- !u!135 &135628976892807904
 SphereCollider:
   m_ObjectHideFlags: 1

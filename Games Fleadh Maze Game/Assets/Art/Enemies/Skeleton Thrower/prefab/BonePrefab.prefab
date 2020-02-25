@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65020646170949368}
   - component: {fileID: 95117977525247170}
   - component: {fileID: 114268038441958318}
+  - component: {fileID: 114465165930165870}
   m_Layer: 0
   m_Name: BonePrefab
   m_TagString: Untagged
@@ -145,3 +146,20 @@ MonoBehaviour:
   dmg: 5
   rb: {fileID: 0}
   anim: {fileID: 0}
+--- !u!114 &114465165930165870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776187645774740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  n: 0
+  hp: 0
+  fairy: 0
+  swordskele: 0
+  throwskele: 0

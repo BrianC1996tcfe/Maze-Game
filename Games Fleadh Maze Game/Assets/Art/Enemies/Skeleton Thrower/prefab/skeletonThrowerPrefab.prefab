@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 54725661169163456}
   - component: {fileID: 114853048306357512}
   - component: {fileID: 114151302136454318}
+  - component: {fileID: 114635943557303158}
   m_Layer: 0
   m_Name: skeletonThrowerPrefab
   m_TagString: Enemy
@@ -1129,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc430e9f1f4518f45bfd140ef5a3287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_Health: 25
+  max_Health: 0
   cur_Health: 0
   healthBar: {fileID: 1640194699753188}
   player: {fileID: 0}
@@ -1189,6 +1190,23 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114635943557303158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1486437429840932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  n: 0
+  hp: 0
+  fairy: 0
+  swordskele: 0
+  throwskele: 0
 --- !u!114 &114652369265674534
 MonoBehaviour:
   m_ObjectHideFlags: 1
