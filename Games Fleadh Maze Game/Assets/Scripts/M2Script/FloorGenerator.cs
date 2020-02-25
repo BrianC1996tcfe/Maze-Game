@@ -11,6 +11,7 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject wall,column;
 	public GameObject TextCheck;
 	public GameObject sewerpath, sewerConnectMid;
+	public GameObject[] Enemies;
 	public Vector2 size;
 	private int tilesize = 10;//,stack=0;
 
@@ -340,8 +341,8 @@ public class FloorGenerator : MonoBehaviour {
 		}
 	}
 	private void playerTile(){
-		Vector3 startpos = new Vector3(0,0,-tilesize);
-		GameObject playerStart = Instantiate(startTile,startpos,Quaternion.Euler(0,180,0));
+		// Vector3 startpos = new Vector3(0,0,-tilesize);
+		// GameObject playerStart = Instantiate(startTile,startpos,Quaternion.Euler(0,180,0));
 		wallBoolRemove(0,0,"south");
 	}
 	private void endtile(){
@@ -442,6 +443,14 @@ public class FloorGenerator : MonoBehaviour {
 					GameObject madeFloor = Instantiate(floor,zpos,Quaternion.Euler(0,rotato,0));
 					madeFloor.name = "FloorTile, x-"+i+", z-"+e;
 					madeFloor.transform.parent = transform;
+					//Make Enemy Spawn
+					int randEnemy = Random.Range(-15,Enemies.Length);
+					if(randEnemy<0){
+						// nothing here as this is the case where no enemy spawns
+					}
+					else{
+						GameObject newEnemy = Instantiate(Enemies[randEnemy],zpos,Quaternion.Euler(0,rotato,0));
+					}
 				}
 			}
 		}
