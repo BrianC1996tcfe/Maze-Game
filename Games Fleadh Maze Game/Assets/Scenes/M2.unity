@@ -113,6 +113,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8347169 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172266730888102, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
+    type: 2}
+  m_PrefabInternal: {fileID: 1562509317}
+--- !u!1 &1163028967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1450194991339876, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
+    type: 2}
+  m_PrefabInternal: {fileID: 1562509317}
 --- !u!1 &1290524467
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +238,42 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4797234587156046, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.994284
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797234587156046, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5315373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797234587156046, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.5408342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406467117726802, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.52853775
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406467117726802, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.16833074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406467117726802, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.8459205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661037435206376, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661037435206376, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661037435206376, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
   m_IsPrefabParent: 0
@@ -259,6 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Maze: {fileID: 1376443783435830, guid: bebbe88fac0e43b43a5a65d35f07c189, type: 2}
+  player: {fileID: 8347169}
+  camerar: {fileID: 1163028967}
 --- !u!4 &2042538682
 Transform:
   m_ObjectHideFlags: 0

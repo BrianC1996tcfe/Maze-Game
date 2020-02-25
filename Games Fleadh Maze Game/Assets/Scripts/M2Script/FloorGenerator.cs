@@ -28,6 +28,7 @@ public class FloorGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log("lvl: "+enemyLevel);
 		//int x =size.x as int;
 		partofmaze = new bool[(int)size.x+1,(int)size.y+1];
 		// Debug.Log("1USED "+partofmaze.GetLength(0)+"USED "+partofmaze.GetLength(1));
@@ -40,7 +41,7 @@ public class FloorGenerator : MonoBehaviour {
 		setBoolsTrue();
 		if(!(size.y<10 || size.x<10)){
 			placeBossRoomPrefab();
-			placeSewerRoomPrefab();
+			// placeSewerRoomPrefab();
 		}
 		
 		playerTile();
@@ -460,7 +461,8 @@ public class FloorGenerator : MonoBehaviour {
 					else{
 						GameObject newEnemy = Instantiate(Enemies[randEnemy],zpos,Quaternion.Euler(0,rotato,0));
 						newEnemy.transform.parent = transform;
-						// newEnemy.GetComponent<EnemyManager>.setLevel(enemyLevel);
+						newEnemy.GetComponent<EnemyManager>().EnemyLevel(enemyLevel);
+						
 					}
 				}
 			}

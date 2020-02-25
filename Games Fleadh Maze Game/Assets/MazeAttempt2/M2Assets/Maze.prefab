@@ -68,5 +68,5 @@ MonoBehaviour:
   - {fileID: 1995200485855444, guid: 8b43dcb0538249a45be48aa259ec94d8, type: 2}
   - {fileID: 1879540667638306, guid: 476617e8dd666fc418659132ad67e906, type: 2}
   - {fileID: 1609733060263794, guid: fe98099ef7d46e541b4dc61a7b0cbf64, type: 2}
-  size: {x: 20, y: 10}
-  enemyLevel: 0
+  size: {x: 5, y: 5}
+  enemyLevel: 1

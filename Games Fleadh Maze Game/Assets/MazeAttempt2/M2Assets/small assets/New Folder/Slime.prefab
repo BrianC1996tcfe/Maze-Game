@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 65076417122897266}
   - component: {fileID: 114897534260012612}
   - component: {fileID: 54293281601267356}
+  - component: {fileID: 114346113047603718}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -715,6 +716,20 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114346113047603718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609733060263794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1609733060263794}
+  enemyAttackType: 3
+  enemyWeapon: {fileID: 1844851963884374}
 --- !u!114 &114600673011384972
 MonoBehaviour:
   m_ObjectHideFlags: 1

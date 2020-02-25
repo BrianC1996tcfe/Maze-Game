@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 54971089005772332}
   - component: {fileID: 114483861575662626}
   - component: {fileID: 114973698778398814}
+  - component: {fileID: 114000941373155356}
   m_Layer: 0
   m_Name: skeletonThrowerPrefab
   m_TagString: Untagged
@@ -1118,6 +1119,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000941373155356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995200485855444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1995200485855444}
+  enemyAttackType: 2
+  enemyWeapon: {fileID: 1776187645774740, guid: fc83db80afe0ea0478fc21db6fcfcf79,
+    type: 2}
 --- !u!114 &114065026504513100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1253,8 +1269,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4947146548499038, guid: 24615e4166a34a047ab5e0159b74cfb4, type: 2}
+  anim: {fileID: 0}
   firePoint: {fileID: 4127326797122098}
   bonePrefab: {fileID: 1776187645774740, guid: fc83db80afe0ea0478fc21db6fcfcf79, type: 2}
+  ID: 0
 --- !u!114 &114616248532091524
 MonoBehaviour:
   m_ObjectHideFlags: 1
