@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
 	public float max_Health;
-	public float cur_Health = 0f;
-	public float heal_amount;
+	public float cur_Health;
 	public GameObject healthBar;
 	public Text health;
 	private Animator anim;
@@ -21,13 +20,10 @@ public class PlayerHealth : MonoBehaviour {
 
 		max_Health = 100f;
 		cur_Health = max_Health;
-		cur_Health += heal_amount;
-
-		SetHealthBar ();
 	}
 
-	public void Update(){
-		
+	public void Update (){
+		SetHealthBar ();
 	}
 		
 	public void TakeDamage(float amount){
@@ -39,9 +35,10 @@ public class PlayerHealth : MonoBehaviour {
 			movement.enabled = false;
 		}
 	}
+
 	public void UsePotion(float amount){
-		heal_amount += amount;
-		if(cur_Health >= 100f){
+		cur_Health += amount;
+		if(cur_Health >= max_Health){
 			cur_Health = max_Health;
 		}
 	}

@@ -18,15 +18,17 @@ public class StaminaSystem : MonoBehaviour {
 
 	public void Update(){
 		SetStaminaBar ();
-
-		/*
-		if(cur_stamina <= 0f){
-			anim.SetBool ("Sprint", false);
-			anim.SetBool ("Roll", false);
-			anim.SetBool ("AttackHeavy", false);
+		if(cur_stamina <= 0){
+			cur_stamina = 0;
 		}
-		*/
 
+	}
+
+	public void UseStaminaPotion(float amount){
+		cur_stamina += amount;
+		if(cur_stamina >= max_stamina){
+			cur_stamina = max_stamina;
+		}
 	}
 
 	public void RegenStamina(float amount){

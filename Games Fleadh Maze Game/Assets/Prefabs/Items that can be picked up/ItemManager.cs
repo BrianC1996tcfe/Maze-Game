@@ -27,15 +27,16 @@ public class ItemManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1)){
 			H_potion--;
-			player.GetComponent<PlayerHealth> ().UsePotion (10);
+			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (10);
 			updateNumberAndSprite();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2)){
 			S_potion--;
+			player.gameObject.GetComponent<StaminaSystem> ().UseStaminaPotion (10);
 			updateNumberAndSprite();
 		}
 		if(pickup==true){
-			Debug.Log("Gay");
+			Debug.Log("oooooo");
 			
 			switch(ID){
 			case 0:
