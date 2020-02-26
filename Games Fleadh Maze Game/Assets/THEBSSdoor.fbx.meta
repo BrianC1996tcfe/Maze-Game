@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 34f8d575c226a064dbf114b3ae664ab6
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BossDoor.001
+    100002: BossDoorArmature
+    100004: Chain- horizontal-Right-1
+    100006: Chain- horizontal-Right-1.001
+    100008: Chain- horizontal-Right-1.002
+    100010: Chain- horizontal-Right-1.003
+    100012: Chain- horizontal-Right-1.004
+    100014: Chain- horizontal-Right-1.004_end
+    100016: Chain-Diagonal-BottomLeft-1
+    100018: Chain-Diagonal-BottomLeft-1.001
+    100020: Chain-Diagonal-BottomLeft-1.002
+    100022: Chain-Diagonal-BottomLeft-1.003
+    100024: Chain-Diagonal-BottomLeft-1.004
+    100026: Chain-Diagonal-BottomLeft-1.005
+    100028: Chain-Diagonal-BottomLeft-1.005_end
+    100030: Chain-Diagonal-BottomRight-1
+    100032: Chain-Diagonal-BottomRight-1.001
+    100034: Chain-Diagonal-BottomRight-1.002
+    100036: Chain-Diagonal-BottomRight-1.003
+    100038: Chain-Diagonal-BottomRight-1.004
+    100040: Chain-Diagonal-BottomRight-1.005
+    100042: Chain-Diagonal-BottomRight-1.005_end
+    100044: Chain-horizonta-lLeft-1
+    100046: Chain-horizonta-lLeft-1.001
+    100048: Chain-horizonta-lLeft-1.002
+    100050: Chain-horizonta-lLeft-1.003
+    100052: Chain-horizonta-lLeft-1.004
+    100054: Chain-horizonta-lLeft-1.004_end
+    100056: ChainDiagonal-topLeft-1
+    100058: ChainDiagonal-topLeft-1.001
+    100060: ChainDiagonal-topLeft-1.002
+    100062: ChainDiagonal-topLeft-1.003
+    100064: ChainDiagonal-topLeft-1.004
+    100066: ChainDiagonal-topLeft-1.005
+    100068: ChainDiagonal-topLeft-1.005_end
+    100070: ChainDiagonal-TopRight-1
+    100072: ChainDiagonal-TopRight-1.001
+    100074: ChainDiagonal-TopRight-1.002
+    100076: ChainDiagonal-TopRight-1.003
+    100078: ChainDiagonal-TopRight-1.004
+    100080: ChainDiagonal-TopRight-1.005
+    100082: ChainDiagonal-TopRight-1.005_end
+    100084: Door-Left_Bone
+    100086: Door-Left_Bone_end
+    100088: Door-Right-Bone
+    100090: Door-Right-Bone_end
+    100092: DoorFrame
+    100094: DoorFrame_end
+    100096: Key-Bone
+    100098: Key-Bone_end
+    100100: Lock-Bone
+    100102: Lock-Bone_end
+    100104: //RootNode
+    100106: Vertical-Chain -1- TopBone
+    100108: Vertical-Chain -1- TopBone.001
+    100110: Vertical-Chain -1- TopBone.002
+    100112: Vertical-Chain -1- TopBone.003
+    100114: Vertical-Chain -1- TopBone.004
+    100116: Vertical-Chain -1- TopBone.005
+    100118: Vertical-Chain -1- TopBone.006
+    100120: Vertical-Chain -1- TopBone.007
+    100122: Vertical-Chain -1- TopBone.008
+    100124: Vertical-Chain -1- TopBone.009
+    100126: Vertical-Chain -1- TopBone.010
+    100128: Vertical-Chain -1- TopBone.011
+    100130: Vertical-Chain -1- TopBone.011_end
+    400000: BossDoor.001
+    400002: BossDoorArmature
+    400004: Chain- horizontal-Right-1
+    400006: Chain- horizontal-Right-1.001
+    400008: Chain- horizontal-Right-1.002
+    400010: Chain- horizontal-Right-1.003
+    400012: Chain- horizontal-Right-1.004
+    400014: Chain- horizontal-Right-1.004_end
+    400016: Chain-Diagonal-BottomLeft-1
+    400018: Chain-Diagonal-BottomLeft-1.001
+    400020: Chain-Diagonal-BottomLeft-1.002
+    400022: Chain-Diagonal-BottomLeft-1.003
+    400024: Chain-Diagonal-BottomLeft-1.004
+    400026: Chain-Diagonal-BottomLeft-1.005
+    400028: Chain-Diagonal-BottomLeft-1.005_end
+    400030: Chain-Diagonal-BottomRight-1
+    400032: Chain-Diagonal-BottomRight-1.001
+    400034: Chain-Diagonal-BottomRight-1.002
+    400036: Chain-Diagonal-BottomRight-1.003
+    400038: Chain-Diagonal-BottomRight-1.004
+    400040: Chain-Diagonal-BottomRight-1.005
+    400042: Chain-Diagonal-BottomRight-1.005_end
+    400044: Chain-horizonta-lLeft-1
+    400046: Chain-horizonta-lLeft-1.001
+    400048: Chain-horizonta-lLeft-1.002
+    400050: Chain-horizonta-lLeft-1.003
+    400052: Chain-horizonta-lLeft-1.004
+    400054: Chain-horizonta-lLeft-1.004_end
+    400056: ChainDiagonal-topLeft-1
+    400058: ChainDiagonal-topLeft-1.001
+    400060: ChainDiagonal-topLeft-1.002
+    400062: ChainDiagonal-topLeft-1.003
+    400064: ChainDiagonal-topLeft-1.004
+    400066: ChainDiagonal-topLeft-1.005
+    400068: ChainDiagonal-topLeft-1.005_end
+    400070: ChainDiagonal-TopRight-1
+    400072: ChainDiagonal-TopRight-1.001
+    400074: ChainDiagonal-TopRight-1.002
+    400076: ChainDiagonal-TopRight-1.003
+    400078: ChainDiagonal-TopRight-1.004
+    400080: ChainDiagonal-TopRight-1.005
+    400082: ChainDiagonal-TopRight-1.005_end
+    400084: Door-Left_Bone
+    400086: Door-Left_Bone_end
+    400088: Door-Right-Bone
+    400090: Door-Right-Bone_end
+    400092: DoorFrame
+    400094: DoorFrame_end
+    400096: Key-Bone
+    400098: Key-Bone_end
+    400100: Lock-Bone
+    400102: Lock-Bone_end
+    400104: //RootNode
+    400106: Vertical-Chain -1- TopBone
+    400108: Vertical-Chain -1- TopBone.001
+    400110: Vertical-Chain -1- TopBone.002
+    400112: Vertical-Chain -1- TopBone.003
+    400114: Vertical-Chain -1- TopBone.004
+    400116: Vertical-Chain -1- TopBone.005
+    400118: Vertical-Chain -1- TopBone.006
+    400120: Vertical-Chain -1- TopBone.007
+    400122: Vertical-Chain -1- TopBone.008
+    400124: Vertical-Chain -1- TopBone.009
+    400126: Vertical-Chain -1- TopBone.010
+    400128: Vertical-Chain -1- TopBone.011
+    400130: Vertical-Chain -1- TopBone.011_end
+    2100000: Lock
+    2100002: KeyHole(Black)
+    2100004: cHAINS
+    2100006: DoorFrame
+    2100008: Door-Steel
+    2100010: Door
+    2100012: Material
+    4300000: BossDoor.001
+    7400000: BossDoorArmature|KeyOpen
+    7400002: BossDoorArmature|OpenAnimationBossDoor
+    9500000: //RootNode
+    13700000: BossDoor.001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
