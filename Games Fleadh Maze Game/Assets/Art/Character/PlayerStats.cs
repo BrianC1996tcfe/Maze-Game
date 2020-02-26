@@ -42,6 +42,10 @@ public class PlayerStats : MonoBehaviour {
 
 	//methods
 	public void Start(){
+		canvas = GameObject.FindGameObjectWithTag("PlayerInfoCanvas");
+		cameraPrefab = GameObject.FindGameObjectWithTag("CameraBase");
+		playerPrefab = GameObject.FindGameObjectWithTag ("Player");
+
 		Button btnStr = strBtn.GetComponent<Button> ();
 		btnStr.onClick.AddListener(strBtnOnClick);
 

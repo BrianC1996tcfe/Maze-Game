@@ -24,10 +24,11 @@ public class NewMovement : MonoBehaviour {
 	public float sprintSpeed;
 	public float runSpeed;
 
-	private bool canSprint = true;
+	public float cur_stamina;
 
 	//-----------------------------------------------
 	void Start () {
+		cur_stamina = StaminaSystem.cur_stamina;
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
@@ -75,12 +76,12 @@ public class NewMovement : MonoBehaviour {
 	}
 	//------------------Rolling-------------------
 	public void Roll(){
-		if (Input.GetKey (KeyCode.LeftControl)) {
+		if (Input.GetKeyDown (KeyCode.LeftControl)) {
 			anim.SetBool ("Roll", true);
 			anim.SetBool ("Sprint", false);
 			anim.SetBool ("Movement", false);
 			StartCoroutine("RollTime");
-			//this.GetComponent<StaminaSystem> ().TakeStamina (10f);
+			this.GetComponent<StaminaSystem> ().TakeStamina (25f);
 		} else {
 			anim.SetBool ("Roll", false);
 			anim.SetBool ("Sprint", false);
@@ -89,15 +90,15 @@ public class NewMovement : MonoBehaviour {
 	}
 
 	IEnumerator RollTime(){
-		if (Input.GetKey (KeyCode.LeftShift)) {
+		if (Input.GetKeyDown (KeyCode.LeftControl)) {
 			this.GetComponent<Collider> ().enabled = false;
 
-			yield return new WaitForSeconds (0.8f);
+			yield return new WaitForSeconds (1f);
 
 			this.GetComponent<Collider> ().enabled = true;
 		}
 	}
-	//------------------Attacking--------------------
+	//------------------Quick Attacking--------------------
 	IEnumerator QuickAttackCollider(){
 		if (Input.GetButtonDown ("Fire1")) {
 			swordL.GetComponent<BoxCollider> ().enabled = true;
@@ -117,8 +118,8 @@ public class NewMovement : MonoBehaviour {
 			anim.SetBool ("Movement", true);
 		}
 	}
-
-	IEnumerator HeavyCollider(){
+	//-----------------Heavy Attacking-----------------------------
+		IEnumerator HeavyCollider(){
 		if (Input.GetButtonDown ("Fire2")) {
 			swordR.GetComponent<BoxCollider> ().enabled = true;
 
@@ -127,18 +128,20 @@ public class NewMovement : MonoBehaviour {
 			swordR.GetComponent<BoxCollider> ().enabled = false;
 		}
 	}
-
+		
 	public void HeavyAttack(){
-		if (Input.GetButtonDown ("Fire2")) {
+		if (Input.GetButtonDown ("Fire2") ) {
 			StartCoroutine ("HeavyCollider");
 			anim.SetBool ("AttackHeavy", true);
 			anim.SetBool ("Movement", false);
+			this.GetComponent<StaminaSystem> ().TakeStamina (25f);
 		} else {
 			anim.SetBool ("AttackHeavy", false);
 			anim.SetBool ("Movement", true);
 		}
 	}
-	//------------------------------------------------------------
+
+	//-----------------------Movement------------------------------
 
 	public void PlayerMoveAndRotation(){
 		inputX = Input.GetAxis ("Horizontal");
