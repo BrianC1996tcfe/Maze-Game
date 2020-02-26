@@ -25,12 +25,12 @@ public class ItemManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Alpha1)){
+		if (Input.GetKeyDown(KeyCode.Alpha1) && H_potion >= 1){
 			H_potion--;
 			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (10);
 			updateNumberAndSprite();
 		}
-		if (Input.GetKeyDown(KeyCode.Alpha2)){
+		if (Input.GetKeyDown(KeyCode.Alpha2) && S_potion >= 1){
 			S_potion--;
 			player.gameObject.GetComponent<StaminaSystem> ().UseStaminaPotion (10);
 			updateNumberAndSprite();
@@ -62,21 +62,21 @@ public class ItemManager : MonoBehaviour {
 		H_PotionNum.GetComponent<Text>().text = H_potion + " / " + maxH_potion;
 		S_PotionNum.GetComponent<Text>().text = S_potion + " / " + maxS_potion;
 		KeyNum.GetComponent<Text>().text = Key + " / ?" ;
-		if(H_potion<1){
+		if(H_potion<= 0){
 			H_potion=0;
 			H_PotionSlot.GetComponent<Image>().sprite = H_PotionSpriteGrey;
 		}
 		else{
 			H_PotionSlot.GetComponent<Image>().sprite = H_PotionSprite;
 		}
-		if(S_potion<1){
+		if(S_potion <= 0){
 			S_potion=0;
 			S_PotionSlot.GetComponent<Image>().sprite = S_PotionSpriteGrey;
 		}
 		else{
 			S_PotionSlot.GetComponent<Image>().sprite = S_PotionSprite;
 		}
-		if(Key<1){
+		if(Key <= 0){
 			Key=0;
 			KeySlot.GetComponent<Image>().sprite = KeySpriteGrey;
 		}

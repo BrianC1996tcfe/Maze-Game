@@ -8,7 +8,7 @@ public class swordDamage : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		StartCoroutine ("Collider");
-		if (other.gameObject.tag=="Enemy") {
+		if (other.gameObject.tag=="Player") {
 			other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (dmg);
 		}
 	}
