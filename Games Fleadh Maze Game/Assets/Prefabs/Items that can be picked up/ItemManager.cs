@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemManager : MonoBehaviour {
 	public GameObject H_PotionSlot,S_PotionSlot,KeySlot;
 	public GameObject H_PotionNum,S_PotionNum,KeyNum;
+	public GameObject player;
 	public Sprite H_PotionSprite,H_PotionSpriteGrey,S_PotionSprite,S_PotionSpriteGrey,KeySprite,KeySpriteGrey;
 	public int startH_PotionNum,startS_PotionNum, maxH_potion, maxS_potion;
 	private static int H_potion,S_potion,Key;
@@ -15,6 +16,7 @@ public class ItemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		player = GameObject.FindGameObjectWithTag ("Player");
 		H_potion = startH_PotionNum;
 		S_potion = startS_PotionNum;
 		Key = 0;
@@ -25,7 +27,7 @@ public class ItemManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1)){
 			H_potion--;
-			// other.gameObject.GetComponent<PlayerHealth> ().TakeDamage (-10);
+			player.GetComponent<PlayerHealth> ().UsePotion (10);
 			updateNumberAndSprite();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2)){
