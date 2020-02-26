@@ -24,8 +24,8 @@ Vector2 newlvlSize;
 		fl4Gen.enemyLevel=1;
 		MazePos = Maze.transform.position;
 		PlayerStartPos = player.transform.position;
-		GameObject newMaze = Instantiate(Maze,MazePos,Quaternion.identity);
-		newMaze.tag = "Maze";
+		// GameObject newMaze = Instantiate(Maze,MazePos,Quaternion.identity);
+		// newMaze.tag = "Maze";
 		
 
 	}

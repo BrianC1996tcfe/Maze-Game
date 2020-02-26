@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 7feda20323bd1874486d4cd52d9bb813
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chain Diagpnal
+    100004: chain horizontal
+    100006: chain Vertical
+    100008: Door-Left
+    100010: Door-right
+    100012: DoorFrame
+    100014: KEY
+    100016: Lock
+    100018: Mirror-Point forChains
+    100020: Plane
+    400000: //RootNode
+    400002: Chain Diagpnal
+    400004: chain horizontal
+    400006: chain Vertical
+    400008: Door-Left
+    400010: Door-right
+    400012: DoorFrame
+    400014: KEY
+    400016: Lock
+    400018: Mirror-Point forChains
+    400020: Plane
+    2100000: No Name
+    2100002: DoorFrame
+    2100004: cHAINS
+    2100006: Door-Steel
+    2100008: Door
+    2100010: Lock
+    2100012: KeyHole(Black)
+    2100014: Material
+    2300000: Chain Diagpnal
+    2300002: chain horizontal
+    2300004: chain Vertical
+    2300006: Door-Left
+    2300008: Door-right
+    2300010: DoorFrame
+    2300012: KEY
+    2300014: Lock
+    2300016: Plane
+    3300000: Chain Diagpnal
+    3300002: chain horizontal
+    3300004: chain Vertical
+    3300006: Door-Left
+    3300008: Door-right
+    3300010: DoorFrame
+    3300012: KEY
+    3300014: Lock
+    3300016: Plane
+    4300000: Plane
+    4300002: DoorFrame
+    4300004: Chain Diagpnal
+    4300006: chain horizontal
+    4300008: chain Vertical
+    4300010: Door-right
+    4300012: Door-Left
+    4300014: Lock
+    4300016: KEY
+    7400000: Plane|Cube.002Action
+    7400002: Plane|Cube.003Action
+    7400004: Plane|Cube.004Action
+    7400006: Plane|Cube.005Action
+    7400008: Plane|Cube.005Action.001
+    7400010: Plane|Cube.006Action
+    7400012: Plane|Cube.007Action
+    7400014: Plane|Cube.009Action
+    7400016: Plane|CubeAction
+    7400018: Plane|PlaneAction
+    7400020: DoorFrame|Cube.002Action
+    7400022: DoorFrame|Cube.003Action
+    7400024: DoorFrame|Cube.004Action
+    7400026: DoorFrame|Cube.005Action
+    7400028: DoorFrame|Cube.005Action.001
+    7400030: DoorFrame|Cube.006Action
+    7400032: DoorFrame|Cube.007Action
+    7400034: DoorFrame|Cube.009Action
+    7400036: DoorFrame|CubeAction
+    7400038: DoorFrame|PlaneAction
+    7400040: Chain Diagpnal|Cube.002Action
+    7400042: Chain Diagpnal|Cube.003Action
+    7400044: Chain Diagpnal|Cube.004Action
+    7400046: Chain Diagpnal|Cube.005Action
+    7400048: Chain Diagpnal|Cube.005Action.001
+    7400050: Chain Diagpnal|Cube.006Action
+    7400052: Chain Diagpnal|Cube.007Action
+    7400054: Chain Diagpnal|Cube.009Action
+    7400056: Chain Diagpnal|CubeAction
+    7400058: Chain Diagpnal|PlaneAction
+    7400060: chain horizontal|Cube.002Action
+    7400062: chain horizontal|Cube.003Action
+    7400064: chain horizontal|Cube.004Action
+    7400066: chain horizontal|Cube.005Action
+    7400068: chain horizontal|Cube.005Action.001
+    7400070: chain horizontal|Cube.006Action
+    7400072: chain horizontal|Cube.007Action
+    7400074: chain horizontal|Cube.009Action
+    7400076: chain horizontal|CubeAction
+    7400078: chain horizontal|PlaneAction
+    7400080: chain Vertical|Cube.002Action
+    7400082: chain Vertical|Cube.003Action
+    7400084: chain Vertical|Cube.004Action
+    7400086: chain Vertical|Cube.005Action
+    7400088: chain Vertical|Cube.005Action.001
+    7400090: chain Vertical|Cube.006Action
+    7400092: chain Vertical|Cube.007Action
+    7400094: chain Vertical|Cube.009Action
+    7400096: chain Vertical|CubeAction
+    7400098: chain Vertical|PlaneAction
+    7400100: Door-right|Cube.002Action
+    7400102: Door-right|Cube.003Action
+    7400104: Door-right|Cube.004Action
+    7400106: Door-right|Cube.005Action
+    7400108: Door-right|Cube.005Action.001
+    7400110: Door-right|Cube.006Action
+    7400112: Door-right|Cube.007Action
+    7400114: Door-right|Cube.009Action
+    7400116: Door-right|CubeAction
+    7400118: Door-right|PlaneAction
+    7400120: Door-Left|Cube.002Action
+    7400122: Door-Left|Cube.003Action
+    7400124: Door-Left|Cube.004Action
+    7400126: Door-Left|Cube.005Action
+    7400128: Door-Left|Cube.005Action.001
+    7400130: Door-Left|Cube.006Action
+    7400132: Door-Left|Cube.007Action
+    7400134: Door-Left|Cube.009Action
+    7400136: Door-Left|CubeAction
+    7400138: Door-Left|PlaneAction
+    7400140: Lock|Cube.002Action
+    7400142: Lock|Cube.003Action
+    7400144: Lock|Cube.004Action
+    7400146: Lock|Cube.005Action
+    7400148: Lock|Cube.005Action.001
+    7400150: Lock|Cube.006Action
+    7400152: Lock|Cube.007Action
+    7400154: Lock|Cube.009Action
+    7400156: Lock|CubeAction
+    7400158: Lock|PlaneAction
+    7400160: KEY|Cube.002Action
+    7400162: KEY|Cube.003Action
+    7400164: KEY|Cube.004Action
+    7400166: KEY|Cube.005Action
+    7400168: KEY|Cube.005Action.001
+    7400170: KEY|Cube.006Action
+    7400172: KEY|Cube.007Action
+    7400174: KEY|Cube.009Action
+    7400176: KEY|CubeAction
+    7400178: KEY|PlaneAction
+    7400180: Scene-Bean
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Scene-Bean
+      takeName: Scene
+      firstFrame: 1
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
