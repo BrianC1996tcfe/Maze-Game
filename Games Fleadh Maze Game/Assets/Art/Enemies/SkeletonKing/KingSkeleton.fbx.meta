@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 60c3e5ae7ef21c440b7382c6fc2c535c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: foorL
+    100004: foorL_end
+    100006: foorR
+    100008: foorR_end
+    100010: GoldBelt
+    100012: GoldBeltDiagonal
+    100014: handL
+    100016: handL_end
+    100018: handR
+    100020: handR_end
+    100022: head
+    100024: head_end
+    100026: hip
+    100028: King Skeleton
+    100030: //RootNode
+    100032: lowerarmL
+    100034: lowerarmR
+    100036: lowerlegL
+    100038: lowerlegR
+    100040: neck
+    100042: NecklaceGold
+    100044: RedButtCloth
+    100046: Ring_LittleFinger
+    100048: Ring_RingFinger
+    100050: RingIndex
+    100052: RingMiddle
+    100054: RingThumb
+    100056: stomach
+    100058: Sword
+    100060: upperarmL
+    100062: upperarmR
+    100064: upperlegL
+    100066: upperlegR
+    400000: Armature
+    400002: foorL
+    400004: foorL_end
+    400006: foorR
+    400008: foorR_end
+    400010: GoldBelt
+    400012: GoldBeltDiagonal
+    400014: handL
+    400016: handL_end
+    400018: handR
+    400020: handR_end
+    400022: head
+    400024: head_end
+    400026: hip
+    400028: King Skeleton
+    400030: //RootNode
+    400032: lowerarmL
+    400034: lowerarmR
+    400036: lowerlegL
+    400038: lowerlegR
+    400040: neck
+    400042: NecklaceGold
+    400044: RedButtCloth
+    400046: Ring_LittleFinger
+    400048: Ring_RingFinger
+    400050: RingIndex
+    400052: RingMiddle
+    400054: RingThumb
+    400056: stomach
+    400058: Sword
+    400060: upperarmL
+    400062: upperarmR
+    400064: upperlegL
+    400066: upperlegR
+    2100000: handle
+    2100002: Grip
+    2100004: BLADE
+    2100006: Material.003
+    2100008: Material.002
+    2100010: Material.004
+    2100012: Material.005
+    2100014: defaultsds
+    2100016: Material.007
+    2300000: GoldBelt
+    2300002: GoldBeltDiagonal
+    2300004: NecklaceGold
+    2300006: RedButtCloth
+    2300008: Ring_LittleFinger
+    2300010: Ring_RingFinger
+    2300012: RingIndex
+    2300014: RingMiddle
+    2300016: RingThumb
+    2300018: Sword
+    3300000: GoldBelt
+    3300002: GoldBeltDiagonal
+    3300004: NecklaceGold
+    3300006: RedButtCloth
+    3300008: Ring_LittleFinger
+    3300010: Ring_RingFinger
+    3300012: RingIndex
+    3300014: RingMiddle
+    3300016: RingThumb
+    3300018: Sword
+    4300000: Sword
+    4300002: King Skeleton
+    4300004: GoldBelt
+    4300006: RedButtCloth
+    4300008: GoldBeltDiagonal
+    4300010: RingMiddle
+    4300012: Ring_RingFinger
+    4300014: RingIndex
+    4300016: Ring_LittleFinger
+    4300018: NecklaceGold
+    4300020: RingThumb
+    7400000: Armature|Attack1
+    7400002: Armature|Attack2
+    7400004: Armature|Idle
+    7400006: Armature|library
+    7400008: Armature|Walk
+    9500000: //RootNode
+    13700000: King Skeleton
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
