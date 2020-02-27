@@ -50,9 +50,24 @@ public class ItemManager : MonoBehaviour {
 			case 2:
 				Key++;
 				Debug.Log("72 "+Key);
-				break;
+			break;
+			case 3:
+				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				Debug.Log("c3");
+			break;	
+			case 4:
+				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				Debug.Log("c4 ");
+			break;
+			case 5:
+				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				Debug.Log("c5");
+			break;
+			case 6:
+				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				Debug.Log("c6");
+			break;	
 			}
-			
 			pickup=false;
 			updateNumberAndSprite();
 		}

@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23740063841971310}
   - component: {fileID: 65125302357594134}
   - component: {fileID: 114785893626278282}
+  - component: {fileID: 54445518136947636}
+  - component: {fileID: 65439916610500040}
   m_Layer: 0
   m_Name: GreenGem
   m_TagString: Untagged
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360964242021422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.400108, y: 3.06, z: -200.55373}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360964242021422}
   m_Mesh: {fileID: 4300000, guid: 970e8144e3d86234085b91af11d93ad8, type: 3}
+--- !u!54 &54445518136947636
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360964242021422}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!65 &65125302357594134
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -96,6 +113,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.06, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65439916610500040
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360964242021422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025515508, y: 0.051031016, z: 0.0072756982}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114785893626278282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,9 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e1e6272b81ae46b0bd9f5bec50fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Green Gem
-  id: 1
-  itemUISprite: {fileID: 21300000, guid: c872048e268d7e148a135926d44e43ee, type: 3}
+  id: 4
   particleEffect: {fileID: 1456122858471216, guid: 29ec9f8a95df14741b10a1abfe41580e,
     type: 2}
-  InvManager: {fileID: 1197661224111398, guid: a2e4e86f3e7ab32449a93623a9c2fa6d, type: 2}
+  InvManager: {fileID: 0}
