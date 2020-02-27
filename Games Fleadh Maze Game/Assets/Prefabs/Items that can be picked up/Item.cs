@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour{
-	public string itemName = "Unique_ItemName";
-	public int id;//unique id // represent pickup-able items place in array
-	public Sprite itemUISprite;
+	public int id;//unique id
 	public GameObject particleEffect;
 	public GameObject InvManager;
-	// private toolbarScript toolbar;
 
-	void Start(){
-        //Change item tag to Respawn to detect when we look at it
-        gameObject.tag = "Respawn";
-    }
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider collision)
     {
-		Vector3 pos = gameObject.transform.position;
-       
-		// toolbar.pickupItem(id);
-		InvManager.GetComponent<ItemManager>().pickupItem(id);
-		Destroy(gameObject);
-		GameObject replacement = Instantiate(particleEffect,pos,Quaternion.identity);
+		// Debug.Log("item20");
+		if(collision.gameObject.tag=="Player"){
+			// Debug.Log("item22");
+			Vector3 pos = this.gameObject.transform.position;
+			InvManager.GetComponent<ItemManager>().pickupItem(id);
+			Destroy(this.gameObject);
+			GameObject replacement = Instantiate(particleEffect,pos,Quaternion.identity);
+		}
 	}
 }
