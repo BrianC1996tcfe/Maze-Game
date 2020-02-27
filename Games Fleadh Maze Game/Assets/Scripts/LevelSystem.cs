@@ -22,7 +22,7 @@ public class LevelSystem : MonoBehaviour{
 	void Start(){
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		player = this.gameObject;
-		level = 1;
+		level = 1f;
 		experience = 0;
 		experienceRequired = 100;
 	}
