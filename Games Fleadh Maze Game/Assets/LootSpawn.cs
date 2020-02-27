@@ -7,7 +7,7 @@ public class LootSpawn : MonoBehaviour {
 	public int[] lootSpawnRate;
 	public float thrust = 1.0f;
 	void Start () {
-		
+		StartCoroutine(spawntheloot());
 	}
 	
 	// Update is called once per frame
