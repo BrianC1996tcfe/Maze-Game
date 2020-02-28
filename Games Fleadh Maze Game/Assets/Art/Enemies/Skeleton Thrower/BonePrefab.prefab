@@ -157,9 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  n: 0
-  hp: 0
-  fairy: 0
-  swordskele: 0
-  throwskele: 0
+  enemy: {fileID: 0}
+  enemyAttackType: 0
+  enemyWeapon: {fileID: 0}
