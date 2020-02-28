@@ -15,6 +15,7 @@ TagManager:
   - EnemyWeapon
   - LootStream
   - InvMan
+  - GM
   layers:
   - Default
   - TransparentFX
