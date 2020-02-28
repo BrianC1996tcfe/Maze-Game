@@ -82,6 +82,9 @@ Vector2 newlvlSize;
 		Destroy(GameObject.FindWithTag("Maze"));
 		GameObject newMaze = Instantiate(Maze,MazePos,Quaternion.identity);
 		newMaze.tag = "Maze";
+		// player.FindWithTag("InvMan").GetComponent<ItemManager>().resetInventory();
+		// player.GetComponentInChildren<ItemManager>.resetInventory();
+		GameObject.FindGameObjectWithTag("InvMan").GetComponent<ItemManager>().resetInventory();
 		player.transform.position = PlayerStartPos;
 		camerar.transform.position = CStartPos;
 	}

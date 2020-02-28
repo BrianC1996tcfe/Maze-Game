@@ -99,6 +99,12 @@ public class ItemManager : MonoBehaviour {
 			KeySlot.GetComponent<Image>().sprite = KeySprite;
 		}
 	}
+	public void resetInventory(){
+		H_potion = startH_PotionNum;
+		S_potion = startS_PotionNum;
+		Key = 0;
+		updateNumberAndSprite();
+	}
 	public void pickupItem(int id){
 		// switch(id){
 		// 	case 0:

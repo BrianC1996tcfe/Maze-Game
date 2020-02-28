@@ -4,11 +4,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PortalToNewScene : MonoBehaviour {
-
 public int SceneNum;
 
 private void OnTriggerEnter ()
 {
-	SceneManager.LoadScene(SceneNum);
+	GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().NextLevel();
 }
 }
