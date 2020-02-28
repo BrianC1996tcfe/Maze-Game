@@ -139,4 +139,4 @@ MonoBehaviour:
   id: 5
   particleEffect: {fileID: 1456122858471216, guid: 29ec9f8a95df14741b10a1abfe41580e,
     type: 2}
-  InvManager: {fileID: 0}
+  InvManager: {fileID: 1182703965048080, guid: b18fd06374d4e5c4cae32a8150ccc2e2, type: 2}

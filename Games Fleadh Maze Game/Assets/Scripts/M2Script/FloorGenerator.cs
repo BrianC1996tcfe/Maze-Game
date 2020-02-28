@@ -47,7 +47,8 @@ public class FloorGenerator : MonoBehaviour {
 		playerTile();
 		endtile();
 		// Debug.Log("19");
-		int chestnum = Mathf.RoundToInt((size.x*size.y)/50);
+		// int chestnum = Mathf.RoundToInt((size.x*size.y)/50);
+		int chestnum = Mathf.RoundToInt((size.x*size.y)/25);
 		if(!(chestnum==0)){
 			placeChests(chestnum);
 		}

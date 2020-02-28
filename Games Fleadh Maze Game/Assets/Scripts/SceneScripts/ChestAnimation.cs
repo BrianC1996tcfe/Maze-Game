@@ -11,6 +11,7 @@ public class ChestAnimation : MonoBehaviour {
 	void Start () {
 		coolBool = false;
 		anim = GetComponent<Animator>();
+		loot = GameObject.FindGameObjectWithTag("LootStream");
 	}
 	void Update () {
 		if(InteractionText.activeSelf){
@@ -31,6 +32,7 @@ public class ChestAnimation : MonoBehaviour {
 		yield return new WaitForSeconds(1.5f);
 		Vector3 lootPos = this.gameObject.transform.position;
 		Quaternion lootrot = this.gameObject.transform.rotation;
+		lootPos.y = 1;
 		GameObject lootSpawn = Instantiate(loot,lootPos,lootrot);
 	}
 	public void killChestFunctionality(){

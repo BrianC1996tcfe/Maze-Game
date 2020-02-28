@@ -6537,6 +6537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  experience: 0
   experienceRequired: 0
   exp: {fileID: 969504891}
   myLevel: {fileID: 831474202}
