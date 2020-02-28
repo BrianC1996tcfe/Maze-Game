@@ -6,7 +6,6 @@ public class SkeletonKingController : MonoBehaviour {
 
 	public Transform player;
 	static Animator anim;
-	int n;
 
 	void Start(){
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
@@ -21,15 +20,15 @@ public class SkeletonKingController : MonoBehaviour {
 
 			anim.SetBool ("isIdle", false);
 
-			if (direction.magnitude > 6) {
+			if (direction.magnitude > 5) {
 				//0.05f is the movement speed towards the player
-				this.transform.Translate (0, 0, 0.2f);
+				this.transform.Translate (0, 0, 0.15f);
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
 			} else {
-					anim.SetBool ("isAttacking", true);
-					anim.SetBool ("isWalking", false);
-			}
+				anim.SetBool ("isAttacking", true);
+				anim.SetBool ("isWalking", false);
+			} 
 		} else {
 			anim.SetBool ("isIdle", true);
 			anim.SetBool ("isWalking", false);

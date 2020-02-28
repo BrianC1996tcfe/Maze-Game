@@ -2423,7 +2423,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697654185711352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 3.56, z: -7.3}
+  m_LocalPosition: {x: -0.38, y: 3.56, z: -7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4618058439185406}
@@ -2712,7 +2712,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774815407169840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 33.9, z: 12.5}
+  m_LocalPosition: {x: 2.5, y: 33.9, z: 12.5}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4038257781289032}
@@ -3966,7 +3966,7 @@ MonoBehaviour:
   H_PotionNum: {fileID: 1426786648065280}
   S_PotionNum: {fileID: 1541721500287536}
   KeyNum: {fileID: 1434334336594032}
-  player: {fileID: 0}
+  player: {fileID: 1672769393097958}
   H_PotionSprite: {fileID: 21300000, guid: 6168f865abe6f154fb45ef5e4bef334b, type: 3}
   H_PotionSpriteGrey: {fileID: 21300000, guid: 9db9852783de650469c695f5bf2c1cd2, type: 3}
   S_PotionSprite: {fileID: 21300000, guid: ea1efced4760e054aa764e3f3ccdbc2d, type: 3}
@@ -5265,7 +5265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_Health: 0
   cur_Health: 0
-  heal_amount: 0
   healthBar: {fileID: 1434274901642632}
   health: {fileID: 114145602443899522}
 --- !u!114 &114763169294326118
@@ -5311,6 +5310,7 @@ MonoBehaviour:
   movementSpeed: 0
   sprintSpeed: 0
   runSpeed: 0
+  cur_stamina: 0
 --- !u!114 &114802627990091986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6647,7 +6647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -837, y: -257.99994}
+  m_AnchoredPosition: {x: -644, y: -257}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224534802690429386
