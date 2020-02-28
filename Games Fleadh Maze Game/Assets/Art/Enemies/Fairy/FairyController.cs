@@ -31,7 +31,7 @@ public class FairyController : MonoBehaviour
 
 			if (direction.magnitude > 10)
             {
-                this.transform.Translate(0, 0, 0.05f);
+                this.transform.Translate(0, 0, 0.2f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }

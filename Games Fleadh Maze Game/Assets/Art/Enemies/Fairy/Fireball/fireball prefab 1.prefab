@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4583150512373844}
   - component: {fileID: 33450683595508520}
   - component: {fileID: 23335534709863092}
-  - component: {fileID: 114361268098495530}
   - component: {fileID: 135628976892807904}
   - component: {fileID: 54914516112350224}
+  - component: {fileID: 114361268098495530}
   - component: {fileID: 114772885723991988}
   m_Layer: 0
   m_Name: fireball prefab 1
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  dmg: 1790
+  dmg: 5
   rb: {fileID: 54914516112350224}
 --- !u!114 &114731173794738664
 MonoBehaviour:

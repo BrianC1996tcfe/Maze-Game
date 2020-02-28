@@ -22,7 +22,7 @@ public class SWSController : MonoBehaviour {
 
 			if (direction.magnitude > 3) {
 				//0.05f is the movement speed towards the player
-				this.transform.Translate (0, 0, 0.05f);
+				this.transform.Translate (0, 0, 0.1f);
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
 			} else {
