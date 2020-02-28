@@ -14,6 +14,6 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void PlayBtnOnClick(){
-		SceneManager.LoadScene ("M2");
+		SceneManager.LoadScene ("Maze");
 	}
 }
