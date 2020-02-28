@@ -8,7 +8,7 @@ public class LevelSystem : MonoBehaviour{
 
 	//variables
 	public float level;
-	private float experience;
+	public float experience;
 	public float experienceRequired;
 	public Text exp;
 	public Text myLevel;
@@ -19,15 +19,15 @@ public class LevelSystem : MonoBehaviour{
 	public float addPoints;
 	//methods
 
-	void Start(){
+	public void Start(){
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		player = this.gameObject;
-		level = 1;
+		level = 1f;
 		experience = 0;
 		experienceRequired = 100;
 	}
 
-	void Update(){
+	public void Update(){
 		SetLevel ();
 		Exp ();
 		SetXpBar();

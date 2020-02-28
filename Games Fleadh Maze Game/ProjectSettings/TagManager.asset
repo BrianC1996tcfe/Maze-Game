@@ -12,6 +12,7 @@ TagManager:
   - MazeScript
   - CameraBase
   - PlayerInfoCanvas
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX

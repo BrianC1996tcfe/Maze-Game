@@ -18,8 +18,10 @@ public class EnemyManager : MonoBehaviour {
 	// public GameObject SlimeAttack;
 	// public GameObject ThrowSkeletonAttack;
 	public GameObject enemyWeapon;
-	void Start () {
-		// enemy = GameObject.FindGameObjectWithTag ("Enemy");
+
+	public void Start(){
+		enemyWeapon = GameObject.FindGameObjectWithTag("EnemyWeapon");
+		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 	}
 
 	public void EnemyLevel(int level){
