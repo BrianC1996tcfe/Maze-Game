@@ -10,7 +10,7 @@ public class ItemManager : MonoBehaviour {
 	public Sprite H_PotionSprite,H_PotionSpriteGrey,S_PotionSprite,S_PotionSpriteGrey,KeySprite,KeySpriteGrey;
 	public int startH_PotionNum,startS_PotionNum, maxH_potion, maxS_potion;
 	private static int H_potion,S_potion,Key;
-	public GameObject[] UsableItems;
+	public GameObject[] UsableItemsParticle;
 	private bool pickup = false;
 	private int ID;
 	private float xp;
@@ -31,11 +31,17 @@ public class ItemManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha1) && H_potion >= 1){
 			H_potion--;
 			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (10);
+			Vector3 pPos = player.gameObject.transform.position;
+			pPos.y = 2.5f;
+			GameObject pEffect = Instantiate(UsableItemsParticle[0],pPos,Quaternion.identity);
 			updateNumberAndSprite();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2) && S_potion >= 1){
 			S_potion--;
 			player.gameObject.GetComponent<StaminaSystem> ().UseStaminaPotion (10);
+			Vector3 pPos = player.gameObject.transform.position;
+			pPos.y = 2.5f;
+			GameObject pEffect = Instantiate(UsableItemsParticle[1],pPos,Quaternion.identity);
 			updateNumberAndSprite();
 		}
 		if(pickup==true){
