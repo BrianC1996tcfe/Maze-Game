@@ -553,6 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionText: {fileID: 1796165932612628}
+  loot: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!135 &135491776911042258
 SphereCollider:
   m_ObjectHideFlags: 1
