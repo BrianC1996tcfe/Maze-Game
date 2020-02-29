@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -105,6 +106,7 @@ public class FloorGenerator : MonoBehaviour {
 		}
 	}
 	private void pathfinder(){
+		try{
 		//This Gets 46 for some odd reason
 
 		//cellsUsed=0;
@@ -190,7 +192,7 @@ public class FloorGenerator : MonoBehaviour {
 					}
 					// Debug.Log("north "+ nC);
 				if(!(neighbourCount==0)){
-					int rand = Random.Range(0,neighbourCount);
+					int rand = UnityEngine.Random.Range(0,neighbourCount);
 					int nextDirection = neighbour[rand];
 					//0-north 1-east 2-south 3-west
 					switch(nextDirection){
@@ -255,6 +257,10 @@ public class FloorGenerator : MonoBehaviour {
 		}
 		// Debug.Log("Finito c "+cellsUsed+" t "+tempcount);
 	}
+	catch(Exception e){
+		GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().NextLevel(false);
+	}
+	}
 		private void wallBoolRemove(int x,int z, string direction){
 			switch(direction){
 				case "north":
@@ -298,8 +304,8 @@ public class FloorGenerator : MonoBehaviour {
 		int maxZ = (int)size.y - (int)room1.rangeZ.x;
 		int minX = 0-(int)room1.rangeX.y;
 		int minZ =	0-(int)room1.rangeZ.y;
-		int xr = Random.Range(minX, maxX);
-		int	zr = Random.Range(minZ, maxZ);
+		int xr = UnityEngine.Random.Range(minX, maxX);
+		int	zr = UnityEngine.Random.Range(minZ, maxZ);
 		// Debug.Log("T sizex "+size.x+" sizey "+size.y+" minX "+minX+" maxX "+maxX+" minZ "+minZ+" maxZ "+maxZ+" xrand "+xr+"  zrand "+zr);
 		for(int i=0;i<room1.tilepos.Length;i++){
 			//Debug.Log("WIK "+newpos[i]);
@@ -325,8 +331,8 @@ public class FloorGenerator : MonoBehaviour {
 		int maxZ = (int)size.y - (int)room2.rangeZ.x;
 		int minX = 0-(int)room2.rangeX.y;
 		int minZ =	0-(int)room2.rangeZ.y;
-		int xr = Random.Range(minX, maxX);
-		int	zr = Random.Range(minZ, maxZ);
+		int xr = UnityEngine.Random.Range(minX, maxX);
+		int	zr = UnityEngine.Random.Range(minZ, maxZ);
 		 Debug.Log("Checknumbers : [sizex- "+size.x+" sizey- "+size.y+"] [minX- "+minX+" maxX- "+maxX+"] [minZ- "+minZ+" maxZ- "+maxZ+"] [xrand- "+xr+"  zrand- "+zr+"]");
 		for(int i=0;i<room2.tilepos.Length;i++){
 			Debug.Log("Check V2-"+room2.tilepos[i]+" /"+xr+" , "+zr);
@@ -362,12 +368,12 @@ public class FloorGenerator : MonoBehaviour {
 	}
 	private void placeChests(int spawnNum){
 		for(int i=0;i<spawnNum;i++){
-			int x=Random.Range(0,(int)size.x-1),z=Random.Range(0,(int)size.y);
+			int x=UnityEngine.Random.Range(0,(int)size.x-1),z=UnityEngine.Random.Range(0,(int)size.y);
 			//stop from placing on top of something else
 			//**fix it so that it can't be placed between **
 			while(partofmaze[x,z]==false || (x==0 && z==0) || (x==(int)size.x-1 && z==(int)size.y-1 || ( !partofmaze[x+1,z] && !partofmaze[x,z-1] && !partofmaze[x-1,z] && !partofmaze[x,z+1]))){
-				x=Random.Range(0,(int)size.x);
-				z=Random.Range(0,(int)size.y);
+				x=UnityEngine.Random.Range(0,(int)size.x);
+				z=UnityEngine.Random.Range(0,(int)size.y);
 			}
 			//https://answers.unity.com/questions/452983/how-to-exclude-int-values-from-randomrange.html
 			//wont rotate to outside
@@ -398,7 +404,7 @@ public class FloorGenerator : MonoBehaviour {
 			else{
 				ValDir=new int[]{0,1,2,3};
 			}
-			int mandy = ValDir[Random.Range(0,ValDir.Length)];
+			int mandy = ValDir[UnityEngine.Random.Range(0,ValDir.Length)];
 			prefabrotationcheck(mandy,x,z,ValDir);
 			// 
 			int rotato = 90*mandy;
@@ -416,28 +422,28 @@ public class FloorGenerator : MonoBehaviour {
 				case 0:
 					if(!partofmaze[x+1,z]){
 						while(mandy==0){
-							mandy = ValDir[Random.Range(0,ValDir.Length)];
+							mandy = ValDir[UnityEngine.Random.Range(0,ValDir.Length)];
 						}
 					}
 				break;
 				case 1:
 					if(!partofmaze[x,z-1]){
 						while(mandy==1){
-							mandy = ValDir[Random.Range(0,ValDir.Length)];
+							mandy = ValDir[UnityEngine.Random.Range(0,ValDir.Length)];
 						}
 					}
 				break;
 				case 2:
 					if(!partofmaze[x-1,z]){
 						while(mandy==2){
-							mandy = ValDir[Random.Range(0,ValDir.Length)];
+							mandy = ValDir[UnityEngine.Random.Range(0,ValDir.Length)];
 						}
 					}
 				break;
 				case 3:
 					if(!partofmaze[x,z+1]){
 						while(mandy==3){
-							mandy = ValDir[Random.Range(0,ValDir.Length)];
+							mandy = ValDir[UnityEngine.Random.Range(0,ValDir.Length)];
 						}
 					}
 				break;
@@ -445,12 +451,12 @@ public class FloorGenerator : MonoBehaviour {
 	}
 
 	private void makeFloor(){
-		int randkey = Random.Range(0,((int)size.x*(int)size.y)/2);
+		int randkey = UnityEngine.Random.Range(0,((int)size.x*(int)size.y)/2);
 		int keynum = 0;
 		for(int i=0;i<size.x;i++){
 			for(int e=0;e<size.y;e++){
 				if(partofmaze[i,e]==true){
-					int rondam = Random.Range(0,3);
+					int rondam = UnityEngine.Random.Range(0,3);
 					int rotato = 90*rondam;
 					Vector3 zpos = new Vector3(i*tilesize,0,e*tilesize);
 					GameObject madeFloor = Instantiate(floor,zpos,Quaternion.Euler(0,rotato,0));
@@ -463,7 +469,7 @@ public class FloorGenerator : MonoBehaviour {
 						spawnKey.transform.parent = transform;
 					}
 					//Make Enemy Spawn
-					int randEnemy = Random.Range(-15,Enemies.Length);
+					int randEnemy = UnityEngine.Random.Range(-15,Enemies.Length);
 					if(randEnemy<0){
 						// nothing here as this is the case where no enemy spawns
 					}

@@ -8,7 +8,7 @@ public int SceneNum;
 
 private void OnTriggerEnter ()
 {
-	GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().NextLevel();
+	GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().NextLevel(true);
 	// GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().showSplash = true;
 }
 }

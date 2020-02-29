@@ -33,14 +33,14 @@ Vector2 newlvlSize;
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.R)){
-		NextLevel();
+		NextLevel(true);
 		}
 		if (Input.GetKeyDown(KeyCode.K)){
 		BacktoFirstLevel();
 		}
 	}
 		
-	public void NextLevel(){
+	public void NextLevel(bool workingPerfectly){
 		Debug.Log("44 SHID");
 		// StartCoroutine(GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().levelChangeSplash());
 		GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().showSplash = true;
@@ -49,8 +49,10 @@ Vector2 newlvlSize;
 		// // int a = Maze.GetComponent<FloorGenerator>().enemyLevel;
 		// FloorGenerator fg = Maze.GetComponent<FloorGenerator>();
 		// int b = a.enemyLevel;
-		if(!(fl4Gen.enemyLevel>=5)){
-			fl4Gen.enemyLevel++;
+		if(workingPerfectly){
+			if(!(fl4Gen.enemyLevel>=5)){
+				fl4Gen.enemyLevel++;
+			}
 		}
 		switch(fl4Gen.enemyLevel){
 			case 1:
