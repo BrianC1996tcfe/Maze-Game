@@ -1396,8 +1396,7 @@ MonoBehaviour:
   player: {fileID: 4947146548499038, guid: 24615e4166a34a047ab5e0159b74cfb4, type: 2}
   anim: {fileID: 0}
   firePoint: {fileID: 4037055039699048}
-  fireballPrefab: {fileID: 1261853058776446, guid: cc907b02e94ad7c46be664c62a7e4153,
-    type: 2}
+  fireballPrefab: {fileID: 0}
 --- !u!114 &114077714436015146
 MonoBehaviour:
   m_ObjectHideFlags: 1
