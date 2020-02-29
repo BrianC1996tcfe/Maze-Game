@@ -16,7 +16,7 @@ public class Fireball : MonoBehaviour {
 		dmg += amount;
 	}
 	public IEnumerator strayBullets(){
-		yield return new WaitForSeconds(10f);
+		yield return new WaitForSeconds(2f);
 		Destroy (gameObject);
 	}
 	void OnTriggerEnter(Collider other){
@@ -27,9 +27,6 @@ public class Fireball : MonoBehaviour {
 		else{
 			StartCoroutine(strayBullets());
 		}
-		// if(!(other.gameObject.tag=="Enemy")){
-			
-		// }
 		//Destroy (gameObject);
 	}
 }

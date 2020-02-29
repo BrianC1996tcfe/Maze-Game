@@ -7,7 +7,9 @@ public class Item : MonoBehaviour{
 	public GameObject particleEffect;
 	public GameObject InvManager;
 
-
+	void Start(){
+		InvManager = GameObject.FindGameObjectWithTag("InvMan");
+	}
     public void OnTriggerEnter(Collider collision)
     {
 		// Debug.Log("item20");
