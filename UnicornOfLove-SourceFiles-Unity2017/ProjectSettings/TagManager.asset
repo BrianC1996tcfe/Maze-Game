@@ -21,6 +21,7 @@ TagManager:
   - Key
   - BluSword
   - RedSword
+  - Door
   layers:
   - Default
   - TransparentFX

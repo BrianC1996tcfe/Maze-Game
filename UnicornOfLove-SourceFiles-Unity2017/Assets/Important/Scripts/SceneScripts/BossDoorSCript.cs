@@ -7,28 +7,31 @@ public class BossDoorSCript : MonoBehaviour {
 	public GameObject doorTrigger;
 	public GameObject doorTrigger_Text;
 	public GameObject Inventory;
-	private bool coolBool;
+	public bool doorBool;
 	// Use this for initialization
 	void Start () {
-		coolBool = false;
+		doorBool = false;
 		animt= this.gameObject.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.O)){
-			animt.SetBool("openDoor", true);
-		}
+		// if(Input.GetKeyDown(KeyCode.O)){
+		// 	animt.SetBool("openDoor", true);
+		// }
 		if(doorTrigger_Text.activeSelf){
 			if(Input.GetKeyDown(KeyCode.E)){
 				// if(coolBool){
 				// 	coolBool = false;
 				// }
 				// else{
-					coolBool = true;
+					// coolBool = true;
 				// }
-				animt.SetBool("openDoor", coolBool);
-				killDoorFunctionality();
+				if(doorBool){
+					animt.SetBool("openDoor", true);
+					killDoorFunctionality();
+					ItemManager.Key--;
+				}
 			}
 		}
 	}

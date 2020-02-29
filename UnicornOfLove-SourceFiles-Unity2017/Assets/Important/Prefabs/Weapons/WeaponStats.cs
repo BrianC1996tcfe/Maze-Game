@@ -26,7 +26,7 @@ public class WeaponStats : MonoBehaviour {
 		WeaponDMG = strenght * baseDMG;
 
 		dmg = WeaponDMG;
-		Debug.Log(this.gameObject.tag+" "+dmg);
+		// Debug.Log(this.gameObject.tag+" "+dmg);
 	}
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag=="Enemy"){

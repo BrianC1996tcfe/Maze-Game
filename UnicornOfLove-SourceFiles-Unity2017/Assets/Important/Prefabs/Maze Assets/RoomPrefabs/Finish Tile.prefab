@@ -8184,7 +8184,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.2, z: 0.02}
-  m_Center: {x: -0.04, y: 0.1, z: 0}
+  m_Center: {x: 0.04, y: 0.1, z: 0}
 --- !u!65 &65281720549913168
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -8940,6 +8940,7 @@ MonoBehaviour:
   doorTrigger: {fileID: 1070696690161192}
   doorTrigger_Text: {fileID: 1445974077954278}
   Inventory: {fileID: 0}
+  doorBool: 0
 --- !u!114 &114695046128045570
 MonoBehaviour:
   m_ObjectHideFlags: 1

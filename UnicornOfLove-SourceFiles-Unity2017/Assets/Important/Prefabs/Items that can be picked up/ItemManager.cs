@@ -9,7 +9,7 @@ public class ItemManager : MonoBehaviour {
 	public GameObject player;
 	public Sprite H_PotionSprite,H_PotionSpriteGrey,S_PotionSprite,S_PotionSpriteGrey,KeySprite,KeySpriteGrey;
 	public int startH_PotionNum,startS_PotionNum, maxH_potion, maxS_potion;
-	private static int H_potion,S_potion,Key;
+	public static int H_potion,S_potion,Key;
 	public GameObject[] UsableItemsParticle;
 	private bool pickup = false;
 	private int ID;
