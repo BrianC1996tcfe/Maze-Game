@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 114346113047603718}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -843,6 +843,7 @@ MonoBehaviour:
   cur_Health: 0
   healthBar: {fileID: 1754073977173034}
   player: {fileID: 1672769393097958, guid: 24615e4166a34a047ab5e0159b74cfb4, type: 2}
+  invManager: {fileID: 0}
   xp: 5
 --- !u!114 &114970889827846092
 MonoBehaviour:

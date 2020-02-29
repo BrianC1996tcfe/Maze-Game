@@ -21,6 +21,8 @@ public class WeaponStats : MonoBehaviour {
 
 	}
 	void OnTriggerEnter(Collider other){
-		other.gameObject.GetComponent<EnemyHealth> ().TakeDamage (WeaponDMG);
+		if(other.gameObject.tag=="Enemy"){
+			other.gameObject.GetComponent<EnemyHealth> ().TakeDamage (WeaponDMG);
+		}
 	}
 }
