@@ -13,9 +13,12 @@ public class ItemManager : MonoBehaviour {
 	public GameObject[] UsableItems;
 	private bool pickup = false;
 	private int ID;
+	private float xp;
+	public GameObject invManager;
 
 	// Use this for initialization
 	void Start () {
+		invManager = GameObject.FindGameObjectWithTag("InvMan");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		H_potion = startH_PotionNum;
 		S_potion = startS_PotionNum;

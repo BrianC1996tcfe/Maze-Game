@@ -17,23 +17,43 @@ public class LevelSystem : MonoBehaviour{
 	public GameObject enemy;
 	public static float myPoints;
 	public float addPoints;
+
+	float interval = 0.01f;
+	float nextTime = 0f;
+
+	public Text score;
+	public float curScore;
+
 	//methods
 
 	public void Start(){
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		player = this.gameObject;
 		level = 1f;
+
 		experience = 0;
 		experienceRequired = 100;
+
+	}
+
+	public void UpdateScore(){
+		curScore = experience;
+		score.text = "Score : " + curScore.ToString ();
 	}
 
 	public void Update(){
 		SetLevel ();
 		Exp ();
 		SetXpBar();
+
+		if(Time.time >= nextTime){
+			UpdateScore ();
+			nextTime += interval;
+		}
+
 	}
 
-	public void GainExp(int amount){
+	public void GainExp(float amount){
 		experience += amount;
 	}
 
@@ -41,9 +61,10 @@ public class LevelSystem : MonoBehaviour{
 		myLevel.text = "Lv : " + level.ToString ();
 	}
 
+
+
 	void LevelUp(){
 		level += 1;
-		experience = 0;
 		experienceRequired = experienceRequired * 1.75f;
 		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
 
