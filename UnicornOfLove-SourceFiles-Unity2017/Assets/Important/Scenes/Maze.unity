@@ -6592,7 +6592,7 @@ Camera:
   m_GameObject: {fileID: 333825721}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -22475,7 +22475,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ef0076574eafa1743853949dc9207862, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.01
   m_Pitch: 1
@@ -22483,7 +22483,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 139
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
