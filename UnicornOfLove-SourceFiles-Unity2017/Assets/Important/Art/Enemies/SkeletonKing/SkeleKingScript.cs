@@ -8,12 +8,15 @@ public class SkeleKingScript : MonoBehaviour {
 	static Animator anim;
 	private bool canAttack = false;
 
+	private int enemyDistance = 50;
+
 	void Start(){
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		anim = this.GetComponent<Animator>();
 	}
 	void Update () {
-		if (Vector3.Distance (player.position, this.transform.position) < 17) {
+		if (Vector3.Distance (player.position, this.transform.position) < enemyDistance) {
+			Debug.Log(" KS "+enemyDistance);
 			Vector3 direction = player.position - this.transform.position;
 			direction.y = 0;
 
