@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject player;
 	public GameObject invManager;
 
-	public float xp = 5f;
+	public float xp;
 
 
 	void Start () {

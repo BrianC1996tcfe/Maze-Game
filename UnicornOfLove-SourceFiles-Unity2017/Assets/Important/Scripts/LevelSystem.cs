@@ -18,7 +18,7 @@ public class LevelSystem : MonoBehaviour{
 	public static float myPoints;
 	public float addPoints;
 
-	float interval = 0.01f;
+	float interval = 0.001f;
 	float nextTime = 0f;
 
 	public Text score;
@@ -30,10 +30,8 @@ public class LevelSystem : MonoBehaviour{
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		player = this.gameObject;
 		level = 1f;
-
 		experience = 0;
 		experienceRequired = 100;
-
 	}
 
 	public void UpdateScore(){
@@ -50,7 +48,6 @@ public class LevelSystem : MonoBehaviour{
 			UpdateScore ();
 			nextTime += interval;
 		}
-
 	}
 
 	public void GainExp(float amount){
@@ -60,12 +57,10 @@ public class LevelSystem : MonoBehaviour{
 	public void SetLevel(){
 		myLevel.text = "Lv : " + level.ToString ();
 	}
-
-
-
+		
 	void LevelUp(){
 		level += 1;
-		experienceRequired = experienceRequired * 1.75f;
+		experienceRequired *= 1.5f;
 		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
 
 		PlayerStats.points += 3f;
@@ -76,6 +71,7 @@ public class LevelSystem : MonoBehaviour{
 			LevelUp ();	
 		}
 	}
+
 	public void SetXpBar(){
 		float my_experience = experience / experienceRequired;
 		xpBar.transform.localScale = new Vector3 (Mathf.Clamp(my_experience,0f,1f),xpBar.transform.localScale.y, xpBar.transform.localScale.z);

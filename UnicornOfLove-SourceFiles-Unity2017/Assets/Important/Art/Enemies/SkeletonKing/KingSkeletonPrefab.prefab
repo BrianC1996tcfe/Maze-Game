@@ -36,6 +36,8 @@ GameObject:
   - component: {fileID: 4840842535522662}
   - component: {fileID: 33679005745878732}
   - component: {fileID: 23320889273297316}
+  - component: {fileID: 65158517222280576}
+  - component: {fileID: 114157564812060094}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -206,6 +208,7 @@ GameObject:
   - component: {fileID: 65382319917891548}
   - component: {fileID: 114577770527176196}
   - component: {fileID: 114854984772505312}
+  - component: {fileID: 114229841221983464}
   m_Layer: 0
   m_Name: KingSkeletonPrefab
   m_TagString: Untagged
@@ -801,6 +804,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!65 &65158517222280576
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022340384555858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017215345, y: 0.00855886, z: 0.02434752}
+  m_Center: {x: -0.0004431253, y: -0.000000034947412, z: -0.01637363}
 --- !u!65 &65382319917891548
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -822,7 +837,7 @@ Animator:
   m_GameObject: {fileID: 1439227280589534}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 60c3e5ae7ef21c440b7382c6fc2c535c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f00c0af16eec974c9a33691a7db0f2a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -830,6 +845,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114157564812060094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022340384555858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af117d63c982154dad5b56b3855e7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 5
+--- !u!114 &114229841221983464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439227280589534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275535e9d5c99344b5faa2b91bd8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  enemyAttackType: 0
+  enemyWeapon: {fileID: 0}
 --- !u!114 &114577770527176196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -845,7 +886,8 @@ MonoBehaviour:
   cur_Health: 0
   healthBar: {fileID: 0}
   player: {fileID: 0}
-  xp: 5
+  invManager: {fileID: 0}
+  xp: 50
 --- !u!114 &114854984772505312
 MonoBehaviour:
   m_ObjectHideFlags: 1
