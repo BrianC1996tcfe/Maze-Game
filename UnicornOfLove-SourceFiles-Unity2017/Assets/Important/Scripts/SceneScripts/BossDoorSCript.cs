@@ -31,6 +31,7 @@ public class BossDoorSCript : MonoBehaviour {
 					animt.SetBool("openDoor", true);
 					killDoorFunctionality();
 					ItemManager.Key--;
+					GameObject.FindGameObjectWithTag("InvMan").GetComponent<ItemManager>().updateNumberAndSprite();
 				}
 			}
 		}
