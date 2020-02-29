@@ -8,11 +8,13 @@ public class EnemyHealth : MonoBehaviour {
 	public float cur_Health = 0f;
 	public GameObject healthBar;
 	public GameObject player;
+	public GameObject invManager;
 
-	public int xp = 5;
+	public float xp = 5f;
 
 
 	void Start () {
+		invManager = GameObject.FindGameObjectWithTag("InvMan");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		cur_Health = max_Health;
 	}
