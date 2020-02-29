@@ -445,6 +445,8 @@ public class FloorGenerator : MonoBehaviour {
 	}
 
 	private void makeFloor(){
+		int randkey = Random.Range(0,((int)size.x*(int)size.y)/2);
+		int keynum = 0;
 		for(int i=0;i<size.x;i++){
 			for(int e=0;e<size.y;e++){
 				if(partofmaze[i,e]==true){
@@ -454,6 +456,12 @@ public class FloorGenerator : MonoBehaviour {
 					GameObject madeFloor = Instantiate(floor,zpos,Quaternion.Euler(0,rotato,0));
 					madeFloor.name = "FloorTile, x-"+i+", z-"+e;
 					madeFloor.transform.parent = transform;
+					//place A key
+					keynum++;
+					if(randkey==keynum){
+						GameObject spawnKey = Instantiate(GameObject.FindGameObjectWithTag("Key"),zpos,Quaternion.Euler(0,rotato,0));
+						spawnKey.transform.parent = transform;
+					}
 					//Make Enemy Spawn
 					int randEnemy = Random.Range(-15,Enemies.Length);
 					if(randEnemy<0){

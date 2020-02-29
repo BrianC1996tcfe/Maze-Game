@@ -18,6 +18,7 @@ TagManager:
   - GM
   - CameraFollow
   - Splash
+  - Key
   layers:
   - Default
   - TransparentFX
