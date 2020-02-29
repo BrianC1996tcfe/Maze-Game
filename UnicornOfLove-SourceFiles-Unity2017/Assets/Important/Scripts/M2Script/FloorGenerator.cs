@@ -13,6 +13,7 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject TextCheck;
 	public GameObject sewerpath, sewerConnectMid;
 	public GameObject[] Enemies;
+	public GameObject[] Breakables;
 	public Vector2 size;
 	private int tilesize = 25;//,stack=0;
 
