@@ -30,7 +30,7 @@ public class ItemManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1) && H_potion >= 1){
 			H_potion--;
-			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (10);
+			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (25);
 			Vector3 pPos = player.gameObject.transform.position;
 			pPos.y = 2.5f;
 			GameObject pEffect = Instantiate(UsableItemsParticle[0],pPos,Quaternion.identity);
@@ -64,22 +64,23 @@ public class ItemManager : MonoBehaviour {
 				break;
 			case 2:
 				Key++;
+				player.gameObject.GetComponent<LevelSystem>().GainExp(50);
 				Debug.Log("72 "+Key);
 			break;
 			case 3:
-				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				player.gameObject.GetComponent<LevelSystem>().GainExp(100);
 				Debug.Log("c3");
 			break;	
 			case 4:
-				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				player.gameObject.GetComponent<LevelSystem>().GainExp(50);
 				Debug.Log("c4 ");
 			break;
 			case 5:
-				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				player.gameObject.GetComponent<LevelSystem>().GainExp(150);
 				Debug.Log("c5");
 			break;
 			case 6:
-				player.gameObject.GetComponent<LevelSystem>().GainExp(5);
+				player.gameObject.GetComponent<LevelSystem>().GainExp(20);
 				Debug.Log("c6");
 			break;	
 			}

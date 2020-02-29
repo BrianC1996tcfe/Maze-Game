@@ -9,9 +9,10 @@ public class SplashScreen : MonoBehaviour {
 	public GameObject main_Text;
 	public GameObject interact_Text;
 	public GameObject canv;
-	private int Level;
-	public bool canplay, showSplash, deadplayer,restart;
+	private static int Level;
+	public  bool canplay, showSplash, deadplayer,restart;
 	void Start () {
+		// check=true;
 		showSplash = false;
 		canplay = false;
 		deadplayer = false;
@@ -24,34 +25,27 @@ public class SplashScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// if(Input.GetKeyDown(KeyCode.M)){
-
-		// }
-		// if(canplay && deadplayer){
-		// 	if(Input.anyKey){
-		// 		canplay = false;
-		// 		deadplayer = false;
-		// 		showSplash = false;
-		// 		canv.SetActive(false);
-		// 		startingSplash();
-		// 		GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().BacktoFirstLevel();
-		// 		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().revive();
-		// 	}
+		// if(check){
+		// 	Debug.Log("29S Hid");
 		// }
 		if(canplay){
 			if(Input.anyKey){
 				showSplash = false;
 				canv.SetActive(false);
 				eraseText();
+				canplay = false;
 				if(restart){
 					// canv.canvasRenderer.SetAlpha (1f);
-					startingSplash();
 					restart = false;
+					startingSplash();
+					
 					// GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().BacktoFirstLevel();
 				}
+				
 			}
 		}
 		if(showSplash){
+			Debug.Log("55 SHID");
 			showSplash = false;
 			// if(Input.anyKey){
 				canplay = false;

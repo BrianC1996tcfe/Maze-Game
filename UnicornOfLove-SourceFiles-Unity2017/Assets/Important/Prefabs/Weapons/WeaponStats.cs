@@ -13,12 +13,20 @@ public class WeaponStats : MonoBehaviour {
 	public int dmg;
 
 	//--------------------------------------------------
+	public void start(){
+		// if(this.gameObject.tag=="BluSword"){
+
+		// }
+		// else if(this.gameObject.tag=="RedSword"){
+
+		// }
+	}
 	public void Update(){
 		strenght = PlayerStats.Strenght;
-		WeaponDMG = strenght + baseDMG;
+		WeaponDMG = strenght * baseDMG;
 
 		dmg = WeaponDMG;
-
+		Debug.Log(this.gameObject.tag+" "+dmg);
 	}
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag=="Enemy"){

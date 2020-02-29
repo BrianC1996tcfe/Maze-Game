@@ -62,7 +62,9 @@ public class LevelSystem : MonoBehaviour{
 		level += 1;
 		experienceRequired *= 1.5f;
 		player.gameObject.GetComponent<PlayerHealth>().IncreaseHealth(10);
-
+		// GameObject.FindGameObjectWithTag("BluSword").GetComponent<WeaponStats>().strenght++;
+		// GameObject.FindGameObjectWithTag("RedSword").GetComponent<WeaponStats>().strenght++;
+		PlayerStats.Strenght++;
 		PlayerStats.points += 3f;
 	}
 

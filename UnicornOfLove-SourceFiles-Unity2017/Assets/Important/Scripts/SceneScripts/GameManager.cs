@@ -41,6 +41,8 @@ Vector2 newlvlSize;
 	}
 		
 	public void NextLevel(){
+		Debug.Log("44 SHID");
+		// StartCoroutine(GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().levelChangeSplash());
 		GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().showSplash = true;
 		Destroy(GameObject.FindWithTag("Maze"));
 		// Maze.GetComponent<s
