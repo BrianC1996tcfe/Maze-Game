@@ -43,11 +43,17 @@ public class ItemManager : MonoBehaviour {
 			
 			switch(ID){
 			case 0:
-				H_potion++;
+				if(H_potion < maxH_potion){
+					H_potion++;
+				}
+				
 				Debug.Log("64 "+H_potion);
 				break;
 			case 1:
-				S_potion++;
+				if(S_potion < maxS_potion){
+					S_potion++;
+				}
+				
 				Debug.Log("68 "+S_potion);
 				break;
 			case 2:
