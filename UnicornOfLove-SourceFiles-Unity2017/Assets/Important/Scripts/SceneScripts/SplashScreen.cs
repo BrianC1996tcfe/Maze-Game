@@ -72,7 +72,7 @@ public class SplashScreen : MonoBehaviour {
 	public void startingSplash(){
 		Level = 1;
 		title_Text.GetComponent<Text>().text="Level "+Level;
-		main_Text.GetComponent<Text>().text="Instructions + story";
+		main_Text.GetComponent<Text>().text="Instructions:\nW A S D to Move, Mouse Controls Camera\nLeft Mouse Click-Stab Attack\tRight Mouse Click-Swing Attack\nShift-Run\tCtrl-Roll\n1-Healthpotion\t2-StaminaPotion \n\nGet To The End of the maze and don't die!";
 		interact_Text.GetComponent<Text>().text="[Any Button] to Begin Game";
 		canplay = true;
 		canv.SetActive(true);

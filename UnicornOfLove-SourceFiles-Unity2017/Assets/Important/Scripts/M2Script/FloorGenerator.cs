@@ -318,43 +318,43 @@ public class FloorGenerator : MonoBehaviour {
 		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
 		GameObject prefabRoom = Instantiate(BossRoom,Rpos,Quaternion.identity);
 		prefabRoom.transform.parent = transform;
-		if(room1.sewerConnected==true){
-			Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,tilesize/2,(room1.sewerPoint.y+zr)*tilesize);
-			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
-			SewerEntrance.transform.parent = transform;
-		}
+		// if(room1.sewerConnected==true){
+		// 	Vector3 Spos = new Vector3((room1.sewerPoint.x+xr)*tilesize,tilesize/2,(room1.sewerPoint.y+zr)*tilesize);
+		// 	GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+		// 	SewerEntrance.transform.parent = transform;
+		// }
 	}
-	private void placeSewerRoomPrefab(){
-		RoomPrefab_SewerEntrance room2 =  SewerRoom.GetComponent<RoomPrefab_SewerEntrance>();
-		Vector2[] newpos =  new Vector2[room2.tilepos.Length];
-		int maxX = (int)size.x - (int)room2.rangeX.x;
-		int maxZ = (int)size.y - (int)room2.rangeZ.x;
-		int minX = 0-(int)room2.rangeX.y;
-		int minZ =	0-(int)room2.rangeZ.y;
-		int xr = UnityEngine.Random.Range(minX, maxX);
-		int	zr = UnityEngine.Random.Range(minZ, maxZ);
-		 Debug.Log("Checknumbers : [sizex- "+size.x+" sizey- "+size.y+"] [minX- "+minX+" maxX- "+maxX+"] [minZ- "+minZ+" maxZ- "+maxZ+"] [xrand- "+xr+"  zrand- "+zr+"]");
-		for(int i=0;i<room2.tilepos.Length;i++){
-			Debug.Log("Check V2-"+room2.tilepos[i]+" /"+xr+" , "+zr);
-			newpos[i].x = (int)room2.tilepos[i].x + xr;
-			newpos[i].y = (int)room2.tilepos[i].y + zr;
-			 Debug.Log("Co-ordinate "+i+" (x-"+(int)newpos[i].x+" z-"+(int)newpos[i].y+") Length: "+room2.tilepos.Length);
-			partofmaze[(int)newpos[i].x,(int)newpos[i].y]=false;
-			wallBoolRemove((int)newpos[i].x,(int)newpos[i].y,"all");
-			GameObject numText2 = Instantiate(TextCheck,new Vector3(newpos[i].x*tilesize,1,newpos[i].y*tilesize),Quaternion.Euler(90,90,0));	
-								numText2.name="numtext "+i.ToString();
-								numText2.GetComponent<TextMesh>().text=""+i.ToString();
-								numText2.transform.parent = transform;
-		}
-		Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
-		GameObject prefabRoom = Instantiate(SewerRoom,Rpos,Quaternion.identity);
-		prefabRoom.transform.parent = transform;
-		if(room2.sewerConnected==true){
-			Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,tilesize/2,(room2.sewerPoint.y+zr)*tilesize);
-			GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
-			SewerEntrance.transform.parent = transform;
-		}
-	}
+	// private void placeSewerRoomPrefab(){
+	// 	RoomPrefab_SewerEntrance room2 =  SewerRoom.GetComponent<RoomPrefab_SewerEntrance>();
+	// 	Vector2[] newpos =  new Vector2[room2.tilepos.Length];
+	// 	int maxX = (int)size.x - (int)room2.rangeX.x;
+	// 	int maxZ = (int)size.y - (int)room2.rangeZ.x;
+	// 	int minX = 0-(int)room2.rangeX.y;
+	// 	int minZ =	0-(int)room2.rangeZ.y;
+	// 	int xr = UnityEngine.Random.Range(minX, maxX);
+	// 	int	zr = UnityEngine.Random.Range(minZ, maxZ);
+	// 	 Debug.Log("Checknumbers : [sizex- "+size.x+" sizey- "+size.y+"] [minX- "+minX+" maxX- "+maxX+"] [minZ- "+minZ+" maxZ- "+maxZ+"] [xrand- "+xr+"  zrand- "+zr+"]");
+	// 	for(int i=0;i<room2.tilepos.Length;i++){
+	// 		Debug.Log("Check V2-"+room2.tilepos[i]+" /"+xr+" , "+zr);
+	// 		newpos[i].x = (int)room2.tilepos[i].x + xr;
+	// 		newpos[i].y = (int)room2.tilepos[i].y + zr;
+	// 		 Debug.Log("Co-ordinate "+i+" (x-"+(int)newpos[i].x+" z-"+(int)newpos[i].y+") Length: "+room2.tilepos.Length);
+	// 		partofmaze[(int)newpos[i].x,(int)newpos[i].y]=false;
+	// 		wallBoolRemove((int)newpos[i].x,(int)newpos[i].y,"all");
+	// 		GameObject numText2 = Instantiate(TextCheck,new Vector3(newpos[i].x*tilesize,1,newpos[i].y*tilesize),Quaternion.Euler(90,90,0));	
+	// 							numText2.name="numtext "+i.ToString();
+	// 							numText2.GetComponent<TextMesh>().text=""+i.ToString();
+	// 							numText2.transform.parent = transform;
+	// 	}
+	// 	Vector3 Rpos = new Vector3(xr*tilesize,0,zr*tilesize);
+	// 	GameObject prefabRoom = Instantiate(SewerRoom,Rpos,Quaternion.identity);
+	// 	prefabRoom.transform.parent = transform;
+	// 	if(room2.sewerConnected==true){
+	// 		Vector3 Spos = new Vector3((room2.sewerPoint.x+xr)*tilesize,tilesize/2,(room2.sewerPoint.y+zr)*tilesize);
+	// 		GameObject SewerEntrance = Instantiate(sewerConnectMid,Spos,Quaternion.identity);
+	// 		SewerEntrance.transform.parent = transform;
+	// 	}
+	// }
 	private void playerTile(){
 		// Vector3 startpos = new Vector3(0,0,-tilesize);
 		// GameObject playerStart = Instantiate(startTile,startpos,Quaternion.Euler(0,180,0));
