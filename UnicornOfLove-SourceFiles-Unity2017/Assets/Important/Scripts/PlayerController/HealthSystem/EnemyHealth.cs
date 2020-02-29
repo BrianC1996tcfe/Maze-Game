@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject healthBar;
 	public GameObject player;
 	public GameObject invManager;
+	public GameObject loot;
 
 	public float xp;
 
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour {
 		invManager = GameObject.FindGameObjectWithTag("InvMan");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		cur_Health = max_Health;
+		loot = GameObject.FindGameObjectWithTag("smallLoot");
 	}
 
 	public void TakeDamage(float amount){
@@ -32,8 +34,11 @@ public class EnemyHealth : MonoBehaviour {
 	}
 
 	public void Die(){
+		Vector3 pPos = this.gameObject.transform.position;
 		player.gameObject.GetComponent<LevelSystem>().GainExp(xp);
+		pPos.y = 1;
 		Destroy (gameObject);
+		GameObject enemyloot = Instantiate(loot,pPos,Quaternion.identity);
 	}
 
 	public void SetHealthBar(){

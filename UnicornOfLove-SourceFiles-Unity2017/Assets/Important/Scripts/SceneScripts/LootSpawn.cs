@@ -5,6 +5,7 @@ using UnityEngine;
 public class LootSpawn : MonoBehaviour {
 	public GameObject[] loot;
 	public int[] lootSpawnRate;
+	public int minloot,maxloot;
 	public float thrust = 1.0f;
 	void Start () {
 		StartCoroutine(spawntheloot());
@@ -18,7 +19,7 @@ public class LootSpawn : MonoBehaviour {
 		// }
 	}
 	public IEnumerator spawntheloot(){
-		int randlootnum = Random.Range(6,16);
+		int randlootnum = Random.Range(minloot,maxloot);
 		Vector3 SpawnPos = this.gameObject.transform.position;
 		for(int i = 0; i <= randlootnum; i++){
 			int randloot = Random.Range(0,loot.Length);
