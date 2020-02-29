@@ -18,7 +18,10 @@ public class EnemyHealth : MonoBehaviour {
 		invManager = GameObject.FindGameObjectWithTag("InvMan");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		cur_Health = max_Health;
-		loot = GameObject.FindGameObjectWithTag("smallLoot");
+		if(loot==null){
+			loot = GameObject.FindGameObjectWithTag("smallLoot");
+			}
+		
 	}
 
 	public void TakeDamage(float amount){

@@ -45,6 +45,9 @@ public class EnemyManager : MonoBehaviour {
 				else if(enemyAttackType==3){
 					enemyWeapon.GetComponent<swordDamage> ().dmg = 7;
 				}
+				else if(enemyAttackType==4){
+					enemyWeapon.GetComponent<swordDamage> ().dmg = 14;
+				}
 				// enemy.GetComponent<Fireball> ().AddDamage (2);
 				// enemy.GetComponent<swordDamage> ().AddDamage (2);
 				// enemy.GetComponent<BoneScript> ().AddDamage (2);
@@ -64,6 +67,9 @@ public class EnemyManager : MonoBehaviour {
 				}
 				else if(enemyAttackType==3){
 					enemyWeapon.GetComponent<swordDamage> ().dmg = 10;
+				}
+				else if(enemyAttackType==4){
+					enemyWeapon.GetComponent<swordDamage> ().dmg = 20;
 				}
 				// enemy.GetComponent<Fireball> ().AddDamage (5);
 				// enemy.GetComponent<swordDamage> ().AddDamage (5);
@@ -85,6 +91,9 @@ public class EnemyManager : MonoBehaviour {
 				else if(enemyAttackType==3){
 					enemyWeapon.GetComponent<swordDamage> ().dmg = 15;
 				}
+				else if(enemyAttackType==4){
+					enemyWeapon.GetComponent<swordDamage> ().dmg = 20;
+				}
 				// enemy.GetComponent<Fireball> ().AddDamage (10);
 				// enemy.GetComponent<swordDamage> ().AddDamage (10);
 				// enemy.GetComponent<BoneScript> ().AddDamage (10);
@@ -104,6 +113,9 @@ public class EnemyManager : MonoBehaviour {
 				}
 				else if(enemyAttackType==3){
 					enemyWeapon.GetComponent<swordDamage> ().dmg = 20;
+				}
+				else if(enemyAttackType==4){
+					enemyWeapon.GetComponent<swordDamage> ().dmg = 40;
 				}
 				// enemy.GetComponent<Fireball> ().AddDamage (15);
 				// enemy.GetComponent<swordDamage> ().AddDamage (15);
@@ -125,6 +137,9 @@ public class EnemyManager : MonoBehaviour {
 				}
 				else if(enemyAttackType==3){
 					enemyWeapon.GetComponent<swordDamage> ().dmg = 25;
+				}
+				else if(enemyAttackType==4){
+					enemyWeapon.GetComponent<swordDamage> ().dmg = 50;
 				}
 				// enemy.GetComponent<Fireball> ().AddDamage (21);
 				// enemy.GetComponent<swordDamage> ().AddDamage (21);

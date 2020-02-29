@@ -23,6 +23,7 @@ TagManager:
   - RedSword
   - Door
   - smallLoot
+  - Lb
   layers:
   - Default
   - TransparentFX
