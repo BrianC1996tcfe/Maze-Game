@@ -657,7 +657,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1879540667638306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalPosition: {x: 344.47418, y: 384.3612, z: 1211.1061}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4101505621157974}
@@ -1382,7 +1382,8 @@ MonoBehaviour:
   healthBar: {fileID: 1471729610075140}
   player: {fileID: 1672769393097958, guid: 24615e4166a34a047ab5e0159b74cfb4, type: 2}
   invManager: {fileID: 0}
-  xp: 301
+  loot: {fileID: 0}
+  xp: 40
 --- !u!114 &114653439518358524
 MonoBehaviour:
   m_ObjectHideFlags: 1
