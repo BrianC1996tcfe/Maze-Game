@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44626653, g: 0.49606, b: 0.57462174, a: 1}
+  m_IndirectSpecularColor: {r: 0.44626713, g: 0.4960609, b: 0.5746228, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -432,6 +432,11 @@ Prefab:
 --- !u!1 &459143818 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1681139946943926, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
+    type: 2}
+  m_PrefabInternal: {fileID: 1169469436}
+--- !u!1 &472317836 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1080662193696268, guid: b768ff0190a7bd24bbb99a4ab2ca7213,
     type: 2}
   m_PrefabInternal: {fileID: 1169469436}
 --- !u!1 &515694051
@@ -1418,7 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Maze: {fileID: 1376443783435830, guid: bebbe88fac0e43b43a5a65d35f07c189, type: 2}
   player: {fileID: 788707895}
-  camerar: {fileID: 0}
+  camerar: {fileID: 472317836}
 --- !u!4 &2042538682
 Transform:
   m_ObjectHideFlags: 0
