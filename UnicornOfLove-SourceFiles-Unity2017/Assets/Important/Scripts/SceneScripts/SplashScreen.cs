@@ -65,7 +65,7 @@ public class SplashScreen : MonoBehaviour {
 					eraseText();
 					StartCoroutine(GameOverSplash());
 					GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>().BacktoFirstLevel();
-					GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().revive();
+					// GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().revive();
 				}
 		}
 	}

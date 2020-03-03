@@ -90,6 +90,7 @@ Vector2 newlvlSize;
 		// player.FindWithTag("InvMan").GetComponent<ItemManager>().resetInventory();
 		// player.GetComponentInChildren<ItemManager>.resetInventory();
 		GameObject.FindGameObjectWithTag("InvMan").GetComponent<ItemManager>().resetInventory();
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().revive();
 		player.transform.position = PlayerStartPos;
 		camerar.transform.position = CStartPos;
 	}
