@@ -30,7 +30,9 @@ public class ItemManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1) && H_potion >= 1){
 			H_potion--;
-			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (25);
+			float quaterHealth = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerHealth>().max_Health/4;
+			H_potion = startH_PotionNum;
+			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (quaterHealth);
 			Vector3 pPos = player.gameObject.transform.position;
 			pPos.y = 2.5f;
 			GameObject pEffect = Instantiate(UsableItemsParticle[0],pPos,Quaternion.identity);
@@ -38,7 +40,8 @@ public class ItemManager : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2) && S_potion >= 1){
 			S_potion--;
-			player.gameObject.GetComponent<StaminaSystem> ().UseStaminaPotion (10);
+			float quaterStamina = GameObject.FindGameObjectWithTag ("Player").GetComponent<StaminaSystem>().max_stamina/4;
+			player.gameObject.GetComponent<StaminaSystem> ().UseStaminaPotion (quaterStamina);
 			Vector3 pPos = player.gameObject.transform.position;
 			pPos.y = 2.5f;
 			GameObject pEffect = Instantiate(UsableItemsParticle[1],pPos,Quaternion.identity);

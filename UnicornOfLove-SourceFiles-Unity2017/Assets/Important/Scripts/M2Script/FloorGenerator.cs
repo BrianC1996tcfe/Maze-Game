@@ -302,7 +302,7 @@ public class FloorGenerator : MonoBehaviour {
 		RoomPrefab_Boss room1 =  BossRoom.GetComponent<RoomPrefab_Boss>();
 		Vector2[] newpos =  new Vector2[room1.tilepos.Length];
 		int maxX = (int)size.x - (int)room1.rangeX.x;
-		int maxZ = (int)size.y - (int)room1.rangeZ.x;
+		int maxZ = ((int)size.y-1) - (int)room1.rangeZ.x;
 		int minX = 0-(int)room1.rangeX.y;
 		int minZ =	0-(int)room1.rangeZ.y;
 		int xr = UnityEngine.Random.Range(minX, maxX);

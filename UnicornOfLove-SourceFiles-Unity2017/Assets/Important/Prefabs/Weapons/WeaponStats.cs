@@ -23,7 +23,7 @@ public class WeaponStats : MonoBehaviour {
 	}
 	public void Update(){
 		strenght = PlayerStats.Strenght;
-		WeaponDMG = strenght * baseDMG;
+		WeaponDMG = baseDMG +((strenght * baseDMG)/2);
 
 		dmg = WeaponDMG;
 		// Debug.Log(this.gameObject.tag+" "+dmg);
