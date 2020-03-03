@@ -31,7 +31,7 @@ public class ItemManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha1) && H_potion >= 1){
 			H_potion--;
 			float quaterHealth = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerHealth>().max_Health/4;
-			H_potion = startH_PotionNum;
+			// H_potion = startH_PotionNum;
 			player.gameObject.GetComponent<PlayerHealth> ().UsePotion (quaterHealth);
 			Vector3 pPos = player.gameObject.transform.position;
 			pPos.y = 2.5f;
@@ -48,7 +48,8 @@ public class ItemManager : MonoBehaviour {
 			updateNumberAndSprite();
 		}
 		if(pickup==true){
-			Debug.Log("oooooo");
+			pickup=false;
+			Debug.Log("Pickup "+ID);
 			
 			switch(ID){
 			case 0:
@@ -87,7 +88,7 @@ public class ItemManager : MonoBehaviour {
 				Debug.Log("c6");
 			break;	
 			}
-			pickup=false;
+			// pickup=false;
 			updateNumberAndSprite();
 		}
 	}
