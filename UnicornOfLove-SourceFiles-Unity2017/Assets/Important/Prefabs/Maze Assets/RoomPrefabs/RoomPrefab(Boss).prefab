@@ -26391,6 +26391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textForDoor: {fileID: 1263062652323782}
+  Door: {fileID: 1804607842175136}
 --- !u!114 &114229784320119002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -57,6 +57,8 @@ MonoBehaviour:
   SewerRoom: {fileID: 1128661061549828, guid: 4b0e9cf4ba5c3f14ea66356c4daa1155, type: 2}
   startTile: {fileID: 1043021658436588, guid: b768ff0190a7bd24bbb99a4ab2ca7213, type: 2}
   endTile: {fileID: 1338753894732422, guid: a7ec715d8abd5484dbeb472abe588c50, type: 2}
+  endTileBoss: {fileID: 1063968125363450, guid: f4ba26eda3009d84aa337017b1bd986b,
+    type: 2}
   wall: {fileID: 1985584652112568, guid: efad91f6482bd97428ce4bbe3fc777c4, type: 2}
   column: {fileID: 1178424721161400, guid: a7ce4170a5f35e1468d47947f05e3813, type: 2}
   TextCheck: {fileID: 1492664831862850, guid: 99da2c3b92969d14291ea46c96f6f937, type: 2}

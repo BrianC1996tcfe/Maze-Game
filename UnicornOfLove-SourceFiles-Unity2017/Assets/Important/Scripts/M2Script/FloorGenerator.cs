@@ -8,7 +8,7 @@ public class FloorGenerator : MonoBehaviour {
 	public GameObject LootRoom;
 	public GameObject BossRoom;
 	public GameObject SewerRoom;
-	public GameObject startTile,endTile;
+	public GameObject startTile,endTile,endTileBoss;
 	public GameObject wall,column;
 	public GameObject TextCheck;
 	public GameObject sewerpath, sewerConnectMid;
@@ -362,8 +362,15 @@ public class FloorGenerator : MonoBehaviour {
 		wallBoolRemove(0,0,"south");
 	}
 	private void endtile(){
+		GameObject finish;
+		if(enemyLevel<5){
+			finish = endTile;
+		}
+		else{
+			finish = endTileBoss;
+		}
 		Vector3 endpos = new Vector3(size.x*tilesize,0,(size.y-1)*tilesize);
-		GameObject playerend = Instantiate(endTile,endpos,Quaternion.Euler(0,90,0));
+		GameObject playerend = Instantiate(finish,endpos,Quaternion.Euler(0,90,0));
 		playerend.transform.parent = transform;
 		wallBoolRemove((int)size.x-1,(int)size.y-1,"east");
 	}

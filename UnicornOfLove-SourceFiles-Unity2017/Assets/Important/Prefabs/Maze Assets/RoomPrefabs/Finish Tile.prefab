@@ -3529,7 +3529,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1338753894732422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 234.49292, y: 127.6061, z: 170.44711}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.49999997, z: 0.5}
   m_Children:
   - {fileID: 4590898172088932}
@@ -8953,6 +8953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textForDoor: {fileID: 1445974077954278}
+  Door: {fileID: 1300342820431428}
 --- !u!114 &114834184562496414
 MonoBehaviour:
   m_ObjectHideFlags: 1
