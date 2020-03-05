@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 				death_Is_Upon_You = true;
 				anim.SetBool ("Death", true);
 				movement.enabled = false;
+				this.gameObject.GetComponent<LevelSystem>().experience=0;
 				GameObject.FindGameObjectWithTag("Splash").GetComponent<SplashScreen>().deadplayer = true;
 			}
 		}

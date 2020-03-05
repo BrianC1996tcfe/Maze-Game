@@ -87,7 +87,7 @@ public class SplashScreen : MonoBehaviour {
 		Level++;
 		title_Text.GetComponent<Text>().text="Level "+Level;
 		main_Text.GetComponent<Text>().text="You've beaten level "+(Level-1)+" are you ready for level "+Level;
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(3f);
 		interact_Text.GetComponent<Text>().text="[Any Button] to Play";
 		canplay = true;
 		// Level++;
@@ -100,7 +100,7 @@ public class SplashScreen : MonoBehaviour {
 		canv.SetActive(true);
 		title_Text.GetComponent<Text>().text="You Have Died";
 		main_Text.GetComponent<Text>().text="You made it to Level "+Level;
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(3f);
 		interact_Text.GetComponent<Text>().text="[Any Button] to Start Again";
 		canplay = true;
 		// deadplayer = true;	

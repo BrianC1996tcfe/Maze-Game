@@ -1276,11 +1276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc430e9f1f4518f45bfd140ef5a3287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_Health: 0
+  max_Health: 30
   cur_Health: 0
   healthBar: {fileID: 1325155397915778}
   player: {fileID: 0}
   invManager: {fileID: 0}
+  loot: {fileID: 0}
   xp: 11
 --- !u!114 &114071144597594134
 MonoBehaviour:

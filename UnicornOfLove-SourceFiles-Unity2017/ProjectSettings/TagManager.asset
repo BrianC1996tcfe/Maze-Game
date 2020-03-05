@@ -24,6 +24,7 @@ TagManager:
   - Door
   - smallLoot
   - Lb
+  - ting
   layers:
   - Default
   - TransparentFX

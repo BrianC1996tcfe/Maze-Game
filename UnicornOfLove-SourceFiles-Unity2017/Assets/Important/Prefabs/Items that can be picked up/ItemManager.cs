@@ -93,7 +93,7 @@ public class ItemManager : MonoBehaviour {
 		}
 	}
 	public void updateNumberAndSprite(){
-		Debug.Log("35 "+H_potion + " / " + S_potion + " /  "+Key);
+		// Debug.Log("35 "+H_potion + " / " + S_potion + " /  "+Key);
 		H_PotionNum.GetComponent<Text>().text = H_potion + " / " + maxH_potion;
 		S_PotionNum.GetComponent<Text>().text = S_potion + " / " + maxS_potion;
 		KeyNum.GetComponent<Text>().text = Key + " / ?" ;

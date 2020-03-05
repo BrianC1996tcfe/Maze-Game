@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 65801007912746358}
   m_Layer: 0
   m_Name: blueGem
-  m_TagString: Untagged
+  m_TagString: ting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,4 +139,6 @@ MonoBehaviour:
   id: 3
   particleEffect: {fileID: 1456122858471216, guid: 29ec9f8a95df14741b10a1abfe41580e,
     type: 2}
-  InvManager: {fileID: 1182703965048080, guid: b18fd06374d4e5c4cae32a8150ccc2e2, type: 2}
+  InvManager: {fileID: 0}
+  pickup: {fileID: 0}
+  audioSrc: {fileID: 0}

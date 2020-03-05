@@ -31,14 +31,14 @@ Vector2 newlvlSize;
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.R)){
-		NextLevel(true);
-		}
-		if (Input.GetKeyDown(KeyCode.K)){
-		BacktoFirstLevel();
-		}
-	}
+	// void Update () {
+	// 	if (Input.GetKeyDown(KeyCode.R)){
+	// 	NextLevel(true);
+	// 	}
+	// 	if (Input.GetKeyDown(KeyCode.K)){
+	// 	BacktoFirstLevel();
+	// 	}
+	// }
 		
 	public void NextLevel(bool workingPerfectly){
 		Debug.Log("44 SHID");
@@ -65,10 +65,10 @@ Vector2 newlvlSize;
 				newlvlSize = new Vector2(10,10);
 			break;
 			case 4:
-				newlvlSize = new Vector2(25,10);
+				newlvlSize = new Vector2(15,10);
 			break;
 			case 5:
-				newlvlSize = new Vector2(25,15);
+				newlvlSize = new Vector2(25,10);
 			break;
 		}
 		fl4Gen.size.x = newlvlSize.x;

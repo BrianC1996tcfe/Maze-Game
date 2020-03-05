@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65681099580349870}
   m_Layer: 0
   m_Name: HealthPotion
-  m_TagString: Untagged
+  m_TagString: ting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,9 @@ MonoBehaviour:
   id: 0
   particleEffect: {fileID: 1506499963240884, guid: 511cb908654a2c244b763ad08b25e5db,
     type: 2}
-  InvManager: {fileID: 1182703965048080, guid: b18fd06374d4e5c4cae32a8150ccc2e2, type: 2}
+  InvManager: {fileID: 0}
+  pickup: {fileID: 0}
+  audioSrc: {fileID: 0}
 --- !u!198 &198654198709492908
 ParticleSystem:
   m_ObjectHideFlags: 1
